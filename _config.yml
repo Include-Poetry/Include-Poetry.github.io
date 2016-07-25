@@ -29,5 +29,7 @@ incremental: true;
 collections:
   C: 
     output: true
+    permalink: pretty
   Karel:
     output: true
+    permalink: pretty
