@@ -1,0 +1,33 @@
+
+# Nombre del sitio
+name: Include Poetry
+
+# Título
+title: Include Poetry
+
+# Versión de Markdown
+markdown: kramdown
+
+# Email
+email: includepoetry@gmail.com
+
+# Descripcón del sitio
+description: Aprende a programar C/C++ y Karel.
+
+# Google services
+google_analytics: UA-74086952-1
+
+# Base del sitio url: "http://localhost:4000"
+url: "http://192.168.1.65:4000"
+host: 0.0.0.0
+
+# Excuidos de la conversión
+exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace]
+
+incremental: true;
+
+collections:
+  C: 
+    output: true
+  Karel:
+    output: true

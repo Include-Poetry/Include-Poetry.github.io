@@ -1,0 +1,253 @@
+<div class="Cabecera">
+	<a href="{{ site.url }}/">
+		<picture>
+			<source media="(min-width: 700px)" srcset="{{ site.url }}/Recursos/Multimedia/Include.png">
+			<img class="LogoC" src="{{ site.url }}/Recursos/Multimedia/iP.png" alt="Include Poetry" oncontextmenu="return false" oncopy="return false">
+		</picture>
+	</a>
+	<ul class="Menu">
+		<li>{% if page.url contains "Karel/" %}
+			<a href="{{ site.url }}/Karel/Principio/Karel/" style="color:#fff;background:#000;">Karel</a>
+			{% else %}
+			<a href="{{ site.url }}/Karel/Principio/Karel/">Karel</a>
+			{% endif %}
+			<ul>
+				<li><a href="{{ site.url }}/Karel/Principio/Karel/">Para empezar</a>
+					<ul>
+						<li><a href="{{ site.url }}/Karel/Principio/Karel/">Karel el robot</a></li>
+						<li><a href="{{ site.url }}/Karel/Principio/Mundo/">Mundo de Karel</a></li>
+						<li><a href="{{ site.url }}/Karel/Principio/Zumbadores/">Zumbadores</a></li>
+						<li><a href="{{ site.url }}/Karel/Principio/Simulador/">El simulador</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/Karel/Instrucciones/Lineales/">Instrucciones</a>
+					<ul>
+						<li><a href="{{ site.url }}/Karel/Instrucciones/Lineales/">Lineales</a></li>
+						<li><a href="{{ site.url }}/Karel/Instrucciones/Condicionales/">Condicionales</a></li>
+						<li><a href="{{ site.url }}/Karel/Instrucciones/Ciclicas/">Ciclicas</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/Karel/Funciones/">Funciones</a></li>
+				<li><a href="{{ site.url }}/Karel/Problemas/">Problemas de Karel</a></li>
+				<li><a href="{{ site.url }}/Karel/Recursion/">Recursión</a>
+					<ul>
+						<li><a href="{{ site.url }}/Karel/Recursion/Simple/">Recursión simple</a></li>
+						<li><a href="{{ site.url }}/Karel/Recursion/Parametros/">Recursión con parámetros</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/Karel/Busquedas/">Búsquedas</a>
+					<ul>
+						<li><a href="{{ site.url }}/Karel/Busquedas/Simples/">Búsquedas simples</a></li>
+						<li><a href="{{ site.url }}/Karel/Busquedas/Parametros/">Búsquedas con parámetros</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/Otros temas/Karel/">Tópicos adicionales</a></li>
+			</ul>
+		</li>
+		<li>{% if page.url contains "C/" %}
+			<a href="{{ site.url }}/C/" style="color:#fff;background:#000;">C++</a>
+			{% else %}
+			<a href="{{ site.url }}/C/">C++</a>
+			{% endif %}
+			<ul>
+				<li><a href="{{ site.url }}/C/Introduccion/">Introducción</a>
+					<ul>
+						<li><a href="{{ site.url }}/C/Introduccion/Compilador/">Compilador</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Variables/">Variables</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Librerias/">Librerías</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Operadores/">Operadores</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Funciones/">Funciones</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Sentencias/">Sentencias</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Arreglos/">Arreglos</a></li>
+						<li><a href="{{ site.url }}/C/Introduccion/Estructuras/">Estructuras</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/C/STL/">STL</a>
+					<ul>
+						<li><a href="{{ site.url }}/C/STL/Vector/">Vector</a></li>
+						<li><a href="{{ site.url }}/C/STL/String/">String</a></li>
+						<li><a href="{{ site.url }}/C/STL/Queue/">Queue</a></li>
+						<li><a href="{{ site.url }}/C/STL/Stack/">Stack</a></li>
+						<li><a href="{{ site.url }}/C/STL/List/">List</a></li>
+						<li><a href="{{ site.url }}/C/STL/Pair/">Pair</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/C/Recursion/">Recursión</a>
+					<ul>
+						<li><a href="{{ site.url }}/C/Recursion/DFS/">DFS</a></li>
+						<li><a href="{{ site.url }}/C/Recursion/BFS/">BFS</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ site.url }}/Otros temas/C/">Tópicos adicionales</a></li>
+				<!--Continuacion barra de menu C-->
+			</ul>
+		</li>
+		<li>{% if page.url contains "Recursos/" %}
+			<a href="{{ site.url }}/Recursos/Descargables/" style="color:#fff;background:#000;">Recursos</a>
+			{% else %}
+			<a href="{{ site.url }}/Recursos/Descargables/">Recursos</a>
+			{% endif %}
+			<ul>
+				<li><a href="{{ site.url }}/Recursos/Problemario/">Problemario</a></li>
+				<li><a href="{{ site.url }}/Recursos/Descargables/">Descargables</a></li>
+			</ul>
+		</li>
+		<li><a href="{{ site.url }}/Acerca de/">Más de #iP</a>
+			<ul>
+				<li><a href="{{ site.url }}/Acerca-de/">Acerca de</a></li>
+				<li><a href="{{ site.url }}/Contacto/">Contacto</a></li>
+				<li><a href="{{ site.url }}/Presentacion/">Guía de uso</a></li>
+				<li><a href="{{ site.url }}/Motivacion/">¡Motivate!</a></li>
+				<li><a href="{{ site.url }}/Poetry/">¿Y la poesía?</a></li>
+			</ul>
+		</li>
+	</ul>
+	<input type="checkbox" name="Karel" id="Karel">
+	<input type="checkbox" name="C" id="C">
+	<input type="checkbox" name="Recursos" id="Recursos">
+	<input type="checkbox" name="Mas" id="Mas">
+	<ul class="MenuM">
+		<li><label for="Karel"><img src="{{ site.url }}/Recursos/Multimedia/Iconos/Karel.png"></label></li>
+		<li><label for="C"><img src="{{ site.url }}/Recursos/Multimedia/Iconos/C.png"></label></li>
+		<li><label for="Recursos"><img src="{{ site.url }}/Recursos/Multimedia/Iconos/Recursos.png"></label></li>
+		<li><label for="Mas"><img src="{{ site.url }}/Recursos/Multimedia/Iconos/AD.png"></label></li>
+	</ul>
+	<div class="MenuContM" id="mKarel">
+		<div class="cbTitulo">
+			<a class="bTitulo" href="{{ site.url }}/Karel/Principio/Karel/">Karel</a>
+		</div>
+		<div class="sPE">
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Karel/Principio/Karel/">Para empezar en Karel</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/Karel/Principio/Karel/">Karel el robot</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Principio/Mundo/">Mundo de Karel</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Principio/Zumbadores/">Zumbadores</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Principio/Simulador/">El simulador</a>
+			</div>
+		</div>
+		<div class="sIns">
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Karel/Instrucciones/Lineales/">Instrucciones en Karel</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/Karel/Instrucciones/Lineales/">Lineales</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Instrucciones/Condicionales/">Condicionales</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Instrucciones/Ciclicas/">Cíclicas</a>
+			</div>
+		</div>
+		<div class="sFun">
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Karel/Funciones/">Funciones</a>
+			</div>
+			<div class="cbElem"></div>
+		</div>
+		<div class="sRes">
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Karel/Problemas/">Problemas de Karel</a>
+			</div>
+			<div class="cbElem">
+			</div>
+		</div>
+		<div class="sRec">
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Karel/Recursion/">Recursión en Karel</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/Karel/Recursion/Simple/">Recursión simple</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Recursion/Parametros/">Recursión con parámetros</a>
+			</div>
+		</div>
+		<div class="sBus">
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Karel/Busquedas/">Búsquedas en Karel</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/Karel/Busquedas/Simples/">Búsquedas simples</a>
+				<a class="bElem" href="{{ site.url }}/Karel/Busquedas/Parametros/">Búsquedas con parámetros</a>
+			</div>
+		</div>
+		<div>
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Otros temas/C/">Tópicos adicionales</a>
+			</div>
+			<div class="cbElem">
+			</div>
+		</div>
+	</div>
+	<div class="MenuContM" id="mC">
+		<div class="cbTitulo">
+			<a class="bTitulo" href="{{ site.url }}/C/">C/C++</a>
+		</div>
+		<div>
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/C/Introduccion/">Introducción</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Compilador/">Compilador</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Variables/">Variables</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Librerias/">Librerías</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Operadores/">Operadores</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Funciones/">Funciones</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Sentencias/">Sentencias</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Arreglos/">Arreglos</a>
+				<a class="bElem" href="{{ site.url }}/C/Introduccion/Estructuras/">Estructuras</a>
+			</div>
+		</div>
+		<div>
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/C/STL/">STL</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/C/STL/Vector/">Vector</a>
+				<a class="bElem" href="{{ site.url }}/C/STL/String/">String</a>
+				<a class="bElem" href="{{ site.url }}/C/STL/Queue/">Queue</a>
+				<a class="bElem" href="{{ site.url }}/C/STL/Stack/">Stack</a>
+				<a class="bElem" href="{{ site.url }}/C/STL/List/">List</a>
+				<a class="bElem" href="{{ site.url }}/C/STL/Pair/">Pair</a>
+			</div>
+		</div>
+		<div>
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/C/Recursion/">Recursión</a>
+			</div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/C/Recursion/DFS/">DFS</a>
+				<a class="bElem" href="{{ site.url }}/C/Recursion/BFS/">BFS</a>
+			</div>
+		</div>
+		<div>
+			<div class="cbTitulo">
+				<a class="bTitulo" href="{{ site.url }}/Otros temas/C/">Tópicos adicionales</a>
+			</div>
+			<div class="cbElem">
+			</div>
+		</div>
+	</div>
+	<div class="MenuContM" id="mRec">
+		<div class="cbTitulo">
+			<a class="bTitulo" href="{{ site.url }}/Recursos/Descargables/">Recursos</a>
+		</div>
+		<div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/Recursos/Problemario/">Problemario</a>
+				<a class="bElem" href="{{ site.url }}/Recursos/Descargables/">Descargables</a>
+			</div>
+		</div>
+	</div>
+	<div class="MenuContM" id="mMas">
+		<div class="cbTitulo">
+			<a class="bTitulo" href="{{ site.url }}/Acerca de/">Más de #iP</a>
+		</div>
+		<div>
+			<div class="cbElem">
+				<a class="bElem" href="{{ site.url }}/Acerca-de/">Acerca de</a>
+				<a class="bElem" href="{{ site.url }}/Contacto/">Contacto</a>
+				<a class="bElem" href="{{ site.url }}/Presentacion/">Guía de uso</a>
+				<a class="bElem" href="{{ site.url }}/Motivacion/">¡Motivate!</a>
+				<a class="bElem" href="{{ site.url }}/Poetry/">¿Y la poesía?</a>
+			</div>
+		</div>
+	</div>
+</div>

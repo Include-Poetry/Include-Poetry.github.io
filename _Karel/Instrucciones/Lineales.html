@@ -1,0 +1,132 @@
+---
+layout: General
+title: Instrucciones lineales en Karel
+---
+<p>
+	El funcionamiento de todo programa puede verse tan simple como <b>tomar una serie de instrucciones e ir haciendo lo que cada una indica</b>.
+	<br>
+	Imaginemos ahora, que nos dan instrucciones a nosotros para realizar una tarea, y detallan esas instrucciones en una hoja de papel, podríamos tomar a esa hoja como el <b>código</b> de un programa y a nosotros el robot que seguirá ese código.
+	<br>
+	Realizar las instrucciones en exactamente el mismo orden en el que están escritas, <b>que no requieren regresar ni adelantarnos</b> en los pasos, sería realizar <b>instrucciones lineales</b>.
+</p>
+<p>
+	En el caso de Karel, una instrucción o <b>comando</b> lineal, no es diferente a eso, y podemos decir además, que es algo que Karel <b>tratará de hacer sin importar nada</b> <s>(sin pensar)</s>.
+</p>
+<div class="EjemploN">
+	La palabra <a class="Ref" href="https://es.wikipedia.org/wiki/Comando_%28inform%C3%A1tica%29" target="_blank">comando</a> viene del inglés <i>command</i> que significa <b>orden o instrucción</b>.
+</div>
+<div class="EjemploK">
+	<span>Con la versión de la OMI sabemos que hemos introducido un comando correctamente porque su color</span> se hace azul.
+</div>
+<div class="Subtitulo">Comandos básicos de Karel</div>
+<p>
+	Se puede decir que hay <b>5 acciones</b> que Karel naturalmente sabe hacer, y que aunque parezcan pocas siempre le han bastado para resolver sus problemas.
+	<ul class="ListaD">
+		<li id="1L"><span>Avanzar</span></li>
+		<li id="2L"><span>Girar a la izquierda</span></li>
+		<li id="3L"><span>Coger un zumbador</span></li>
+		<li id="4L"><span>Dejar un zumbador</span></li>
+		<li id="5L"><span>Apagarse</span></li>
+	</ul>
+</p>
+<div id="1" class="Subtitulo">Avanza</div>
+<p>
+	Cuando Karel recibe la instrucción <b>"avanza"</b>, se desplaza una calle o una avenida hacia adelante, es decir, se mueve <b>un paso hacia la dirección a la que está orientado</b>.
+	<br>
+	Karel avanzará todas las veces que tú le indiques siempre y cuando <b>le sea posible</b>.
+</p>
+<div class="GloboL">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/Karel/Avanza.gif">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/Karel/AvanzaC.gif" alt="Avanza">
+	</picture>
+	<span class="GloboLT">Instrucción avanza</span>
+</div>
+<p>
+	Sintáxis:
+</p>
+<div class="EjemploK">
+	avanza;
+</div>
+<p>
+	Karel, aunque hábil, no puede atravesar paredes, así que de intentarlo, mostrará un mensaje de error.
+</p>
+<div id="2" class="Subtitulo">Gira-izquierda</div>
+<p>
+	Durante la ejecución de un programa <b>Karel se orienta girando</b>. Toma en cuenta que sólo puede girar hacia la izquierda, y sólo dando giros de exactamente 90°, de no ser así Karel quedaría orientado en una posición intermedia, cosa que, como ya habíamos dicho, no puede pasar.
+</p>
+<div class="GloboL">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/Karel/KGira.gif">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/Karel/KGiraC.gif" alt="Gira-izquierda">
+	</picture>
+	<span class="GloboLT">Instrucción gira-izquierda</span>
+</div>
+<p>
+	Sintáxis:
+</p>
+<div class="EjemploK">
+	gira-izquierda;
+</div>
+<div class="EjemploN">
+	A diferencia de la instrucción "avanza", <b>no hay nada</b> que pueda impedir a Karel girar.
+</div>
+<div id="3" class="Subtitulo">Coge-zumbador</div>
+<p>
+	Karel puede tomar un zumbador si así se requiere, al tomarlo lo guarda en su mochila. En el mundo lo podemos ver porque se descuenta en uno la cantidad de zumbadores en esa posición y aumenta la cantidad en su mochila.
+	<br>
+	Por cada instrucción "coge-zumbador" Karel toma un zumbador, y así sucesivamente hasta que ya no pueda hacerlo o se indique hacer otra cosa.
+</p>
+<div class="GloboL">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/Karel/KCoge.gif">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/Karel/KCogeC.gif" alt="Coge-zumbador">
+	</picture>
+	<span class="GloboLT">Instrucción coge-zumbador</span>
+</div>
+<p>
+	Sintáxis:
+</p>
+<div class="EjemploK">
+	coge-zumbador;
+</div>
+<div class="EjemploN">
+	Karel no puede tomar un zumbador de donde no hay <s>(lógicamente)</s>.
+</div>
+<div id="4" class="Subtitulo">Deja-zumbador</div>
+<p>
+	Así como puede tomar, Karel también puede dejar zumbadores en una posición. Lo podemos notar en el mundo porque se agrega uno a la cantidad de zumbadores en esa posición y disminuye la cantidad en su mochila.
+	<br>
+	Por cada instrucción "deja-zumbador" Karel deja un zumbador, y así sucesivamente hasta que ya no pueda hacerlo o se indique hacer otra cosa.
+</p>
+<div class="GloboL">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/Karel/KDeja.gif">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/Karel/KDejaC.gif" alt="Deja-zumbador">
+	</picture>
+	<span class="GloboLT">Instrucción deja-zumbador</span>
+</div>
+<p>
+	Sintáxis:
+</p>
+<div class="EjemploK">
+	deja-zumbador;
+</div>
+<div class="EjemploN">
+	Karel no puede dejar un zumbador si ya no tiene en la mochila <s>(lógicamente)</s>.
+</div>
+<div id="5" class="Subtitulo">Apagate</div>
+<p>
+	La instrucción que Karel siempre deberá realizar al final es apagarse, después de esta instrucción Karel no hará nada más, por lo que debe dejarse hasta el final de nuestro programa.
+	<br>
+	Karel no puede "reiniciarse" si no es volviendo a iniciar la ejecución, porque como seguramente ya notaste, no tiene una instrucción de "enciende". Así, una vez que se apaga termina la ejecución.
+</p>
+<p>
+	Sintáxis:
+</p>
+<div class="EjemploK">
+	apagate;
+</div>
+<div class="Nav">
+	<a href="{{ site.url }}/Karel/Principio/Simulador/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/Karel/Instrucciones/Condicionales/" id="NDer">Tema siguiente</a>
+</div>

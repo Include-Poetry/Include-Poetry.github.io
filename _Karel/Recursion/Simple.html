@@ -1,0 +1,183 @@
+---
+layout: General
+title: Recursión simple en Karel
+---
+<p>
+	Ya que sabemos lo que es la <a href="{{ site.url}}/Karel/Recursión/index.html" class="Ref" target="_blank">recursión</a> es momento de conocer cómo aprovecharla en Karel, conocer su correcta declaración y uso principal.
+</p>
+<ul class="ListaD">
+	<li id="1L"><span>Idea de la pila</span></li>
+	<li id="2L"><span>Pila de llamadas</span></li>
+	<li id="3L"><span>La pila y la recursión</span></li>
+	<li id="4L"><span>Recursión para contar</span></li>
+	<li id="5L"><span>Notas</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Idea de la pila
+</div>
+<p>
+	Seguramente al escuchar (<s><int>o leer</int></s>) la palabra "pila", lo primero que pienses sea en una pila eléctrica, como las que usa el control de la televisión para funcionar. Sin embargo, nosotros como buenos programadores, conocemos otro significado para esa palabra, que no es muy diferente en realidad a lo que ya sabemos.
+</p>
+<p>
+	En la antigüedad, existió un muy ingenioso físico llamado <b>Alessandro Volta</b>, este hombre un día, y gracias años de experimentación e investigación, logró construir la primer batería. Esta invención suya se dio a conocer como la <b>pila voltaica</b>, y consistía de pares de pequeños discos de cobre y zinc apilados uno encima de otro. Su invento lucía algo así:
+</p>
+<div class="GloboL">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/PilaVolta.jpg">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/PilaVolta.jpg" alt="Pila voltaica">
+	</picture>
+	<span class="GloboLT">Pila de Volta</span>
+</div>
+<p>
+	<int>¿Ya has notado la idea?</int>
+	<br>
+	El secreto de la idea aquí, se encuentra en la palabra <a href="http://dle.rae.es/?id=3AOy8Wo" class="Ref" target="_blank">apilar</a>, que seguro te suena familiar, como también lo es ahora la palabra <b>pila</b>. Como <i>una pila de platos</i>. En donde hay un plato arriba de otro.
+</p>
+<p>
+	El funcionamiento básico de una pila (<s><int>y ya no hablamos de la pila de Volta</int></s>) es muy sencillo, imagina la pila de platos, pones sobre una mesa el primer plato, luego sobre éste pones otro, y luego otro y otro más. Cuando quieres tomar un plato de esta pila que ya armaste, tomas el que está hasta arriba, no el que quedó hasta abajo. Es decir <b>el último en poner es el primero que se tomará</b>. Y del mismo modo, cuando hayamos tomado todos los platos, y sólo quede uno, será el que estaba hasta abajo, que es el que pusimos primero, entonces también podemos decir que <b>el primero en poner será el último en quitar</b>.
+</p>
+<div class="EjemploN">
+	En una pila podemos decir que:
+	<br>
+	<b>El primero en entrar es el último en salir</b> y que <b>el último en entrar será el primero en salir</b>
+</div>
+<div class="Subtitulo" id="2">
+	Pila de llamadas
+</div>
+<p>
+	¿Has notado para qué sirve el rectángulo blanco que se encuentra en la esquina inferior izquierda de la pantalla de ejecución del simulador de Karel el robot? Seguramente has notado que está ahí, aunque entender su funcionamiento y motivo de estar ahí es un poco más profundo. Para entenderlo mejor vamos a analizar lo que pasa cuando ejecutamos un programa que tiene una función declarada por nosotros.
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E1/E1.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E1/E1.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">Ejecución</span>
+</div>
+<p>
+	Es muy importante que notes que la ejecución que se realiza aquí, es paso a paso, para ver línea a línea lo que está sucediendo.
+	<br>
+	La ejecución es muy sencilla, el programa arranca con la instrucción <i>avanza</i> en la línea 8, después pasa a la línea 9 en donde se indica que hay que ejecutar la instrucción <i>nueva</i>, que es la que declaramos, entonces la ejecución sigue por la línea 4, que es en donde está la primer acción de <i>nueva</i>, el programa sigue con el <i>avanza</i> de la línea 5 y una vez que llega al final de la instrucción en la línea 6, se regresa a la línea 10 que es en donde iba <b>antes de que la instrucción <i>nueva</i> fuera llamada</b>. (Si algo no tiene sentido para ti, vuelve a analizar el código, recordar la sección de <a href="{{ site.url}}/Karel/Funciones/index.html" class="Ref" target="_blank">funciones</a> puede ser muy útil.)
+</p>
+<p>
+	Karel funciona entonces sin problemas y termina con su ejecución con normalidad. Sin embargo, aquí hay una habilidad muy especial de Karel que estamos olvidando y que fue <b>clave</b> para que todo marchara bien. Esa habilidad es la capacidad de <b>recordar dónde se había quedado</b> para volver ahí una vez terminada la ejecución de esa instrucción. A el lugar donde Karel guarda y recuerda dónde se había quedado le llamaremos <b>pila de llamadas</b>. Nosotros la vemos en ese rectángulo blanco.
+</p>
+<p>
+	Es por esto que cuando la ejecución llega a la línea 9 en la pila de llamadas se guarda el nombre de la función y la línea desde la que fue llamada. Cuando termina de ejecutar esa función, Karel toma <b>la última cosa guardada en la pila</b> y continúa desde ahí.
+</p>
+<div class="Subtitulo" id="3">
+	La pila y la recursión
+</div>
+<p>
+	Primero veamos la manera correcta de realizar una llamada recursiva con Karel. En estos casos, podemos tomar como recursión el hecho de <b>llamar a una función desde sí misma</b>. Es decir, tener una función y como una instrucción dentro de ella está el realizar la función misma. <int>¿No queda muy claro?</int> Analiza el siguiente código.
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>avanzando</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>avanzando</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>avanzando</span>;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>14&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Como puedes ver, declaramos una nueva instrucción llamada <i>avanzando</i>, en la cual avanzamos, luego checamos que el frente esté libre, y de ser así entonces volvemos a llamar a la función <i>avanzando</i>. Recuerda que en toda recursión debemos poner una condición que la detenga. En este caso nuestra recursión termina cuando ya no tenemos el frente libre. 
+	<br>
+	Pero no olvidemos a la pila de llamadas, lo que sucede con ella en la recursión es muy importante.
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E2/E2.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E2/E2.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">Recursión</span>
+</div>
+<p>
+	La acción empieza en la línea 11 cuando desde la función principal se llama a <i>avanzando</i> que es la instrucción que declaramos, entonces se guarda en la pila que se llamó a <i>avanzando</i> desde la línea 11, ahora la ejecución continúa por la línea 4, en donde avanza Karel, después pasa a la línea 5, evalúa si el frente está libre y como sí lo está, vuelve a llamar a la función <i>avanzando</i> en la línea 7, entonces se guarda en la pila que se llamó a la instrucción <i>avanzando</i> pero esta vez desde la línea 7. Vuelve a repetir este proceso hasta que ya no tiene el frente libre.
+</p>
+<p>
+	<int>¿Y qué pasa cuando el frente ya no está libre?</int> Cuando revisa por cuarta vez si el frente está libre, ya no lo está, entonces la condición no se cumple y <b>no se ejecuta otra llamada</b>, sino que sigue por la línea 8, que es el final del <i>si</i>, luego sigue con la línea 9 que no es más que el final de la instrucción. Entonces Karel revisa la pila y toma el <b>último elemento</b> que puso (<int>recuerda que es una pila</int>), así se da cuenta que se había quedado en la línea 7 antes de que se llamara por última vez a la instrucción, sin embargo, sólo sale del <i>si</i> y luego de la instrucción, y repite esto varias veces.
+</p>
+<p>
+	<int>¿Y cuántas veces se repite eso?</int> Pues <b>la misma cantidad de veces que se llamó a la función</b>, para al terminar de vaciar la pila regrese a la línea 11 que fue en donde se llamó por primera vez. Al final de esta ejecución Karel habrá avanzado hasta llegar a la pared que tiene en frente.
+	<br>
+	<int>Genial, pero pude hacer eso con un ciclo "<i>mientras</i>" ¿por qué molestarme en usa recursión?</int>
+</p>
+<div class="Subtitulo" id="4">
+	Recursión para contar
+</div>
+<p>
+	¿Notaste que durante la ejecución algo tuviera alguna relación con la pila de llamadas? Si pones atención, notarás que Karel avanzó la misma cantidad de veces que se llamó a la instrucción <i>avanzando</i>. Exactamente la misma cantidad, pues cada que se llamaba a la instrucción Karel avanzaba. Siendo así, podemos utilizar esto a nuestro favor. Hagamos una pequeña modificación al código que usamos arriba.
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>avanzando</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>avanzando</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deja-zumbador;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>avanzando</span>;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>14&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>15&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Al ejecutar lo anterior tendremos a Karel haciendo esto:
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E3/E3.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E3/E3.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">Contando</span>
+</div>
+<p>
+	Si analizamos lo ocurrido, podemos ver que Karel ha puesto 3 zumbadores en la posición en donde estaba cuando la recursión terminó. Esto se debe a que Karel cada que llamaba a la instrucción <i>avanzando</i> desde la línea 7, dejaba pendiente continuar con la línea 8, en donde dejaría un zumbador. Estos zumbadores no los deja inmediatamente después de avanzar un paso, sino hasta el final, cuando toma de la pila las líneas que había dejado pendientes para ejecución.
+</p>
+<p>
+	Sin embargo, aunque Karel avanzó 4 veces en total, no dejó 4 zumbadores. Esto es porque solamente dejó pendientes 3 veces dejar un zumbador, según la línea 8. Seguro que ya sabes dónde hay que modificar para hacer que Karel deje la cantidad exacta de zumbadores. Ten en cuenta que esta tarea se puede resolver de muchas maneras distintas, prueba a modificar en tu simulador.
+</p>
+<p>
+	Hagamos ahora otro ejemplo, imagina que Karel inicia siempre sobre un montón de zumbadores, tiene infinitos zumbadores en la mochila además y se te pide que gire a la izquierda la misma cantidad de veces que zumbadores sobre los que está. Es decir, si está sobre 3 zumbadores gire 3 veces y luego se apague. Prueba a resolverlo primero en el tu simulador y luego continúa con la explicación aquí.
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E4/E4.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E4/E4.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">Girar por zumbadores</span>
+</div>
+<p>
+	Como puedes notar, Karel gira la misma cantidad de veces que la cantidad de zumbadores sobre los que estaba. Al final de esta ejecución ya no quedan zumbadores en la posición, pero seguro que puedes hacer que los deje de nuevo.
+</p>
+<div class="Subtitulo" id="5">
+	Notas
+</div>
+<div class="EjemploN">
+	Pon mucha atención a las condiciones iniciales de los mundos de estos ejemplos, han sido las ideales para que Karel pudiera realizar el trabajo esperado.
+</div>
+<div class="EjemploN">
+	Recuerda que lo más aconsejable es que vayas realizando en tu simulador las practicas de ejemplo de aquí a la vez que analizas las explicaciones.
+</div>
+<div class="EjemploN">
+	Pon a prueba lo que has aprendido haciendo los problemas de la sección de recursión de Karelotitlán.
+</div>
+<div class="Nav">
+	<a href="{{ site.url }}/Karel/Recursion/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/Karel/Recursion/Parametros/" id="NDer">Tema siguiente</a>
+</div>

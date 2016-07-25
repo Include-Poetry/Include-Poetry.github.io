@@ -1,0 +1,37 @@
+<html>
+	<head>
+		{% include headU.html %}
+		<script type="text/javascript" src="{{ site.url}}/Recursos/JS/fresco.js"></script>
+	  	<link href='https://fonts.googleapis.com/css?family=Roboto:700italic,700,400italic,400|Oswald|Kalam:400,700' rel='stylesheet' type='text/css'>
+	  	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/General.css">
+	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/Code.css">
+	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/fresco.css">
+	  	<script src="https://use.fontawesome.com/c334c419c0.js"></script>
+	  	<!--<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/FontAwesome/css/font-awesome.min.css">-->
+	  	{% if jekyll.environment == 'production' %}
+		{% include analytics.html %}
+		{% endif %}
+	</head>
+
+	<body>
+		{% include BTTL.html %}
+		{% include LoaderG.html %}
+		{% include CabeceraN.html %}
+		{% include Buscar.html %}
+		
+		<div class="Cuerpo">	
+			<div class="Contenido">
+				<div class="Titulo">
+					{{ page.title }}
+				</div>
+				{{ content }}
+				{% include facebookC.html %}
+			</div>
+		</div>
+
+		{% include Pie.html %}
+		{% include ScriptU.html %}
+	</body>
+</html>

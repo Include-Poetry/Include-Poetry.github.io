@@ -1,0 +1,132 @@
+
+.Pie{
+	width: 100%;
+	/*border-radius: 10px 10px 0 0;*/
+	float: left;
+	background: #000;
+	min-height: 150px;
+	position: relative;
+	overflow-x: hidden;
+	/*background: url('../Multimedia/Pie/Fondo4.png');
+	/*border-top: 1px solid #f00;	*/
+}
+#PCielo{
+	display: none;
+}
+#Movile{
+	display: none;
+}
+#PCiudad{
+	width: 20%;
+	float: left;
+	position: absolute;
+	bottom: 0;
+	/*border: 1px solid #fff;*/
+}
+#PTextos{
+	position: relative;
+	top: 12px;
+	float: left;
+	margin-left: 28%;
+	font-family: 'Kalam';
+	color: #fff;
+	width: 72%
+}
+#PTextos a{
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+#PTextos a:hover{
+	padding-left: 10px;
+}
+.PBloque{
+	margin-right: 8%;
+	max-width: 12%;
+	float: left;
+}
+#PBUltimo{
+	margin-right: 0;
+}
+.PTitulo{
+	font-size: 1.2em;
+}
+.PTexto a{
+	display: block;
+	font-size: .8em;
+}
+#PFirma{
+	color: #fff;
+	position: relative;
+	margin-top: 30px;
+	font-family: 'Kalam';
+	display: inline-block;
+	font-size: .8em;
+	padding-left: calc(100% /3);
+}
+#PIzq{
+	float: right;
+	width: 14%;
+	margin-right: 5%;
+	font-size: .8em
+}
+#PLogoB{
+	width: 100%;
+}
+#PGit{
+	width: 70px;
+}
+
+@media only screen and (max-width: 770px){
+	#PCiudad{
+		display: none;
+	}
+	.PTitulo{
+		font-size: .9em;
+	}
+	.Pie{
+		min-height: 130px;
+	}
+	#PTextos{
+		margin-left: 8%;
+		width: 92%
+	}
+	#PFirma{
+		padding-left: calc(100%/4);
+	}
+	#PIzq{
+		font-size: .7em;
+	}
+}
+@media only screen and (max-width: 420px){
+	#PCiudad{
+		display: none;
+	}
+	#PTextos{
+		display: none;
+	}
+	#PCielo{
+		display: block;
+	}
+	.Pie{
+		min-height: 50px;
+	}
+	#Movile{
+		display: block;
+		font-size: .8em;
+		font-family: 'Kalam';
+		color: #fff;
+		text-align: center;
+		margin-top: 10px;
+	}
+	#PFirma{
+		margin:0;
+		padding: 0 20px;
+		margin-top: 10px;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: .7em;
+	}
+}

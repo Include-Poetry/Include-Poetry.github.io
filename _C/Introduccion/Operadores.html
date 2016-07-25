@@ -1,0 +1,192 @@
+---
+layout: General
+title: Operadores y entrada/salida de datos
+---
+<p>
+	Para manipular variables y conocer algunas de sus características utilizamos <i>operadores</i>, también tenemos la entrada y salida de datos, para mostrar y recibir información en la pantalla y del teclado respectivamente.
+</p>
+<ul class="ListaD">
+	<li id="1L"><span>Operadores aritméticos</span></li>
+	<li id="2L"><span>Incremento y decremento</span></li>
+	<li id="3L"><span>Operadores lógicos</span></li>
+	<li id="4L"><span>Operadores de conjunción y disyunción</span></li>
+	<li id="5L"><span>Operador coma</span></li>
+	<li id="6L"><span>Operador ternario condicional</span></li>
+	<li id="7L"><span>Entrada y salida de datos</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Operadores aritméticos
+</div>
+<p>
+	Los operadores aritméticos son como los que utilizamos en <i>matemáticas</i>, así como la suma, la resta, etc.
+</p>
+<p>
+	<b>Asignación</b>
+	<br>
+	Una asignación es dar un valor a una variable, es decir, asignarle un valor. Para hacer esto usamos el símbolo de igual <code>=</code> y para usarlo en una sentencia sería como lo hemos manejado en las declaraciones de variables <code>int a=55;</code> además podemos dar asignaciones de una variable a otra como <code>a=b;</code> en este caso <code>a</code> y <code>b</code> tendrán el mismo valor, siendo que a la primera se le asignó el valor de la segunda, es decir, la asignación se realiza de derecha a izquierda. Después de toda asignación va <code>;</code>
+</p>
+<p>
+	<b>Suma</b>
+	<br>
+	Suma los valores implicados. Esta operación debe hacerse para hacer una asignación, es decir, necesitamos asignar el valor de esa suma a alguna parte, por ejemplo <code>T = 3 + 4;</code> También podemos hacer lo mismo con variables <code>T = a + 2;</code> este procedimiento no cambia el valor de <code>a</code> sino sólo el de <code>T</code> No hay que olvidar el <code>;</code> al final.
+</p>
+<p>
+	<b>Resta</b>
+	<br>
+	Resta los valores en orden de derecha a izquierda. Es necesario hacer una asignación para este proceso <code>A = 8 - 9;</code>
+</p>
+<p>
+	<b>Multiplicación</b>
+	<br>
+	Multiplica los valores implicados. Es necesario hacer una asignación para este proceso <code>A = 42 * 9;</code>
+</p>
+<p>
+	<b>División</b>
+	<br>
+	Divide los valores en orden de izquierda a derecha (<int>como habitualmente</int>). Es necesario hacer una asignación para este proceso <code>A = 8/2;</code>
+</p>
+<p>
+	<b>Módulo</b>
+	<br>
+	Obtiene el módulo del primer argumento dividido por el segundo. El símbolo para el módulo es <code>%</code> El <i>módulo</i> de dos números es el residuo inmediato de realizar la división de estos, por ejemplo \(6/4\) al hacer manualmente esa división veremos que el \(4\) <i>cabe</i> una vez en el \(6\) y <i>sobran</i> \(2\). Si aplicamos \(6\mod4\) obtendríamos ese \(2\). Otros ejemplos son \(4\mod5 = 4, 8\mod2 = 0\). Es necesario hacer una asignación para este proceso <code>A = 3%7;</code>. (<int>Nota que la sintaxis en el compilador es usando <code>%</code> la palabra <code>mod</code> sólo es para el lenguaje matemático</int>).
+</p>
+<p>
+	<b>Uso de paréntesis</b>
+	<br>
+	Podemos (y es necesario) usar paréntesis en operaciones aritméticas, justo como lo hacemos en matemáticas, por esto <code>T = (9+5)/7;</code> equivaldrá a \(\frac{9+5}{7} = 2\)
+</p>
+<p>
+	<b>Operadores a nivel asignación</b>
+	<br>
+	Si queremos por ejemplo aumentar el valor de una variable en tres unidades, podemos hacer <code>T = T + 3;</code> De esta forma le damos a <code>T</code> el valor que tenía más \(3\). Esto funciona pero (<s><int>personalmente creo que</int></s>) es más práctico usar las operaciones a nivel asignación, que consiste en poner antes del signo igual el signo del procedimiento a realizar, por ejemplo, la operación anterior se expresaría como <code>T += 3;</code> Lo que se hace es sumar a la variable de la izquierda todo lo que hay después del igual. <code>T *= 2;</code> sería como <code>T = T*2;</code>, también podemos hacer algo como <code>T -= 5+3;</code> Que sería como poner <code>T = T - (5+3);</code>. Puedes hacer esto con todos los operadores aritméticos.
+</p>
+
+<div class="Subtitulo" id="2">
+	Incremento y decremento
+</div>
+<p>
+	El operador <code>++</code> y el operador <code>--</code> incrementan en uno y disminuyen en uno el valor de una variable respectivamente. El primer operador es como decir <code>a += 1;</code> y el segundo <code>a -= 1;</code> Nota que siempre incrementan o decrementan exactamente en una unidad.
+</p>
+<p>
+	El orden en el que se ubica el operador es muy importante, puede ser <code>T++;</code> o <code>++T;</code> lo mismo para el operador <code>--</code>. En el caso <code>A=4; T=A++;</code> la variable <code>A</code> terminará con un valor de \(5\) mientas que la variable <code>T</code> tendrá un valor de \(4\). Es decir, es como si se hubiera hecho <code>A=4; T=A; A++;</code>
+</p>
+<p>
+	Cuando ponemos el operador antes de la variable sucede distinto, al final del caso <code>A=4; T=++A;</code> la variable <code>A</code> mantendrá un valor de \(4\) mientras que la variable <code>T</code> tendrá un valor de \(5\), por lo que es como haber hecho <code>A=4; T=A+1;</code>.
+</p>
+
+<div class="Subtitulo" id="3">
+	Operadores lógicos
+</div>
+<p>
+	Los operadores lógicos nos permiten saber algunas características de una variable en base a compararlas frente a alguna otra variable o valor. Nos devuelve un valor booleano (de cierto o falso).
+</p>
+<p>
+	<b>Mayor que</b>
+	<br>
+	Devuelve verdadero si el primer valor es más grande que el segundo <code>bool t = 3 > 6;</code> en este caso la comparación usando <code>></code> nos daría como resultado <code>false</code> pues \(3\) no es mayor que \(6\)
+</p>
+<p>
+	<b>Menor que</b>
+	<br>
+	Devuelve verdadero si el primer valor es más chico que el segundo, usa el operador <code><</code>. Por ejemplo <code>bool C = 3 < 6;</code> tiene como valor final <code>true</code>
+</p>
+<p>
+	<b>Igual que</b>
+	<br>
+	Devuelve verdadero si los valores comparados son iguales, usa el operador <code>==</code> (<int>nota que son dos símbolos de igual, si sólo usas uno sería una asignación</int>). Por ejemplo <code>bool R = 5 == 8;</code> da como valor final <code>false</code>
+</p>
+<p>
+	<b>Diferente de</b>
+	<br>
+	Devuelve verdadero si los valores comparados son diferentes, usa el operador <code>!=</code>. Por ejemplo <code>bool F = 4 != -1;</code> devolvería <code>true</code> De hecho puedes usar el operador <code>!</code> con otros operadores lógicos. Devuelve verdadero si lo que está a la derecha del <code>!</code> es falso. Por ejemplo <code>!(4 > 5)</code> devolvería verdadero.
+</p>
+<p>
+	<b>Mayor o igual que</b>
+	<br>
+	Devuelve verdadero si el primer elemento es mayor o igual al segundo, usa el operador <code>>=</code>. Por ejemplo <code>bool A = 3 >= 8;</code> devuelve <code>false</code>
+</p>
+<p>
+	<b>Menor o igual</b>
+	<br>
+	Devuelve verdadero si el primer elemento es menor o igual al segundo, usa el operador <code><=</code>. Por ejemplo <code>bool I = 3 <= 3;</code> devuelve <code>true</code>
+</p>
+
+<div class="Subtitulo" id="4">
+	Operadores de conjunción y disyunción
+</div>
+<p>
+	Estos operadores nos permiten agrupar operadores lógicos y de esta manera hacer comparaciones más específicas.
+</p>
+<p>
+	<b>Conjunción</b>
+	<br>
+	Utilizan el operador <code>&&</code> que podríamos traducir como '<i>y</i>'. Devuelve verdadero cuando ambas comparaciones son verdaderas, por ejemplo <code>bool T = 4 < 6 && 3 >= 3;</code> daría un valor de <code>true</code> pues <code>4 < 6</code> es verdadero al igual que <code>3 >= 3</code>, sin embargo <code>bool T = 5 > 3 && 2 <= -1;</code> devuelve <code>false</code> pues aunque la primera comparación es verdadera la segunda no lo es, y para que la expresión completa sea verdadera ambas comparaciones deben serlo.
+</p>
+<p>
+	<b>Disyunción</b>
+	<br>
+	Utiliza el operador <code>||</code> que podríamos traducir como '<i>o</i>'. Devuelve verdadero cuando una de las dos comparaciones o ambas son verdaderas, por ejemplo <code>bool F = 4 < 6 || 7 < 2;</code> devuelve <code>true</code>, pues aunque la segunda comparación es falsa la segunda sí es verdadera.
+</p>
+
+<div class="Subtitulo" id="5">
+	Operador coma
+</div>
+<p>
+	Este operador es literalmente <code>,</code> se utiliza para dar un orden a un par de procedimientos, por ejemplo <code>int a = (b=5, b+2);</code> de esta forma primero se le da a la variable <code>b</code> (que consideramos previamente declarada) el valor de \(5\) luego a la variable <code>a</code> se le da valor de <code>b+2</code> es decir \(7\).
+</p>
+
+<div class="Subtitulo" id="6">
+	Operador ternario condicional
+</div>
+<p>
+	Este operador, como su nombre lo indica, es <a href="http://dle.rae.es/?id=ZaQPxZN" class="Ref" target="_blank">ternario</a> por lo que está conformado por tres partes. Podríamos verla como una pequeña función que devuelve un valor en base a una comparación. Utiliza el operador <code>?</code> una expresión se vería así <code>(4 > 2) ? 78 : 21</code> en donde primero tenemos una comparación, luego tenemos el operador en sí, después de él un número que es el que la expresión devuelve si la comparación es verdadera, si no lo es devuelve el valor después de <code>:</code>. Como la expresión devuelve un valor es necesario asignar ese valor a alguna variable.
+</p>
+<p>
+	Una expresión completa de este tipo se ve así <code>int T = (4 > 5) ? 21 : 32;</code> después de esto la variable <code>T</code> tendrá un valor de \(32\) pues la comparación no fue verdadera.
+</p>
+
+<div class="Subtitulo" id="7">
+	Entrada y salida de datos
+</div>
+<p>
+	Es importante recalcar que los que se mostrarán a continuación no son operadores, son objetos llamados <i>streams</i>, es una palabra en inglés cuya traducción directa al español es <i>corriente</i> o <i>flujo</i>, nosotros no le vemos mucho sentido con este significado, pero podríamos relacionarlo con el flujo de datos. Más típicamente nos referiremos a ellas como funciones.
+</p>
+<p>
+	Para utilizar la siguiente entrada y salida estándar de datos, debemos de agregar primero la línea <code>using namespace std;</code> Esto es debido a que que para el uso de <i>streams</i> se necesita de una notación particular, que podemos abarcar añadiendo la línea mencionada justo después de nuestras librerías. También debes saber que para utilizar las siguientes funciones debes tener declarada la librería <code>iostream</code> pues es ésta librería la que las abarca.
+</p>
+<p>
+	<code>cin</code>
+	<br>
+	Esta función trabaja junto con el operador de <i>extracción</i> que es <code>>></code>, juntos se escribe como <code>cin>></code>. Al decir extracción es porque se <i>extraen</i> datos de la entrada estándar de la computadora, es decir el teclado. Usándolo podemos dar un valor a una variable durante la ejecución de un programa, se usa así <code>cin >> variable;</code>. Es decir, al usarlo la computadora esperará a que introduzcas un valor con el teclado y ese valor se cargará a la variable especificada. Toma en cuenta que el valor que ingreses debe concordar con el tipo de variable, como lo especificamos antes.
+</p>
+<p>
+	También podemos hacer varias extracciones o lecturas con el mismo <code>cin</code>, usando varios operadores, es decir <code>cin >> a >> b;</code> pedirá primero el valor de <code>a</code> y luego el valor de <code>b</code>;
+</p>
+<p>
+	<code>cout</code>
+	<br>
+	Esta función trabaja junto con el operador de <i>inserción</i> es decir <code><<</code>, juntos se vería así <code>cout<<</code>. Nota que estamos haciendo una inserción, pero ésta no es de nosotros a la computadora, sino al revés. Es decir, con esta función la computadora muestra en pantalla algo. Por ejemplo al declarar <code>cout << a;</code> donde <code>a</code> es una variable de cualquier tipo, estaremos mostrando en pantalla el valor de esa variable, no su nombre.
+</p>
+<p>
+	Si queremos mostrar un mensaje sólo tenemos que ponerlo entre comillas, así <code>cout << "Mensaje a mostrar";</code>. No olvides el <code>;</code> al final. Si queremos mostrar varias cosas en la misma salida, sólo hay que hacer varias inserciones. <code>cout << "Valor de la variable A " << A;</code> Nota que primero mostramos un mensaje y luego mostramos la variable, el nombre de la variable no va entre comillas. Nota también que antes de cerrar el mensaje puse un espacio extra, de no haber este espacio, el valor de <code>A</code> habría sido mostrado justo después de la letra 'A', que era la última del mensaje, es decir, <i>todo pegado</i>.
+</p>
+<p>
+	Por lo tanto si queremos mostrar varias variables en una misma salida, y para que sea fácilmente leída, debemos agregar espacios en blanco (como si fuera un mensaje) entre cada variable es decir <code>cout << a << " " << b;</code>. De no ponerlos los valores saldrían pegados.
+</p>
+<p>
+	Para mostrar un salto de línea podemos usar el carácter especial <code>\n</code>, que es interpretado como un salto de línea, cuando lo agregues no se mostrará ese texto, sino que solamente se mostrará un espacio. También podemos usar <code>endl</code> como si fuera una variable.
+</p>
+<div class="EjemploN">
+	<code>cout << "Este es un mensaje.\nFin.";</code> y <code>cout << "Este es un mensaje." << endl << "Fin.";</code>
+	<br>
+	Ambos mostrarán la siguiente salida y sin comillas:
+	<br>
+	"Este es un mensaje.<br>
+	Fin."
+</div>
+<p>
+	Es más confiable usar <code>\n</code> además genera ejecuciones más rápidas.
+</p>
+<div class="Nav">
+	<a href="{{ site.url }}/C/Introduccion/Librerias/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C/Introduccion/Funciones/" id="NDer">Tema siguiente</a>
+</div>

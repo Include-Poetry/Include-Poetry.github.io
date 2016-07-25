@@ -1,0 +1,104 @@
+
+html{
+	background-image: url('../Multimedia/Geometria.png');
+	background-size: 100%;
+	background-color: #fcfcfc;
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 100%;
+	/*border: 1px solid #000;*/
+	background-attachment: fixed;
+}
+body{
+	font-family: helvetica, sans-serif;
+	font-size: 100%;
+	margin: 0;
+	/*background-color: #fff; /* FDFDFD */
+}
+
+ul{
+   list-style: none;
+}
+p{
+	font-family: 'Roboto', sans-serif;	 /*Roboto*/
+	font-size: 19px;
+}
+a{
+  	color: #a2a2a2;
+	text-decoration: none;
+}
+h1{
+   	font-family: 'Oswald';
+	font-size: 36px;
+}
+
+.Pre-fondo{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 999999;
+}
+
+.Pre-img-i{
+	background: url('../Multimedia/Loading-i.gif') no-repeat center;
+	background-size: contain;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left:50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+	z-index: 9999999999999;
+}
+
+.Pre-img{
+	background: url('../Multimedia/Loading.gif') no-repeat center;
+	background-size: cover;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	left:50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+	z-index: 9999999999999;
+}
+
+.Pre-img-c{
+	background: url('../Multimedia/Loading-c.gif') no-repeat center;
+	background-size: cover;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	left:50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+	z-index: 9999999999999;
+}
+
+.Pre-img-m{
+	background: url('../Multimedia/Loading-m.gif') no-repeat center;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	border-radius: 300px;
+	position: absolute;
+	left:50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+	z-index: 9999999999999;
+}
+
+@media only screen and (max-width: 600px){
+	html{
+		background-image: url('../Multimedia/GeometriaM.png');
+	}
+}

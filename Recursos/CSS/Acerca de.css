@@ -1,0 +1,111 @@
+.Cuerpo{
+	margin-bottom: 0;
+}
+.CTexto{
+	color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+.Panoramica{
+	background-color: rgba(0,0,0,.8);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#Intro{
+	background-image: url('../Multimedia/Fondos/21.jpg');
+}
+.TPrin{
+	padding-top: 8%;
+	float: right;
+	padding-right: 5%;
+	font-family: 'Kalam', cursive;
+	color: #000;
+	font-size: 4em;
+}
+#P1{
+    background-image: url('../Multimedia/Fondos/22.jpg');
+}
+.ADSitio{
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding-top: 15%;
+	font-family: 'Kalam', cursive;
+	font-size: 1.2em;
+	padding-left: 3em; 
+	padding-right: 3em;
+	color: #000;
+	text-align: justify;
+	background: rgba(255,255,255,.8);
+	box-sizing: border-box;
+	overflow: auto;
+	opacity: 0;
+}
+
+.ADSitio span{
+	font-family: 'Kalam', cursive;
+	font-size: 3em;
+}
+#P2{
+    background-image: url('../Multimedia/Fondos/23.jpg');
+}
+.ADDesarrollador{
+	float: right;
+	width: 100%;
+	margin-top: 30%;
+	padding: 2em;
+	font-family: 'Kalam', cursive;
+	font-size: 1.2em;
+	color: #000;
+	text-align: justify;
+	background: rgba(255,255,255,.8);
+	box-sizing: border-box;
+	overflow: auto;
+	opacity: 0;
+}
+
+.ADDesarrollador span{
+	font-family: 'Kalam', cursive;
+	font-size: 3em;
+}
+.Columna{
+	float: left;
+	width: 50%;
+	height: 100%;
+	background-repeat: repeat;
+}
+
+@media only screen and (max-width: 600px){
+	.TPrin{
+		padding-top: 20%;
+		text-align: center;
+		font-family: 'Kalam', cursive;
+		color: #000;
+		font-size: 2.5em;
+	}
+	.ADSitio{
+		margin-top: 20px;
+		width: 100%;
+		height: auto;
+		font-size: .8em;
+		padding-left: 1.5em; 
+		padding-right: 1.5em;
+		padding-bottom: 20px;
+		text-align: left;
+	}
+	.ADDesarrollador{
+		width: 100%;
+		margin-top: 40px;
+		padding: 2em;
+		font-size: .8em;
+		text-align: left;
+	}
+	.Panoramica{
+		background-attachment: scroll;
+	}
+}

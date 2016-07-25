@@ -1,0 +1,211 @@
+---
+layout: General
+title: Tipos de variables en C++
+---
+<p>
+	En la vida diaria construimos y hacemos todo tipo de cosas, desde comida hasta computadoras, sin embargo, no utilizamos los mismos componentes para todas nuestras creaciones, si queremos hacer un pastel usamos harina, leche, mantequilla... que no son los mismos componentes que usaríamos si quisiéramos construir una casa (<s><int>a menos de que vivamos en el universo de Hansel y Gretel</s>) pues cada componente tiene características que son enfocadas a un cierto uso. En la programación pasa exactamente lo mismo.
+</p>
+<ul class="ListaD">
+	<li id="1L"><span>Concepto de variable</span></li>
+	<li id="2L"><span>Idea de tipos de variable</span></li>
+	<li id="3L"><span>Variables básicas en C++</span></li>
+	<li id="4L"><span>Declaración de una variable</span></li>
+	<li id="5L"><span>Limitaciones de las variables básicas</span></li>
+	<li id="6L"><span>Memoria y números binarios</span></li>
+	<li id="7L"><span>Tipos de variable especiales</span></li>
+	<li id="8L"><span>Parámetros signed y unsigned</span></li>
+	<li id="9L"><span>Código ASCII</span></li>
+	<li id="10L"><span>Conversiones de tipos</span></li>
+	<li id="11L"><span>Uso responsable de memoria</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Concepto de variable
+</div>
+<p>
+	Si ya has visto algo de <i>álgebra</i>, seguramente ya conoces lo que es una <a href="http://dle.rae.es/?id=bNTTsak" class="Ref" target="_blank">variable</a>. Una variable en sí es algo muy sencillo de concebir, es <b>algo que puede variar</b>. Con esa <i>variación</i> por lo general nos referimos a un valor, por ejemplo, el valor de un dolar en pesos mexicanos. Sin embargo, puede no ser solamente un número, sino también una palabra.
+</p>
+<div class="EjemploN">
+	Consideraremos a una variable con algo cuyo valor puede variar
+</div>
+<div class="Subtitulo" id="2">
+	Idea de tipos de variables
+</div>
+<p>
+	Cuando nos referimos a <i>tipos de variables</i> en realidad nos estamos refiriendo a distintos tipos de valores que una variable puede tener. Nota que no sólo decimos "distintos valores", sino <i>distintos tipos de valores</i>. Por ejemplo, imagina que, como muy a menudo, quieres hacer un pastel, necesitarás <i>mantequilla</i>, <i>azúcar</i>, <i>huevos</i>, <i>harina</i>, <i>cocoa</i>, <i>levadura</i>, <i>maicena</i> y <i>sal</i>.
+	Sin embargo, cada ingrediente puede interpretarse distinto. Por ejemplo, al hablar de harina, puede ser de trigo, de maíz, de avena, etc.
+</p>
+<p>
+	De esta manera podemos interpretar cada ingrediente como tipo de variable, y cada tipo de ingrediente como su valor, como decir <code class="cd">harina trigo</code>, refiriéndonos a que estamos hablando de una variable tipo <code class="cd">harina</code> con valor de <code class="cd">trigo</code>. Nota que no puede haber algo como <code class="cd">harina NataDulce</code>, porque <code class="cd">NataDulce</code> es un valor posible de una variable tipo <code class="cd">mantequilla</code>.
+</p>
+<div class="Subtitulo" id="3">
+	Variables básicas en C++
+</div>
+<p>
+	Así como en la cocina encontramos distintos tipos de variable, que pueden tener distintos tipos de valores. Las variables básicas en C/C++ son:
+</p>
+<p>
+	<code class="cd">int</code> Para valores tipo números enteros, por ejemplo \(5, 231, -3432\).
+	<br>
+	<code class="cd">float</code> Para valores tipo números no enteros, o con decimales, por ejemplo \(3.14, 823.23, -0.231\).
+	<br>
+	<code class="cd">char</code> Para valores tipo carácter. Un carácter es un <i>símbolo</i>, como los que usamos para escribir, por ejemplo 'T', 'c', 'r', '/', '5'. En este último caso el 5 será considerado como sólo un carácter, como sólo un símbolo y no un número.
+	<br>
+	<code class="cd">bool</code> Para valores tipo booleanos, es decir, de <i>afirmativo</i> o <i>negativo</i>, <i>cierto</i> o <i>falso</i>.
+	<br>
+</p>
+
+<div class="Subtitulo" id="4">
+	Declaración de variables
+</div>
+<p>
+	Cuando queremos utilizar algo, es de buena educación <b>pedirlo primero</b>, en C/C++ pasa exactamente lo mismo, aunque aquí es obligatorio. Cuando queremos usar una variable necesitamos primero <b>declararla</b>, y para hacer esto tomamos un formato como sigue:
+</p>
+<div class="EjemploPc">
+	<b>tipo-de-variable</b> nombre-de-variable[=valor]
+</div>
+<p>
+	Nota que lo que está entre corchetes es opcional, puedes o no dar el valor a la variable al mismo tiempo que la declaras. Podemos además declarar varias variables del mismo tipo separandolas con comas. Si quisiéramos declarar variables como las básicas, sería así:
+</p>
+{% highlight c++ %}
+int T=1401, variable=1, a;
+float pi=3.14, decimal, otra=0.23;
+char letra='C', mas;
+bool dicho=true, bandera=false;
+{% endhighlight %}
+<p>
+	Una variable puede tener cualquier nombre conformado por letras y/o números, que no incluya espacios, símbolos especiales, sea una palabra reservada del compilador (como el tipo de variable), ya lo tenga otra variable o función, o sea enteramente compuesta por números. <i>Sí hay distinción de mayúsculas y minúsculas</i> por lo que <code class="cd">int Variable</code> es diferente de <code class="cd">int variable</code>.
+	<br>
+	Nota que después de declarar una serie de variables de un mismo tipo hay que poner un <code>;</code>
+</p>
+<p>
+	En nuestro ejemplo, la variable <code>a</code>, <code>decimal</code> y <code>mas</code> que son las que no <i>inicializamos</i> es decir, que no les dimos nosotros un valor inicial, tienen un valor <i>aleatorio</i> que la computadora les ha dado. Este valor no es un valor <i>manipulable</i>, o al menos no hay que tratarlo como si lo fuera, pues es un valor que nosotros no conocemos. No hay problema si no inicializamos al momento de declarar una variable, siempre y cuando no la usemos hasta que no le hayamos dado un valor nosotros mismos. En cuanto nosotros ya le hayamos dado un valor podemos decir que ya está <i>inicializada</i>.
+</p>
+
+<div class="Subtitulo" id="5">
+	Limitaciones de las variables básicas
+</div>
+<p>
+	Cada tipo de variable tiene ciertas limitaciones que nos llevan a modificar nuestras declaraciones y que siempre debemos tener en cuenta, por ejemplo:
+</p>
+<p>
+	<code>int</code> Almacena típicamente cualquier número entero \(x\) donde \(-2 147 483 648 \le x \le 2 147 483 647\)
+	<br>
+	<code>float</code> Almacena típicamente cualquier número \(x\) donde \(1.18e^{-38} \le x \le 3.40e^{38}\) con una precisión científica de \(7\) dígitos después del punto decimal.
+	<br>
+	<code>char</code> Almacena sólo \(1\) carácter de los \(256\) posibles del código ASCII
+	<br>
+	<code>bool</code> Almacena sólo un valor <code>true</code> o <code>false</code>
+</p>
+<p>
+	De esta manera, si necesitáramos una variable entera mayor a \(2 147 483 647\) una simple variable <code>int</code> no nos bastaría. Sin embargo, y para esto tenemos otras variables, con alcances mayores. Aunque hay un factor muy importante a considerar para saber qué variables usar, además claro, del tipo de valor que queremos guardar; <b>la memoria</b>.
+</p>
+
+<div class="Subtitulo" id="6">
+	Memoria y números binarios
+</div>
+<p>
+	Sabemos de antemano que cuando hablamos de la memoria de una computadora o celular, nos referimos a la capacidad de almacenar archivos, programas, etc. Pero ¿te has preguntado por qué es así? Es decir ¿cómo es que un archivo ocupa espacio en un dispositivo? La respuesta detrás de esto está muy ligada a las variables de las que estamos hablando. Una variable, al igual que un archivo, necesita <i>estar registrada</i> en alguna parte, y ahí donde está ocupará espacio, y esto es así porque la computadora <i>recuerda</i> las características que estamos guardando.
+</p>
+<p>
+	Es decir, si tú declaras una variable <code>int T=1;</code> la computadora <i>anota</i> en alguna parte, que estarás usando una variable de tipo <code>int</code>, llamada <code>T</code> y que además tiene un valor de \(1\). Ahora, ya mencionamos que la computadora no puede recordar el valor de una variable de este tipo cuando es mayor a \(2 147 483 647\) pero <int>¿por qué es así? ¿No te parece un número demasiado específico?</int>
+</p>
+<p>
+	La capacidad de <i>almacenamiento</i> o más bien de <i>asignación</i> de una variable de un determinado tipo está basada en el espacio que la computadora dedica a cada tipo de variable, y también a la manera en que se guardan los valores en la memoria de una computadora.
+</p>
+<p>
+	Los equipos informáticos de hoy en día, utilizan el sistema <i>binario</i>, nosotros usamos el decimal, tenemos \(10\) posibles dígitos, mientras que el binario sólo tiene \(2\), el \(1\)  y el \(0\). Si estudiamos un poco el sistema binario, notaremos que se basa en potencias de \(2\). <a href="https://es.wikipedia.org/wiki/Sistema_binario" class="Ref" target="_blank">Aquí</a> podrás encontrar de manera explicita el funcionamiento de este sistema, si no lo conoces dale una leída y después continúa aquí.
+</p>
+<p>
+	La memoria de la computadora tiene también unidades de medida, seguro estás familiarizado con algunas de ellas, como el <i>megabyte</i> y el <i>gigabyte</i>. La unidad más chica es el <i>bit</i>, su valor puede ser \(0\) o \(1\) Un conjunto ordenado de \(8\) bits representa un <i>byte</i> por lo que se podría ver como \(10010110\), es decir como un número de \(8\) dígitos, donde cada dígito puede ser \(1\) o \(0\).
+</p>
+<p>
+	Cada tipo de variable tiene un tamaño en bits, de esta manera, si quisiéramos saber cuál es el valor que una determinada variable puede tener basta con hacer la operación \(2^n\) donde \(n\) es el tamaño en bits que la computadora asigna a cada uno. Los tamaños de las variables básicas son:
+</p>
+<p>
+	<code>int</code> Tamaño de \(32\) bits, por lo que su valor máximo es \(2^{32}=4294967296\) sin embargo, como tiene valores positivos y negativos esa cantidad se reduce a la mitad a los negativos y la mitad a los positivos y el cero.
+	<br>
+	<code>float</code> Tamaño de \(32\) bits, su tamaño final se ve reducido por los signos y precisión extra de \(7\) dígitos.
+	<br>
+	<code>char</code> Tamaño de \(8\) bits, su tamaño máximo es \(2^8 = 256\)
+	<br>
+	<code>bool</code> Tamaño de \(8\) bits, pero sólo es evaluado como <code>true</code> o <code>false</code>
+</p>
+<div class="Subtitulo" id="7">
+	Tipos de variables especiales
+</div>
+<p>
+	Su declaración es igual a las ya mencionadas, pero su uso es más especial por los valores que pueden tomar. (En el segundo caso la declaración sería <code>long long T=123;</code>)
+</p>
+<p>
+	<code>short</code> Para valores enteros. Tamaño de \(16\) bits.
+	<br>
+	<code>long long</code> Para valores enteros. Tamaño de \(64\) bits.
+	<br>
+	<code>double</code> Para valores decimales, exactitud de \(15\) dígitos después del punto decimal. Valores \(x\) donde \(2.23e^{-308} \le x \le 1.79e^{308} \)
+</p>
+
+<div class="Subtitulo" id="8">
+	Parámetros signed y unsigned
+</div>
+<p>
+	Como hemos estado viendo, los valores de las variables se ven reducidos de su máximo posible en bits porque usamos signos positivo y negativo. Si sólo usáramos signos positivos tendríamos más espacio para valores más grandes, de la totalidad de sus bits. Para hacer esto usamos los parámetros <code>signed</code> y <code>unsigned</code>.
+</p>
+<p>
+	<code>signed int T=1;</code> Es el parámetro por defecto, no es necesario escribirse. Indica que la variable puede tener valores <i>signados</i>.
+	<br>
+	<code>unsigned int T=14;</code> Indica que la variable sólo tendrá valores positivos, su valor máximo es \(2^n\) donde \(n\) es el tamaño en bits de la variable, en este caso \(32\).
+</p>
+<p>
+	Nota que el parámetro va antes del tipo de variable, y ese parámetro afectará a todas las variables declaradas en esa línea.
+</p>
+
+<div class="Subtitulo" id="9">
+	Código ASCII
+</div>
+<p>
+	Al principio se mencionó que una variable tipo <code>char</code> puede almacenar sólo caracteres, sin embargo, después se habla de un valor máximo de \(256\) <int>¿Es a caso una contradicción?</int> La verdad es que no. Una variable de este tipo lo que almacena en sí es un número con base decimal, un <i>código</i> que está asociado a un carácter. Este es el llamado <i>código ASCII</i>.
+</p>
+<a class="fresco" href="{{ site.url}}/Recursos/Multimedia/ASCII.png">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/ASCII.png">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/ASCII.png" alt="Código ASCII">
+	</picture>
+</a>
+<p>
+	Por lo que cuando hacemos esto <code>char letra='C';</code> en realidad es igual que hacer <code>char letra=65;</code>, sin embargo, en definitiva es más sencillo sólo poner la letra y no tener que recordar su código.
+</p>
+
+<div class="Subtitulo" id="10">
+	Conversiones de tipos
+</div>
+<p>
+	Seguramente te preguntaste qué pasa si a una variable tipo entero le das un valor decimal, es decir, si haces algo como <code>int C=9.21;</code>, o le asignas un carácter. Hay distintas combinaciones y por lo tanto distintas reacciones.
+</p>
+<p>
+	<code>int C=9.21;</code> Aquí se guardará sólo la parte entera de la asignación. Es decir será como poner <code>int C=9;</code>
+	<br>
+	<code>int var='T';</code> Cuando damos un carácter como valor a una variable tipo entero, lo que se guardará en realidad será su código ASCII, en este caso <code>84</code>
+	<br>
+	<code>bool algo=23;</code> Se interpretará como <code>true</code> cuando se asigne a una variable tipo booleana cualquier valor distinto de \(0\), cuando se le da este valor se tomará como de tipo <code>false</code>. Cabe decir que el compilador interpreta <code>false = 0</code> y <code>true = 1</code>
+	<br>
+	<code>int T=true;</code> Se tomarán los valores <code>false = 0</code> y <code>true = 1</code>
+</p>
+<p>
+	Nota que aunque el compilador no nos marque un error al hacer algo como lo de arriba, esto es algo <i>no recomendable</i>. Los primeros dos casos pueden darse en algunas situaciones, pero sólo cuando sea forzosamente necesario, los últimos dos son mucho menos comunes y de hecho sería muy extraño verse en una situación que te forzara a hacer algo así.
+</p>
+
+<div class="Subtitulo" id="11">
+	Uso responsable de memoria
+</div>
+<p>
+	Podríamos utilizar siempre variables tipo <code>long long</code> y así no preocuparnos mucho por los valores que pueda tener una variable de este tipo, sin embargo, esto usaría más memoria de la que suele ser necesaria. Por lo general las variables básicas signadas son suficientes para la mayoría de los problemas, y sólo hay que utilizar las especiales cuando las necesitemos, no es bueno el uso indiscriminado de memoria.
+</p>
+<p>
+	Si sabemos cuanto mide cada variable, y sabemos cuántas variables declaramos, podemos calcular cuál sería el requerimiento de espacio que necesite un programa que escribamos. Ten en cuenta que ese espacio no es el que medirá tu código fuente, o el archivo ejecutable, sino el que requerirá <i>la ejecución del programa</i>.
+</p>
+<p>
+	Si declaramos \(100\) variables tipo <code>int</code>, \(50\) tipo <code>char</code> y \(20\) tipo <code>double</code> estaremos ocupando en total \(100 \cdot 32 + 50 \cdot 8 + 20 \cdot 64 = 4880\) bits, es decir \(610\) bytes.
+</p>
+<div class="Nav">
+	<a href="{{ site.url }}/C/Introduccion/Compilador/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C/Introduccion/Librerias/" id="NDer">Tema siguiente</a>
+</div>

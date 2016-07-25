@@ -1,0 +1,175 @@
+---
+layout: General
+title: Funciones en Karel
+---
+<p>
+	<int>¡Por fin ha llegado la hora de programar!</int>
+	<br>
+	Sólo nos falta saber cómo empezar, y para ello tenemos que conocer lo que es una función. Lo primero que hay que saber, es que existen varios tipos de funciones:
+</p>
+<ul class="ListaD">
+	<li id="1L"><span>Función principal</span></li>
+	<li id="2L"><span>Funciones secundarias</span></li>
+	<li id="3L"><span>Ejemplos en la función principal</span></li>
+	<li id="4L"><span>Ejemplos de funciones secundarias</span></li>
+</ul>
+<div id="1" class="Subtitulo">Función principal</div>
+<p>
+	La <b>función principal</b> es la parte del código por donde empieza a realizarse la ejecución, es lo primero que busca el compilador cuando queremos que ejecute nuestro código, por lo tanto <b>siempre</b> debe estar presente en nuestros programas.
+	<br>
+	En el simulador de Karel, podemos encontrar la función principal al iniciar a hacer un nuevo programa. Para esto nos dirigimos a la pestaña de <b>programa</b> y a continuación en el botón nuevo.
+</p>
+<div class="EjemploK">
+	1&nbsp;iniciar-programa
+	<br>2&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>4&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>5&nbsp;finalizar-programa
+</div>
+<p>
+	Los comandos de las líneas <b>1</b> y <b>5</b> marcan el inicio y el fin del programa, todo lo que está entre ellas es nuestro programa.
+	<br>
+	En las líneas <b>2</b> y <b>4</b> encontramos los límites de nuestra función principal, es decir, al ejecutar nuestro programa comenzará con lo que hay justo debajo del <b>inicia-ejecucion</b>.
+	<br>
+	En este ejemplo Karel sólo se apagaría.
+</p>
+<div id="2" class="Subtitulo">
+	Funciones secundarias
+</div>
+<p>
+	Una función secundaria o <a class="Ref" href="https://es.wikipedia.org/wiki/Subrutina" target="_blank">subrutina</a> es una parte del código que puede ser <a class="Ref" href="http://dle.rae.es/?id=M4evQMl" target="_blank">invocada</a> desde cualquier parte del programa, esta parte del código tiene un nombre específico o <b>nombre de la función</b> y es refiriéndonos a ese nombre como ejecutamos sus comandos.
+</p>
+<p>
+	En Karel para declarar una función nueva, hay que usar la siguiente estructura:
+</p>
+<div class="EjemploK">
+	2&nbsp;define-nueva-instruccion <span>MiFuncion</span> como
+	<br>3&nbsp;inicio
+	<br>4&nbsp;&nbsp;&nbsp;avanza;
+	<br>5&nbsp;&nbsp;&nbsp;gira-izquierda;
+	<br>6&nbsp;fin;
+</div>
+<p>
+	Donde <b>define-nueva-instruccion</b> es una sentencia de control que dice que se está declarando una nueva función.
+	<br>
+	<b>MiFuncion</b> es el nombre de la función que estamos creando en este ejemplo. Puede ser cualquiera pero no puede llevar espacios o acentos, sí puede llevar guiones y números. No puede ser un comando o instrucción que ya exista en el compilador. Tampoco podemos repetir nombres de instrucciones.
+	<br>
+	<b>Como</b> es una palabra de control que le dice al compilador que está por definirse las instrucciones que conformarán esa función.
+	<br>
+	Al igual que con las sentencias condicionales y cíclicas usamos bloques de instrucciones cuando hablaremos de más de una instrucción, o podemos omitirlas si sólo usaremos una. En nuestro ejemplo a nuestra función de nombre "MiFuncion" la conforman dos instrucciones, avanzar y girar a la izquierda, es por ello que se usan bloques de inicio y fin.
+	<br>
+	Los nombres de las funciones que declaramos no se ponen en azul como el resto del código pero eso no significa que estén mal escritas.
+</p>
+<div class="EjemploN">
+	Ninguna función que declaremos puede estar antes de "iniciar-programa" o después de "finalizar-programa", tampoco puede estar dentro de otra función, sea la principal o una secundaria. Tampoco debemos declararla después de la función de donde es llamada, pues cuando el compilador revise que se llama a esa función aún no conoce la función en sí.
+</div>
+<p>
+	Para ejecutar la instrucción que acabamos de declarar, hay que llamarla por su nombre desde la parte del  programa que queremos que se ejecute. Podemos llamar una instrucción secundaria <b>desde cualquier parte</b>.
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>MiFuncion</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gira-izquierda;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>MiFuncion;</span>
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>11&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	En este ejemplo llamamos a nuestra función secundaria desde la función principal, en la línea 8.
+</p>
+<div class="EjemploN">
+	Prueba a ejecutar el código anterior y ver paso a paso lo que sucede con él.
+</div>
+<div id="3" class="Subtitulo">
+	Ejemplos en la función principal
+</div>
+<p>
+	Recuerda que cuando corremos un código compilado, siempre siempre va a empezar a ejecutar por la primera instrucción de la función principal. Algunos ejemplos de instrucciones en la función principal son:
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repetir 3 veces avanza;
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repetir 2 veces gira-izquierda;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gira-izquierda;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>09&nbsp;&nbsp;finalizar-programa
+</div>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces avanza;
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repetir 3 veces gira-izquierda;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mientras junto-a-zumbador hacer avanza;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>09&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	¿Notaste lo que hace Karel al girar tres veces a la izquierda?
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mientras frente-libre hacer avanza;
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si junto-a-zumbador entonces coge-zumbador;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>07&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	¿Encontraste el error en el código anterior?
+</p>
+<div id="4" class="Subtitulo">
+	Ejemplos de funciones secundarias
+</div>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>AvanzayGira</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gira-izquierda;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mientras frente-libre hacer <span>AvanzayGira</span>;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>11&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	¿Recuerdas el segundo ejemplo de la función principal?
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>gira-derecha</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repetir 3 veces gira-izquierda;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>gira-derecha</span>;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces avanza sino gira-izquierda;
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>13&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Y aquí una de las primeras implementaciones de las funciones secundarias y facilitadora del desarrollo de muchos programas, la función de <b>gira-derecha</b>.
+	<br>
+	<int>¿Ya notaste por qué funciona?</int>
+</p>
+<p>
+	<int>¡Felicidades! Ya sabes como empezar a hacer tus propios programas para Karel.</int>
+</p>
+<div class="Nav">
+	<a href="{{ site.url }}/Karel/Instrucciones/Ciclicas/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/Karel/Problemas/" id="NDer">Tema siguiente</a>
+</div>
