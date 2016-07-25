@@ -29,7 +29,7 @@ incremental: true;
 collections:
   C: 
     output: true
-    permalink: /C/:path/
+    permalink: /C++/:path/
   Karel:
     output: true
     permalink: /Karel/:path/
