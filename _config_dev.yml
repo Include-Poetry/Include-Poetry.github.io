@@ -22,7 +22,7 @@ url: "http://192.168.1.66:4000"
 host: 0.0.0.0
 
 # Excuidos de la conversión
-exclude: [No en git]
+exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace]
 
 incremental: true;
 
