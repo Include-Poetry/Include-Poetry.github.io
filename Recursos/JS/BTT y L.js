@@ -18,7 +18,7 @@ $(window).scroll(function() {
 			}, 500);
 		}
 	});
-});
+});	
 $('.VolverA').click(function() {
 	$('html, body').animate({
 		scrollTop: 0
@@ -268,6 +268,7 @@ function CambioEstado() {
 	setTimeout(function() {
 		document.getElementById("Contenedor").innerHTML = estados[contE];
 		$('#Contenedor').fadeIn(500);
+		//$(".LinkTour").animate({width:'toggle'},350);
 	}, 500);
 }
 

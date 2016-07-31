@@ -26,6 +26,11 @@ exclude: [No en git]
 
 incremental: true;
 
+paginate: 8
+paginate_path: "/Poetry/Pagina-:num/"
+
+gems: [jekyll-paginate]
+
 collections:
   C: 
     output: true
@@ -33,3 +38,6 @@ collections:
   Karel:
     output: true
     permalink: /Karel/:path/
+  posts:
+    output: true
+    permalink: /Poetry/:year/:month/:day/:title/

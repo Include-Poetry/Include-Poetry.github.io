@@ -7,7 +7,11 @@
 		<link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
 
 	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/General.css">
+	  	{% if page.url contains "Contacto/" %}
 	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/FContacto.css">
+	  	{% else %}
+	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/Reclutamiento.css">
+	  	{% endif %}
 	  	{% if jekyll.environment == 'production' %}
 		{% include analytics.html %}
 		{% endif %}
