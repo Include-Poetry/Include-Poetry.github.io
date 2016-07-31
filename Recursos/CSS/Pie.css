@@ -64,7 +64,9 @@
 	font-family: 'Kalam';
 	display: inline-block;
 	font-size: .8em;
-	padding-left: calc(100% /3);
+	z-index: 2;
+	text-align: center;
+	width: 100%;
 }
 #PIzq{
 	float: right;
@@ -92,9 +94,6 @@
 	#PTextos{
 		margin-left: 8%;
 		width: 92%
-	}
-	#PFirma{
-		padding-left: calc(100%/4);
 	}
 	#PIzq{
 		font-size: .7em;

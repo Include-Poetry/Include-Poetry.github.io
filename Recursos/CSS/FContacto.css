@@ -23,6 +23,7 @@
 
 form{
 	width: 100%;
+	-webkit-appearance: none; -moz-appearance: none;
 }
 
 .FElem{
@@ -40,6 +41,7 @@ form{
 }
 
 textarea{
+	-webkit-appearance: none; -moz-appearance: none;
 	margin-top: 20px;
 	float: left;
 	width: 50%;
@@ -52,6 +54,7 @@ textarea{
 }
 
 input[type="submit"]{
+	-webkit-appearance: none; -moz-appearance: none;
 	margin-top: 20px;
 	padding: 7px 0;
 	width: 150px;
@@ -80,7 +83,7 @@ input[type="submit"]{
 	.Titulo{
 		font-size: 2em;
 	}
-	.Contenido p, .ListaD, .EjemploN, .EjemploK, .EjemploC, .EjemploPc{
+	.Contenido p, .ListaContenido, .EjemploN, .EjemploK, .EjemploC, .EjemploPc{
 		font-size: 1em;
 	}
 	.FIzq{

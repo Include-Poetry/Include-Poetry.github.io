@@ -27,7 +27,7 @@
 	/*overflow: hidden;*/
 }
 
-.Contenido p{
+p{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 1.3em;
@@ -134,7 +134,7 @@ int{
 	filter: grayscale(0%);
 }
 
-.ListaD{
+.ListaContenido{
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.3em;
 	font-weight: lighter;
@@ -142,10 +142,10 @@ int{
 	max-width: 400px;
 	border-left: 1px dotted #000;
 }
-.ListaD li{
+.ListaContenido li{
 	margin-top: .2em;
 }
-.ListaD span{
+.ListaContenido span{
 	cursor: pointer;
 	border-bottom: 1px dotted #999;
 }
@@ -154,10 +154,12 @@ int{
 	font-family: 'Roboto', sans-serif;
 	font-weight: lighter;
 	list-style: square;
-	max-width: 400px;
+	max-width: 80%;
+	word-break: normal;
 }
 .ListaDGe{
 	font-size: 1.3em;
+	font-family: 'Roboto', sans-serif;
 }
 
 .VolverA{
@@ -199,6 +201,7 @@ int{
 	border: 1px solid #ddd;
 	font-family: 'Inconsolata', 'Consolas';
 	font-size: 1em; 
+	display: inline-block;
 }
 .Nav{
 	width: 100%;
@@ -251,6 +254,8 @@ int{
 	font-family: 'Kalam';
 	margin-top: 20px;
 	width: calc(100% - 62px);
+	width: -webkit-calc(100% - 62px);
+	width: -moz-calc(100% - 62px);
 }
 #buscar{
 	font-family: FontAwesome;
@@ -346,7 +351,7 @@ int{
 	.Subtitulo{
 		font-size: 1.5em;
 	}
-	.Contenido p, .ListaD, .EjemploN, .EjemploK, .EjemploC, .EjemploPc{
+	p, .ListaContenido, .EjemploN, .EjemploK, .EjemploC, .EjemploPc, .ListaDG li{
 		font-size: 1em;
 	}
 	.Cuerpo{
@@ -371,6 +376,8 @@ int{
 	#search-box{
 		font-size: 1em;
 		width: calc(100% - 42px);
+		width: -webkit-calc(100% - 42px);
+		width: -moz-calc(100% - 42px);
 	}
 	#search-results{
 		margin-top: 30px;

@@ -1,0 +1,73 @@
+#Otro, #OtroSad{
+	font-family: 'Kalam', cursive;
+	margin: 20px auto;
+	width: 150px;
+	display: block;
+	border-bottom: 1px solid #fcfcfc;
+	color: #686A6C;
+	font-size: 1em;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+#Otro:hover{
+	color: #000;
+	border-bottom: 1px solid #D2D3D5;
+}
+#OtroSad:hover{
+	color: #000;
+	border-bottom: 1px solid #D2D3D5;
+}
+
+#TGracias, #TError, #TextoG, #TextoE, #Otro, #OtroSad{
+	display: none;
+}
+
+#contactform{
+	width: 100%;
+}
+
+.FElem, textarea{
+	-webkit-appearance: none; -moz-appearance: none;
+	width: 100%;
+	padding: 10px 5px;
+	border: none;
+	border-top: 1px solid #D2D3D5;
+	border-bottom: 1px solid #D2D3D5;
+	font-family: 'Kalam', cursive;
+	margin-bottom: 10px;
+	font-size: 1em;
+}
+
+textarea{
+	font-size: 1em;
+	height: 150px;
+	margin-bottom: 20px;
+}
+
+#Enviar{
+	-webkit-appearance: none; -moz-appearance: none;
+	margin: 0 auto;
+	padding: 7px 0;
+	width: 150px;
+	box-sizing: border-box;
+	font-size: 1em;
+	font-family: 'Kalam', cursive;
+	background-color: #f8f8f8;
+	border: 1px solid #ddd;
+	margin-left: calc(50% - 75px);
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+#Enviar:hover{
+	color: #f8f8f8;
+	background-color: #000;
+}

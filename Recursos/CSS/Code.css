@@ -1,12 +1,12 @@
 .highlight{
 	max-height: 400px;
 	overflow-y: auto;
+	overflow-x: auto;
 }
 .highlight pre{
 	font-size: 1.4em; 
 	margin: 0; 
 	max-width: 100%;
-	overflow: auto;
 }
 .highlight .language-c--{
 	background: initial;

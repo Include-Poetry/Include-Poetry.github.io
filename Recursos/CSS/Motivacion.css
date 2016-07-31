@@ -84,7 +84,7 @@ iframe{
 	text-decoration: none;
 	color: #000;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
 	.Pantalla{
 		background-attachment: scroll;
 	}
