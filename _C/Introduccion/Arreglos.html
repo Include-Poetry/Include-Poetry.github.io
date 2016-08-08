@@ -42,12 +42,12 @@ title: Arreglos en C++
 <p>
 	Para declarar un arreglo primero tenemos que decir de qué tipo será, puede ser de cualquiera de los tipos de variables que ya vimos. Luego el nombre que tendrá el arreglo y al final y entre corchetes la cantidad de variables que tendrá este arreglo. Por ejemplo:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Declaración de un arreglo
 int primero[10];
 char segundo[5];
 bool otro[22];
-{% endhighlight %}
+</textarea>
 <p>
 	En estos casos tendremos \(10\) variables tipo <code>int</code>, \(5\) tipo <code>char</code> y \(22\) tipo <code>bool</code>. Ahora, recuerda que el valor de cada variable dentro del arreglo es independiente al resto de los valores de ese mismo arreglo. Para acceder a cada variable individualmente tenemos que mencionar primero su <i>índice</i>.
 </p>
@@ -61,7 +61,7 @@ bool otro[22];
 <p>
 	Al igual que cualquier otra variable ya vista, los arreglos y sus locaciones necesitan inicializarse para que podamos empezar a usar sus valores, hay varias maneras:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Inicialización 
 #include <iostream>
 using namespace std;
@@ -77,14 +77,14 @@ int main(){
     cout << arreglo[9];
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	La salida del código anterior es <code>5 12 2</code>. Las <i>locaciones</i> o variables del arreglo que no inicializamos, al igual que una variable no inicializada, tiene un valor <i>basura</i> que no debemos usar. Tampoco debemos usar la locación con índice del tamaño de nuestro arreglo, (en el ejemplo \(10\)), o de un valor mayor, pues ese valor es <i>inestable</i> y para nada confiable. Hacer lo que llamamos "<i>salirse de un arreglo</i>" (es decir, referirse a una locación mayor o igual al número de locaciones declarado) puede causar muchos errores en el compilador, si necesitas un arreglo más grande, entonces declara uno con más locaciones. En este ejemplo se han inicializado algunas locaciones de manera manual.
 </p>
 <p>
 	También podemos inicializarlo todo de una vez, sin hacer uso de tantas asignaciones, de la siguiente manera:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Inicialización de un arreglo
 #include <iostream>
 using namespace std;
@@ -96,11 +96,11 @@ int main(){
     cout << arreglo[3];
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	De esta manera, separamos con comas cada valor dentro de las llaves, estos valores se irán asignando a cada locación, en el mismo orden en el que se especifica dentro de las llaves. De esta manera el programa anterior nos daría la salida <code>212 5 2312</code>. También podemos inicializar sólo una parte del arreglo, pero en el mismo orden anterior.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Inicialización de un arreglo
 #include <iostream>
 using namespace std;
@@ -118,7 +118,7 @@ int main(){
     cout << otro[2];
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	La salida del anterior código es <code>5 213 2312</code> en la primera línea y <code>n p !</code>
 </p>
@@ -132,7 +132,7 @@ int main(){
 <p>
 	Ahora imagina la siguiente situación; necesitas hacer un programa que lea del teclado una 10 números, y que después de haberlos ingresado todos, los muestre en pantalla en el mismo orden en el que fueron ingresados. De manera manual tendríamos que poner \(10\) <code>cin</code> pidiendo en cada una una locación distinta, para después poner \(10\) <code>cout</code> mostrando cada una. Sin embargo de manera dinámica esto sería mucho más sencillo:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Uso de un arreglo
 #include <iostream>
 using namespace std;
@@ -148,7 +148,7 @@ int main(){
     }
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Nota como la variable <code>i</code> irá cambiando a medida que el ciclo se repite, y para cada cambio su valor hace referencia a una locación de memoria distinta. De esta manera podemos manejar el arreglo con muy pocas líneas. <int>genial ¿no crees?</int>
 </p>
@@ -162,7 +162,7 @@ int main(){
 <p>
 	Tomemos entonces la definición de un arreglo como una composición de partes ordenadas. Ahora, ya vimos que cada parte es una variable. Si estas variables son enteros, tenemos entonces una composición de números enteros. ¿y si estas variables son letras o simplemente caracteres?
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Arreglo de caracteres
 #include <iostream>
 using namespace std;
@@ -180,14 +180,14 @@ int main(){
     
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	La salida del anterior código es <code>Hola</code>. Tras este principio es como usamos <i>palabras</i> como variables. Sin embargo hay varias cosas importantes a notar, por ejemplo, en el ejemplo declaramos un arreglo de \(4\) locaciones, que es exactamente la misma cantidad de letras que tiene la palabra que definimos con ella. ¿Qué pasaría si usamos más letras que locaciones declaradas? Pues nos estaríamos saliendo del arreglo, y eso, como ya dijimos, no puede ser bueno.
 </p>
 <p>
 	¿Y qué pasaría si hubiéramos usado menos letras que locaciones? Pues tendríamos espacios sin <i>inicializar</i>, por lo que al recorrer el arreglo completo para mostrar la palabra, obtendríamos un resultado extraño. Por ejemplo:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Arreglo de caracteres
 #include <iostream>
 using namespace std;
@@ -205,11 +205,11 @@ int main(){
     
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Al correr el código anterior, obtuve como salida <code>Hola  ê "</code> que muy seguramente es distinta a la que tú obtendrías. Esos valores que no aparecen o son caracteres extraños, pertenecen a los espacios sin inicializar. Teniendo este problema de la cantidad de locaciones y la cantidad de caracteres utilizados, <i>C++</i> nos da una gran ventaja.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Arreglo de caracteres
 #include <iostream>
 using namespace std;
@@ -226,14 +226,14 @@ int main(){
     
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	De esta manera no nos preocupamos si se ingresa una cantidad menor de caracteres, el compilador sabrá cuántas hemos inicializado, y además para cuando queramos mostrarlo, mostrará sólo las locaciones utilizadas. Ten en cuenta que este método de solicitar y mostrar el arreglo por su nombre y sin índices, sólo funciona con arreglos tipo <code>char</code>. El programa anterior con entrada <code>Prueba</code> mostrará como salida <code>Prueba</code>. Nota que tenemos como máximo la cantidad total de locaciones, así que una entrada como <code>parangaricutirimicuaro</code> no podrá ser almacenada en su totalidad, y por lo tanto no se podrá mostrar más allá de los primero \(10\) caracteres, que son los que se almacenaron. Una entrada así produciría la salida: <code>parangaric</code>, es decir, sólo las primeras \(10\) letras.
 </p>
 <p>
 	Recuerda que aún con el método anterior, la palabra ingresada sigue perteneciendo a un arreglo, y como tal, podemos referirnos a cada locación individualmente. También podemos inicializar un arreglo de caracteres de la siguiente manera:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Inicialización de un arreglo
 #include <iostream>
 using namespace std;
@@ -246,7 +246,7 @@ int main(){
     cout << palabra[1];
     return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Se mostraría la salida <code>u P a r</code>. Con todo esto en mente ¿cómo mostrarías una palabra de 8 letras al revés?
 </p>

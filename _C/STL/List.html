@@ -1,12 +1,185 @@
 ---
-layout: EnDesarrollo
-title: En desarrollo
+layout: General
+title: Contenedor list
 ---
 
-<div class="Titulo">#Include Poetry aún está en desarrollo</div>
 <p>
-	<int>Si encuentras esta página es porque esta sección aún está bajo desarrollo, pero no te preocupes, estamos trabajando para hacer crecer a #Include Poetry, te esperamos por aquí luego.</int>
+	La clase <code>list</code> es un contenedor que soporta la inserción y eliminación de elementos desde cualquier parte del mismo.
 </p>
-<div class="EjemploN">
-	<a class="Ref" href="index.html">Volver al inicio</a>
+<ul class="ListaContenido">
+	<li id="1L"><span>Funcionamiento</span></li>
+	<li id="2L"><span>Eficiencia</span></li>
+	<li id="3L"><span>Funciones miembro</span></li>
+	<li id="4L"><span>Funciones no miembro</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Funcionamiento
+</div>
+<p>
+	Imagina un elemento <code>list</code> como un vector, pero que se pueden insertar y remover elementos de cualquier parte del contenedor en un tiempo muy eficiente.
+</p>
+<p>
+	Sin embargo, la desventaja de esta estructura, es que aunque es muy rentable en tiempo, es más costosa en memoria.
+</p>
+
+<div class="Subtitulo" id="2">
+	Eficiencia
+</div>
+<p>
+	Insertar o remover un elemento | constante | \(O(l)\)
+</p>
+
+<div class="Subtitulo" id="3">
+	Funciones miembro
+</div>
+<table class="Tabla">
+	<tr>
+		<th>Función</th>
+		<th>Definición</th>
+	</tr>
+	<tr>
+		<td>(constructor)</td>
+		<td>Construye un contenedor <code>list</code>, es lo que nos permite <i>declararlo</i>.</td>
+	</tr>
+	<tr>
+		<td>(destructor)</td>
+		<td>Destruye el <code>list</code></td>
+	</tr>
+	<tr>
+		<td>Operador <code>=</code></td>
+		<td>Asigna valores al contenedor</td>
+	</tr>
+	<tr>
+		<td><code>get_allocator</code></td>
+		<td>Regresa el asignador asociado</td>
+	</tr>
+	<tr>
+		<th colspan="2">Acceso a elementos</th>
+	</tr>
+	<tr>
+		<td><code>front</code></td>
+		<td>Accede al primer elemento del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>back</code></td>
+		<td>Accede al último elemento del contenedor</td>
+	</tr>
+	<tr>
+		<th colspan="2">Iteradores</th>
+	</tr>
+	<tr>
+		<td><code>begin</code> <code>cbegin</code></td>
+		<td>Devuelve un iterador al principio del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>end</code> <code>cend</code></td>
+		<td>Devuelve un iterador al final del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>rbegin</code> <code>crbegin</code></td>
+		<td>Devuelve un iterador reverso al principio del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>rend</code> <code>crend</code></td>
+		<td>Devuelve un iterador reverso al final del contenedor</td>
+	</tr>
+	<tr>
+		<th colspan="2">Capacidad</th>
+	</tr>
+	<tr>
+		<td><code>empty</code></td>
+		<td>Checa si el contenedor está vacío</td>
+	</tr>
+	<tr>
+		<td><code>size</code></td>
+		<td>Regresa el número de elementos en el contenedor</td>
+	</tr>
+	<tr>
+		<td><code>max_size</code></td>
+		<td>Regresa el máximo número posible de elementos</td>
+	</tr>
+	<tr>
+		<th colspan="2">Modificadores</th>
+	</tr>
+	<tr>
+		<td><code>clear</code></td>
+		<td>Limpia el contenido del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>insert</code></td>
+		<td>Inserta elementos en el contenedor</td>
+	</tr>
+	<tr>
+		<td><code>erase</code></td>
+		<td>Borra elementos</td>
+	</tr>
+	<tr>
+		<td><code>push_back</code></td>
+		<td>Agrega un elemento al final del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>pop_back</code></td>
+		<td>Quita el último elemento del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>push_front</code></td>
+		<td>Agrega un elemento al principio del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>pop_front</code></td>
+		<td>Quita el primer elemento del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>resize</code></td>
+		<td>Cambia la cantidad de elementos almacenados</td>
+	</tr>
+	<tr>
+		<td><code>swap</code></td>
+		<td>Intercambia el contenido</td>
+	</tr>
+	<tr>
+		<th colspan="2">Operaciones</th>
+	</tr>
+	<tr>
+		<td><code>merge</code></td>
+		<td>Mezcla dos listas ordenadas</td>
+	</tr>
+	<tr>
+		<td><code>splice</code></td>
+		<td>Mueve elementos de otra lista</td>
+	</tr>
+	<tr>
+		<td><code>remove</code> <code>remove_if</code></td>
+		<td>Elimina elementos que cumplan con cierto criterio</td>
+	</tr>
+	<tr>
+		<td><code>reverse</code></td>
+		<td>Invierte el orden de los elementos</td>
+	</tr>
+	<tr>
+		<td><code>unique</code></td>
+		<td>Remueve elementos duplicados consecutivos</td>
+	</tr>
+	<tr>
+		<td><code>sort</code></td>
+		<td>Ordena los elementos</td>
+	</tr>
+</table>
+
+<div class="Subtitulo" id="4">
+	Funciones no miembro
+</div>
+<table class="Tabla">
+	<tr>
+		<th>Función</th>
+		<td>Definición</td>
+	</tr>
+	<tr>
+		<td>Operadores <code>==</code>, <code>!=</code>, <code><</code>, <code><=</code>, <code>></code>, <code>>=</code></td>
+		<td>Compara lexicográficamente los valores del contenedor</td>
+	</tr>
+</table>
+
+<div class="Nav">
+	<a href="{{ site.url }}/C++/STL/Stack/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C++/STL/Pair/" id="NDer">Tema siguiente</a>
 </div>

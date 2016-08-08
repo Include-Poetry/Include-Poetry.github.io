@@ -74,6 +74,20 @@
 .btn-multi input:not(:checked) ~ label > .icon {
   opacity: 1;
 }
+#lgrande{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  cursor: initial;
+  top: 0;
+  left: 0;
+}
+.btn-multi input:not(:checked) ~ #lgrande{
+  display: none;
+}
+#botonsitos{
+  z-index: 100;
+}
 .btn-multi label {
   position: relative;
   height: 110px;
@@ -84,6 +98,10 @@
   transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   cursor: pointer;
+}
+#lgrande{
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
 }
 .btn-multi label .btn {
   position: absolute;
