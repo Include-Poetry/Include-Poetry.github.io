@@ -338,6 +338,39 @@ int{
 	background: #000;
 }
 
+.Tabla {
+    font-family: 'Roboto', sans-serif;
+    border-collapse: collapse;
+    background-color: #fcfcfc;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Tabla td:first-child{
+	width: 35%;
+}
+
+.Tabla td, .Tabla th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.Tabla tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.container-tab1{
+	width: auto;
+}
+
+.ace_editor {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+}
+
+
 /* ------ Celular ------- */
 @media only screen and (max-width: 600px){
 	.Contenido{

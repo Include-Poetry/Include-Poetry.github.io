@@ -25,7 +25,7 @@ title: Sentencias en C++
 	<br>
 	Para agregar un comentario en línea debemos agregar dos <i>slash</i> seguidos, uno detrás del otro <code>//</code> lo que está a la derecha de este símbolo será ignorado por el compilador.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 #include <iostream>
 using namespace std;
 
@@ -33,7 +33,7 @@ int main(){
    cout << "Hola mundo, desde #iP";//Mensaje de #iP
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Nota que la instrucción <code>cout</code> y <code>return</code> sí serán tomadas en cuenta por el compilador, sin embargo el comentario que agregamos no se considerará, aunque lo podremos ver en el editor. Estos comentarios se llaman así porque marcan como comentario toda la línea en que se encuentran, pero sólo después del <code>//</code>
 </p>
@@ -42,7 +42,7 @@ int main(){
 	<br>
 	Si queremos hacer un comentario más extenso, que ocupe varias líneas del código, podemos agregar varios comentarios en línea, por ejemplo:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 #include <iostream>
 using namespace std;
 
@@ -53,11 +53,11 @@ int main(){
    cout << "Hola mundo, desde #iP";//Mensaje de #iP
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Sin embargo, puede resultar tedioso poner muchos <code>//</code> si vamos a comentar una parte muy grande del programa, y para esto tenemos los comentarios <i>de varias líneas</i> que marcarán como tal a todo lo que esté entre <code>/*</code> y <code>*/</code>. El mensaje anterior escrito con estos comentarios sería así:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 #include <iostream>
 using namespace std;
 
@@ -68,11 +68,11 @@ int main(){
    cout << "Hola mundo, desde #iP";
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Como recordarás, <i>la práctica y la organización hacen al maestro</i>, mantener nuestros códigos ordenados es muy importante, tanto como lo es agregar comentarios, puedes usarlos para especificar qué estabas haciendo en las líneas difíciles, cómo lograste descifrar el problema, qué método implementaste o qué problema estabas realizando. Todo lo que puedas necesitar para que si un día vuelves a ver un viejo código tuyo, recuerdes cómo lo hiciste.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Problema de "Hola mundo"
 // Realizado por #iP
 #include <iostream>
@@ -82,7 +82,7 @@ int main(){
    cout << "Hola mundo, desde #iP";
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <div class="Subtitulo" id="2">
 	Selección - if y else
 </div>
@@ -101,7 +101,7 @@ int main(){
 	<br>
 	Un ejemplo completo sería:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia if
 #include <iostream>
 using namespace std;
@@ -117,13 +117,13 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	En el ejemplo anterior la sentencia de la línea 7 realizará la acción entre sus llaves, debido a que la variable <code>T</code> en efecto es mayor que \(3\). La sentencia de la línea 11 no realizará sus acciones pues la variable <code>A</code> tiene como valor <code>false</code>.
 	<br>
 	También puede evaluar con los operadores de conjunción y disyunción, <code>&&</code> y <code>||</code>
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia if y operadores && y ||
 #include <iostream>
 using namespace std;
@@ -140,14 +140,14 @@ int main(){
    cout << N << " " << I;
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Al final de la ejecución del anterior programa nuestras variables quedarán así <code>N = 50</code> e <code>I = 10</code>. <int>Prueba a ejecutarlo en tu <i>IDE</i> favorito</int>.
 </p>
 <p>
 	La sentencia <code>if</code> puede ser utilizada agregando un <code>else</code> al final de su bloque. Las acciones del bloque de éste último serán ejecutadas si el valor booleano evaluado <i>no</i> es verdadero. De hecho, la traducción inmediata de <code>else</code> es <i>sino</i>.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia if con else
 #include <iostream>
 using namespace std;
@@ -162,7 +162,7 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	En este caso como <code>A</code> no es mayor \(13\) sólo se mostrará el mensaje <code>La variable A no es mayor a 13</code>. De haber sido mayor ese mensaje nunca se habría mostrado, sólo se habría mostrado el mensaje de la línea 8.
 </p>
@@ -173,7 +173,7 @@ int main(){
 <p>
 	A diferencia de <code>if</code> esta sentencia no trabaja directamente con un valor <i>booleano</i> sino que trabaja con uno de los valores que conformarían a ese valor. Seguramente esto no ha quedado muy claro, así que vamos a revisarlo por partes. Lo primero es su estructura.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Estructura de switch
 switch ( x ){
    case y:
@@ -186,7 +186,7 @@ switch ( x ){
       // Acciones
       break;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	<code>x</code> debe ser una variable tipo <code>int</code> o <code>char</code>, no de otro tipo.
 	<br>
@@ -200,7 +200,7 @@ switch ( x ){
 <p>
 	Pueden haber tantos casos como gustes, y dentro de cada caso pueden haber las acciones que tú decidas. Un ejemplo real sería:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Uso switch
 #include <iostream>
 using namespace std;
@@ -240,7 +240,7 @@ int main(){
    return 0;
 }
 
-{% endhighlight %}
+</textarea>
 <p>
 	Ejecuta el anterior código y pon mucha atención a la salida que produce y el por qué produce esa salida. Prueba y cambia los valores de las variables y los casos.
 </p>
@@ -254,16 +254,16 @@ int main(){
 <p>
 	La sentencia <code>while</code> repite las acciones que abarca y en el mismo orden, mientras el valor booleano que evalúa sea verdadero. Su estructura es la siguiente.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Estructura de while
 while ( valor_booleano ){
    // Acciones a repetir
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Recuerda que por <code>valor_booleano</code> debemos entender cualquier expresión que nos devuelva un valor <code>true</code> o <code>false</code>, como puede ser una <i>comparación</i> o una <i>variable o función booleana</i>. También podemos usar operadores de <i>conjunción</i> y <i>disyunción</i>. Ahora, imagina el siguiente ejemplo:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Uso de while
 #include <iostream>
 using namespace std;
@@ -275,11 +275,11 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	¿Cuántas veces se mostrará el mensaje "<i>hola</i>"? No es necesario pensarlo muchas veces si nos damos cuenta de que la variable <code>T</code> siempre va a ser mayor a \(0\), esto haría que el programa nunca terminara, pues se quedaría <i>ciclado</i>, es decir, la ejecución estaría en un ciclo interminable. Aquí está el factor principal que debemos tener en cuenta al utilizar una estructura cíclica, el asegurarnos de que <i>termine en algún momento</i>. En el ejemplo anterior para que ese ciclo termine la variable <code>T</code> tiene que cambiar. Podemos hacer lo siguiente:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Uso de while
 #include <iostream>
 using namespace std;
@@ -292,7 +292,7 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	De esta manera, la ejecución sería algo así:<br>
 	Se declara la variable <code>T</code> con valor de \(10\).<br>
@@ -304,7 +304,7 @@ int main(){
 <p>
 	¿Cuántas veces se mostrará el mensaje "<i>hola</i>"? ¿Por qué pasa así? Prueba ahora con este código:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Uso de while
 #include <iostream>
 using namespace std;
@@ -322,7 +322,7 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	¿Recuerdas la diferencia entre <code>T--;</code> y <code>--T;</code>?
 </p>
@@ -333,24 +333,24 @@ int main(){
 <p>
 	En base al siguiente segmento de código:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 int T = 5;
 while ( T > 10 ){
    cout << "Mensaje\n";
    T++;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	¿Cuántas veces se mostrará la palabra "<i>Mensaje</i>"? En efecto, no se mostrará ninguna vez, pues <code>T</code> no fue mayor de \(10\) al llegar al <code>while</code>. Si hubiéramos querido que primero se ejecutara lo que hay en las líneas 3 y 4 hubiéramos tenido que usar la estructura <code>do{} while()</code> justo así:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Estructura do while
 int T = 5;
 do {
    cout << "Mensaje\n";
    T++;
 } while( T > 10 );
-{% endhighlight %}
+</textarea>
 <p>
 	Nota que primero ponemos la palabra reservada <code>do</code>, luego entre llaves lo que queremos realizar en el ciclo, y después de esas llaves la palabra reservada <code>while</code> seguido y entre paréntesis de su valor booleano de control, que en este ejemplo fue una comparación.
 	<br>
@@ -363,12 +363,12 @@ do {
 <p>
 	La última sentencia cíclica (<s><int>y mi favorita</int></s>) es la estructura <code>for</code>. Ésta es un poco diferente a las dos anteriores, su estructura es así:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Estructura for
 for ( b1; b2; b3 ){
    // Acciones a repetir
 }
-{% endhighlight %}
+</textarea>
 <p>
 	<int>Es importante que sepas que al poner <code>b1</code>, <code>b2</code> y <code>b3</code>, no se hace referencia a una variable en sí, sólo es para referencia en la explicación</int>.<br>
 	Primero tenemos que poner la palabra reservada <code>for</code>, indica que sigue ese ciclo.<br>
@@ -377,12 +377,12 @@ for ( b1; b2; b3 ){
 	En donde está <i>b3</i> irá la (o las) modificaciones a la (o las) variables de control.<br>
 	Para que quede bien claro, un ejemplo completo es:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Estructura for
 for ( int T=0; T < 10; T++ ){
    cout << T << " ";
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Nota que nuestra variable de control se declaró ahí adentro, puedes declararla ahí o si ya la tienes declarada antes no hay ningún problema. Lo que sí es muy importante es que tiene que estar ya inicializada.<br>
 	El valor booleano de control en este ejemplo es una condición, que nos dice que mientras <code>T</code> sea menor que \(10\) se realizarán las instrucciones que están en esas llaves.<br>
@@ -402,7 +402,7 @@ for ( int T=0; T < 10; T++ ){
 	También podemos no utilizar la variable de control en el bloque de <i>b2</i>, pero siempre siempre debe haber algo ahí que devuelva un valor booleano.<br>
 	Debido a esto podemos escribir un programa como este:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Estructura for
 #include <iostream>
 using namespace std;
@@ -428,7 +428,7 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	Analiza la ejecución de el código anterior. ¿Por qué en un momento se muestra en una línea <code>10 10 10</code>?
 </p>
@@ -446,7 +446,7 @@ int main(){
 	<code>break</code><br>
 	Esta sentencia hace que al momento de que la ejecución pasa por ella, se <i>salga</i> de la sentencia cíclica en la que está metida sin importar el valor booleano de control. Por ejemplo:
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia break
 #include <iostream>
 using namespace std;
@@ -462,7 +462,7 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
 	En este caso sólo se mostrará \(4\) veces la palabra <i>Algo</i>, y eso será cuando <code>A</code> tenía los valores \(0, 1, 2, 3\) pues cuando vale \(3\) mostrará ese valor, para luego hacer que se cumpla la condición de la línea 9, esto ocasionará que se ejecute el <code>break</code> de la línea 10 y que por lo tanto, se salga del ciclo.<br>
 	Seguramente también recuerdas que encontramos <code>break</code> anteriormente en la estructura <code>switch</code> ¿Notas su funcionamiento ahí también? Aunque <code>switch</code> no es una estructura cíclica puede verse afectada por <code>break</code>.
@@ -471,7 +471,7 @@ int main(){
    <code>continue</code><br>
    Esta sentencia se <i>brinca</i> una iteración, justo la iteración en la que se aplicó esta sentencia. No se sale del ciclo completo, sino que sólo no hace una repetición.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia continue
 #include <iostream>
 using namespace std;
@@ -485,7 +485,7 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
    En este ejemplo se estaría mostrando el valor de <code>T</code>, pero cuando su valor sea \(4\), es decir, cuando la condición del <code>if</code> de la línea 7 se cumpla, se <i>saltará</i> lo que había después y se seguirá con el resto de las iteraciones. En este caso este programa mostraría la salida <code>1 2 3 5 6 7 8 9 10 </code>.
 </p>
@@ -493,7 +493,7 @@ int main(){
    <code>goto</code><br>
    Esta para el funcionamiento de esta sentencia, necesitamos declarar previamente una <i>etiqueta</i>. Esta etiqueta se compone de un nombre válido seguido de dos puntos, va ubicada en cualquier parte del código. Una etiqueta no lleva un <i>tipo</i> que la preceda, sólo es el nombre válido y dos puntos. Al momento de que la ejecución pase por la sentencia <code>goto</code> se redirigirá hacia la línea donde está esa etiqueta y se seguirá desde ahí.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia goto
 #include <iostream>
 using namespace std;
@@ -512,11 +512,11 @@ int main(){
    }
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
    El anterior programa mostraría la salida <code>Otro mensaje 0 1 2 3 4 5 6 7 8 9 </code>. El mensaje de la línea 8 no se mostraría, sin embargo la variable <code>letra</code> sí se declaró. No se puede inicializar en una parte del código que sea saltado por un <code>goto</code>, de hacerse una inicialización será ignorada.
 </p>
-{% highlight c++ linenos %}
+<textarea class="editor">
 // Sentencia goto
 #include <iostream>
 using namespace std;
@@ -538,7 +538,7 @@ int main(){
    cout << letra;
    return 0;
 }
-{% endhighlight %}
+</textarea>
 <p>
    La salida al final será <code>Otro mensaje 0 1 2 3 4 5 6 7 8 9 L</code>.
 </p>

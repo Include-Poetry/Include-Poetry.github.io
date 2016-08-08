@@ -1,12 +1,169 @@
 ---
-layout: EnDesarrollo
-title: En desarrollo
+layout: General
+title: Contenedor queue
 ---
 
-<div class="Titulo">#Include Poetry aún está en desarrollo</div>
 <p>
-	<int>Si encuentras esta página es porque esta sección aún está bajo desarrollo, pero no te preocupes, estamos trabajando para hacer crecer a #Include Poetry, te esperamos por aquí luego.</int>
+	La clase <code>queue</code> es un contenedor que brinda la usabilidad de una estrutura FIFO.
 </p>
-<div class="EjemploN">
-	<a class="Ref" href="index.html">Volver al inicio</a>
+<ul class="ListaContenido">
+	<li id="1L"><span>Funcionamiento</span></li>
+	<li id="2L"><span>Eficiencia</span></li>
+	<li id="3L"><span>Funciones miembro</span></li>
+	<li id="4L"><span>Funciones no miembro</span></li>
+	<li id="5L"><span>Ejemplo general</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Funcionamiento
+</div>
+<p>
+	<i>FIFO</i> es el acrónimo de las palabras en inglés <i>First In First Out</i>, que podemos traducir como <i>El primero en entrar, es el primero en salir</i>. A este tipo de estructura se le conoce en español como <i>cola</i>, pues su funcionamiento es precisamente como cuando hacemos <i>cola</i> o <i>fila</i> en algún lugar, por ejemplo, la que hacemos en la caja registradora del supermercado.
+</p>
+<p>
+	Si aún no te queda muy claro, cuando hacemos una cola, estamos <i>metiendo</i> datos a una estructura, todos los datos son ingresados uno detrás del otro en el orden que van llegando, cuando queremos sacar uno, sacamos el que está hasta el frente, es decir, el primero que llegó.
+</p>
+
+<div class="Subtitulo" id="2">
+	Eficiencia
+</div>
+<p>
+	Ingresar un elemento | constante | \(O(l)\)
+	<br>
+	Eliminar un elemento | constante | \(O(l)\)
+</p>
+
+<div class="Subtitulo" id="3">
+	Funciones miembro
+</div>
+<table class="Tabla">
+	<tr>
+		<th>Función</th>
+		<th>Definición</th>
+	</tr>
+	<tr>
+		<td>(constructor)</td>
+		<td>Construye un elemento tipo <code>queue</code></td>
+	</tr>
+	<tr>
+		<td>(destructor)</td>
+		<td>Destruye un elemento tipo <code>queue</code></td>
+	</tr>
+	<tr>
+		<td>Operador <code>=</code></td>
+		<td>Asigna valores al contenedor</td>
+	</tr>
+	<tr>
+		<th colspan="2">Acceso a elementos</th>
+	</tr>
+	<tr>
+		<td><code>front</code></td>
+		<td>Accede al primer elemento del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>back</code></td>
+		<td>Accede al último elemento del contenedor</td>
+	</tr>
+	<tr>
+		<th colspan="2">Capacidad</th>
+	</tr>
+	<tr>
+		<td><code>empty</code></td>
+		<td>Devuelve verdadero si el contenedor está vacío</td>
+	</tr>
+	<tr>
+		<td><code>size</code></td>
+		<td>Devuelve la cantidad de elementos dentro del contenedor</td>
+	</tr>
+	<tr>
+		<th colspan="2">Modificadores</th>
+	</tr>
+	<tr>
+		<td><code>push</code></td>
+		<td>Inserta un elemento al final del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>pop</code></td>
+		<td>Elimina el primer elemento del contenedor</td>
+	</tr>
+	<tr>
+		<td><code>swap</code></td>
+		<td>Intercambia el contenido de dos contenedores</td>
+	</tr>
+</table>
+
+<div class="Subtitulo" id="4">
+	Funciones no miembro
+</div>
+<table class="Tabla">
+	<tr>
+		<th>Función</th>
+		<td>Definición</td>
+	</tr>
+	<tr>
+		<td>Operadores <code>==</code>, <code>!=</code>, <code><</code>, <code><=</code>, <code>></code>, <code>>=</code></td>
+		<td>Compara lexicográficamente los valores del contenedor</td>
+	</tr>
+</table>
+
+<div class="Subtitulo" id="5">
+	Ejemplo general
+</div>
+<textarea class="editor">
+#include <iostream>
+#include <queue> // Libreria
+using namespace std;
+
+int main(){
+
+	queue<int> cola;
+	// Declaración de cola para elementos tipo 'int'
+
+	cola.push(3);
+	cola.push(14);
+	cola.push(97);
+	// Se ingresan datos
+
+	cout << cola.front() << '\n';
+	// Se muestra el primer elemento de la cola
+
+	cout << cola.back() << '\n';
+	// Se muestra el último elemento de la cola
+
+	cout << cola.size() << '\n';
+	// Se obtiene la cantidad de elementos almacenados
+
+	cola.pop();
+	// Se elimina el primer elemento de la estructura
+
+	if (cola.empty()){
+		// Se checa si la estructura está vacía
+		cout << "La estructura esta vacia\n";
+	} else {
+		cout << "La estructura no esta vacia\n";
+	}
+
+	queue<int> otra;
+	otra.push(32);
+	otra.push(12);
+	otra.push(1);
+
+	cola.swap(otra);
+	// Se intercambian contenidos
+
+	cout << cola.size() << " " << otra.size() << '\n';
+	
+	return 0;
+}</textarea>
+
+<textarea class="output">
+/* Salida */
+3
+97
+3
+La estructura no esta vacia
+3 2
+</textarea>
+
+<div class="Nav">
+	<a href="{{ site.url }}/C++/STL/String/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C++/STL/Stack/" id="NDer">Tema siguiente</a>
 </div>
