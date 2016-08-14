@@ -3,6 +3,7 @@ layout: PostPoetry
 title: Desde el movil
 author: rivel_co
 tags: [develop, prueba]
+published: false
 ---
 
 Publicación hecha desde Android usando MrHyde para modificar archivos de un repositorio en Github especialmente blogs en markdown.
