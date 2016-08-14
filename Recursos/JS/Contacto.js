@@ -18,7 +18,7 @@ $contactForm.submit(function(e) {
 			$submit.val('Mensaje enviado');
 			setTimeout(function() {
 				$submit.attr('disabled', false).val(defaultSubmitText);
-				$("#contactform, #TextoF, #Contacto").fadeOut('slow', function() {
+				$("#contactform, #TextoF, #Contacto, #8").fadeOut('slow', function() {
 					$("#TGracias, #TextoG, #Otro").fadeIn('slow');
 				});
 			}, 3000);
@@ -27,7 +27,7 @@ $contactForm.submit(function(e) {
 			$submit.val('Hubo un error :C');
 			setTimeout(function() {
 				$submit.attr('disabled', false).val(defaultSubmitText);
-				$("#contactform, #TextoF, #Contacto").fadeOut('slow', function() {
+				$("#contactform, #TextoF, #Contacto, #8").fadeOut('slow', function() {
 					$("#TError, #TextoE, #OtroSad").fadeIn('slow');
 				});
 			}, 3000);
