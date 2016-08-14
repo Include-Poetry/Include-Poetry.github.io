@@ -1,4 +1,8 @@
-<html>
+{% if jekyll.environment == 'production' %}
+{% include Comentario.html %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="es">
 	<head>
 		{% include headU.html %}
 		<script type="text/javascript" src="{{ site.url}}/Recursos/JS/fresco.js"></script>
@@ -9,6 +13,9 @@
 	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/Code.css">
 	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/fresco.css">
 	  	<script src="https://use.fontawesome.com/c334c419c0.js"></script>
+	  	{% if page.url contains "Topicos-adicionales/" %}
+	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/TopicosExc.css">
+	  	{% endif %}
 	  	{% if jekyll.environment == 'production' %}
 		{% include analytics.html %}
 		{% endif %}
@@ -26,6 +33,17 @@
 					{{ page.title }}
 				</div>
 				{{ content }}
+				<p>
+				{% if page.url contains "Karel/" %}
+					{% for tag in page.tags %}
+			            <a class="TagPost" href="{{ site.url }}/Topicos-adicionales/Karel/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+			        {% endfor %}
+			    {% else %}
+			    	{% for tag in page.tags %}
+			            <a class="TagPost" href="{{ site.url }}/Topicos-adicionales/C++/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+			        {% endfor %}
+			    {% endif %}
+		        </p>
 				{% include facebookC.html %}
 			</div>
 		</div>

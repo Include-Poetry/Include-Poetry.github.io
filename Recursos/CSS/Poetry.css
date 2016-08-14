@@ -64,6 +64,40 @@ header{
 	background: #fcfcfc;
 	z-index: 99;
 }
+img{
+	display: block;
+	position: relative;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
 
 #Titulo{
 	text-align: center;
@@ -271,7 +305,10 @@ footer span{
 	}
 	footer ul{
 		width: 90%;
-		font-size: 1em;
+		font-size: .7em;
+	}
+	footer span{
+		font-size: .6em;
 	}
 	.ancla:before {
 		display: block;
@@ -280,7 +317,7 @@ footer span{
 		height: 92px;
 		visibility: hidden;
 	}
-	p{
+	p, ul{
 		font-size: 1em;
 	}
 	h1{

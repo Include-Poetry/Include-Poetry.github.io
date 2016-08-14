@@ -7,16 +7,25 @@
 	min-height: 100%;
 }
 
-.Titulo{
+.Titulo, h1{
 	margin-top: 0px;
 	font-size: 3em;
 	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
 }
 
-.Subtitulo{
+.Subtitulo, h2{
 	margin-top: 1em;
 	font-size: 2em;
 	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+
+.Subsubtitulo, h3{
+	margin-top: 1em;
+	font-size: 1.5em;
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
 }
 
 .Contenido{
@@ -34,14 +43,22 @@ p{
 	margin-top: 1.3em;
 	line-height: 1.4;
 }
+.yolo{
+	margin-top: .5em;
+}
 
-.EjemploN{
+blockquote, .EjemploN{
 	font-family: 'Droid Sans', sans-serif;
 	font-size: 1.4em;
 	padding-left: 25px;
 	color: #000;
 	margin-top: 1.3em;
 	border-left: 3px solid #000;
+	margin-left: 0;
+	margin-right: 0;
+}
+blockquote p{
+	font-size: 1em;
 }
 .EjemploPc{
 	font-family: 'Inconsolata', 'Consolas';
@@ -51,24 +68,7 @@ p{
 	margin-top: 1.3em;
 	border-left: 3px solid #000;
 }
-.EjemploC{
-	font-family: 'Inconsolata', 'Consolas';
-	font-size: 1.4em;
-	color: #fff;
-	padding-left: 25px;
-	margin-top: 1.3em;
-	background: rgb(28,28,28);
-	border-left: 3px solid #000;
-}
-tipo{
-	color: rgb(102,217,239);
-}
-numero{
-	color: rgb(174,129,255);
-}
-signo{
-	color: rgb(249,38,114);
-}
+
 .EjemploK{
 	font-family: 'Inconsolata', 'Consolas';
 	font-size: 1.4em;
@@ -77,6 +77,7 @@ signo{
 	margin-top: 1.3em;
 	border-left: 3px solid #000;
 	overflow-x: auto;
+	max-height: 400px;
 }
 .EjemploK span{
 	color: #000;
@@ -87,22 +88,21 @@ s{
 	font-weight: lighter;
 }
 
-.Ref{
+.Ref, p > a{
 	font-family: 'Kalam', cursive;
 	text-decoration: none;
 	color: #000;
 }
 
-.Ref:hover{
+.Ref:hover, p > a:hover{
 	text-decoration: underline;
 }
-.Ref{
+.Ref, p > a{
 	background-image: url(../Multimedia/Iconos/elink.png);
 	background-repeat: no-repeat;
 	background-position: center right;
 	padding-right: .7em;
 	background-size: .6em;
-	
 }
 
 int{
@@ -110,7 +110,7 @@ int{
 	font-weight: lighter;
 }
 
-.Imagen{
+.Imagen, .Contenido img{
 	margin-left: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-webkit-filter: grayscale(100%);
@@ -126,17 +126,35 @@ int{
 	max-width: 80%;
 }
 
-.Imagen:hover{
+.Imagen:hover, .Contenido img:hover{
 	-webkit-filter: grayscale(0%);
 	-moz-filter: grayscale(0%);
 	-o-filter: grayscale(0%);
 	-ms-filter: grayscale(0%);
 	filter: grayscale(0%);
 }
+ol{
+	font-family: 'Roboto', sans-serif;
+	max-width: 80%;
+	word-break: normal;
+	font-size: 1.3em;
+	font-weight: lighter;
+}
+
+.ListaDG, .Contenido ul{
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+	list-style: square;
+	max-width: 80%;
+	word-break: normal;
+}
+.ListaDGe, .Contenido ul li{
+	font-size: 1.3em;
+	font-family: 'Roboto', sans-serif;
+}
 
 .ListaContenido{
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.3em;
 	font-weight: lighter;
 	list-style: square;
 	max-width: 400px;
@@ -150,16 +168,21 @@ int{
 	border-bottom: 1px dotted #999;
 }
 
-.ListaDG{
-	font-family: 'Roboto', sans-serif;
-	font-weight: lighter;
-	list-style: square;
-	max-width: 80%;
-	word-break: normal;
+#ListaTemas{
+	padding-left: 0;
+	list-style: none;
+	max-width: 100%;
 }
-.ListaDGe{
-	font-size: 1.3em;
-	font-family: 'Roboto', sans-serif;
+
+#ListaTemas li{
+	font-size: 1em;
+}
+.ancla:before {
+	display: block;
+	content: " ";
+	margin-top: -65px;
+	height: 65px;
+	visibility: hidden;
 }
 
 .VolverA{
@@ -202,6 +225,10 @@ int{
 	font-family: 'Inconsolata', 'Consolas';
 	font-size: 1em; 
 	display: inline-block;
+}
+.Nav a{
+	background: none;
+	color: #585858;
 }
 .Nav{
 	width: 100%;
@@ -247,6 +274,10 @@ int{
 #search-results a{
 	color: #585858;
 }
+form{
+	width: 100%;
+	display: block;
+}
 #search-box{
 	float: left;
 	font-size: 1.3em;
@@ -256,6 +287,7 @@ int{
 	width: calc(100% - 62px);
 	width: -webkit-calc(100% - 62px);
 	width: -moz-calc(100% - 62px);
+	box-sizing: border-box;
 }
 #buscar{
 	font-family: FontAwesome;
@@ -319,6 +351,7 @@ int{
 	font-size: 1em;
 	border-radius: 0;
 	padding-left: 5px;
+	box-sizing: border-box;
 }
 #BMinS{
 	font-size: 1em;
@@ -369,8 +402,37 @@ int{
     margin: 20px 0;
     width: 100%;
 }
-
-
+.TagPost{
+	padding: 0 4px;
+	background-color: #f8f8f8;
+	padding: 0 5px;
+	margin: 3px 2px;
+	border-radius: 3px;
+	border: 1px solid #96989A;
+	font-family: 'Kalam';
+	font-size: 1em;
+	text-decoration: none;
+	color: #96989A;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	display: inline-block;
+	background: none;
+}
+.TagPost:hover{
+	color: #f8f8f8;
+	text-decoration: none;
+	border: 1px solid #96989A;
+	background-color: #96989A;
+}
+#ListaTags{
+	list-style: square;
+}
+#ListaTags li a{
+	color: #383838;
+}
 /* ------ Celular ------- */
 @media only screen and (max-width: 600px){
 	.Contenido{
@@ -378,13 +440,13 @@ int{
 		margin-top: 60px;
 		width: 85%;
 	}
-	.Titulo{
+	.Titulo, h1{
 		font-size: 2em;
 	}
-	.Subtitulo{
+	.Subtitulo, h2{
 		font-size: 1.5em;
 	}
-	p, .ListaContenido, .EjemploN, .EjemploK, .EjemploC, .EjemploPc, .ListaDG li{
+	p, .Contenido ul li, ol, blockquote, .ListaContenido, .EjemploN, .EjemploK, .EjemploC, .EjemploPc, .ListaDG li{
 		font-size: 1em;
 	}
 	.Cuerpo{
@@ -397,6 +459,13 @@ int{
 		bottom: 20px;
 		width: 20px;
 		height: 20px;
+	}
+	.TagPost{
+		font-size: .8em;
+	}
+	.ancla:before {
+		margin-top: -52px;
+		height: 52px;
 	}
 	.Nav{
 		font-size: .8em;
@@ -426,7 +495,7 @@ int{
 	#BMinQ{
 		width: 170px;
 		font-size: 1em;
-		height: 20px;
+		height: 25px;
 		border-radius: 0;
 	}
 	#BMinS{

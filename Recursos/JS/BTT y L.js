@@ -209,7 +209,7 @@ $(window).ready(function() {
 						'width': '100%'
 					}, 500, function() {
 						$('.LinkTour').slideDown(500, function() {
-							$('.Tour a').animate({'opacity':'1'},500, function(){
+							$('.Tour a, .Tour .mini').animate({'opacity':'1'},500, function(){
 								$('.PortadaL').fadeIn(1000);
 							});
 						});

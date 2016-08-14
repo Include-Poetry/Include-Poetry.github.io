@@ -12,7 +12,10 @@
 
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/Poetry.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/Multibtn.css">
-		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/CodeP.css">
+		{% if page.url contains "Contacto/" %}
+		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/ContactoP.css">
+		<script src="{{ site.url }}/Recursos/JS/jquery-1.8.2.min.js"></script>
+		{% endif %}
 
 		<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({
@@ -22,7 +25,7 @@
 			});
 		</script>
 		<script type="text/javascript" async
-		  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+			src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 		</script>
 	  	
 	  	<script src="https://use.fontawesome.com/c334c419c0.js"></script>
@@ -31,33 +34,9 @@
 		{% endif %}
 	</head>
 	<body>
-		{% include CabeceraPp.html %}
+		{% include CabeceraB.html %}
 		<div id="Cuerpo">
 			<div id="Contenido">
-				<h3 class="iAutor">
-					{% if page.date %}
-				    	{% assign m = page.date | date: "%-m" %}
-						{{ page.date | date: "%-d" }}
-						{% case m %}
-							{% when '1' %}Enero
-							{% when '2' %}Febrero
-							{% when '3' %}Marzo
-							{% when '4' %}Abril
-							{% when '5' %}Mayo
-							{% when '6' %}Junio
-							{% when '7' %}Julio
-							{% when '8' %}Agosto
-							{% when '9' %}Septiembre
-							{% when '10' %}Octubre
-							{% when '11' %}Noviembre
-							{% when '12' %}Diciembre
-						{% endcase %}
-						{{ page.date | date: "%Y" }} | {% endif %}
-						Por: {{ page.author }}
-			    </h3>
-			    {% for tag in page.tags %}
-		            <a class="TagPost" href="{{ site.url }}/Poetry/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
-		        {% endfor %}
 				{{ content }}
 			</div>
 		</div>

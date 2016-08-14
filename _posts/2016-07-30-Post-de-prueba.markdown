@@ -3,6 +3,7 @@ layout: PostPoetry
 title: Post de prueba
 author: rivel_co
 tags: [ejemplo, prueba, develop]
+published: false
 ---
 
 Esta publicación no es más que una prueba de desarrollo, por lo tanto me limito a llenar la página con el shidísimo y clásico `lorem ipmsum` porque yolo con la vida.
