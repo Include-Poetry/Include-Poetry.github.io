@@ -1,19 +1,18 @@
-
+html, body{
+	height: 100%;
+}
 html{
 	background-image: url('../Multimedia/Geometria.png');
 	background-size: 100%;
 	background-color: #fcfcfc;
 	background-repeat: no-repeat;
 	background-position: top;
-	height: 100%;
-	/*border: 1px solid #000;*/
 	background-attachment: fixed;
 }
 body{
 	font-family: helvetica, sans-serif;
 	font-size: 100%;
 	margin: 0;
-	/*background-color: #fff; /* FDFDFD */
 }
 
 ul{

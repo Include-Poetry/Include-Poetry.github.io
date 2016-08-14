@@ -1,4 +1,3 @@
-
 # Nombre del sitio
 name: Include Poetry
 
@@ -38,6 +37,15 @@ collections:
   Karel:
     output: true
     permalink: /Karel/:path/
+  Topicos-C:
+    output: true
+    permalink: /Topicos-adicionales/C++/:categories/:title/
+  Topicos-Karel:
+    output: true
+    permalink: /Topicos-adicionales/Karel/:categories/:title/
+  Apuntes-Bio:
+    output: true
+    permalink: /biology/:year/:month/:day/:title/
   posts:
     output: true
     permalink: /Poetry/:year/:month/:day/:title/

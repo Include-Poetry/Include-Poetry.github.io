@@ -1,12 +1,246 @@
 ---
-layout: EnDesarrollo
-title: En desarrollo
+layout: General
+title: Recursión en C++
 ---
 
-<div class="Titulo">#Include Poetry aún está en desarrollo</div>
 <p>
-	<int>Si encuentras esta página es porque esta sección aún está bajo desarrollo, pero no te preocupes, estamos trabajando para hacer crecer a #Include Poetry, te esperamos por aquí luego.</int>
+	En la actualidad, se podría decir que ningún gran programa está hecho sin algo de <i>recursión</i>. Y esto es porque la recursión como técnica de resolver problemas es tan útil que la utilizamos en la vida cotidiana sin siquiera darnos cuenta, comprender el funcionamiento de la recursión es un arma <i>invaluable</i> e <i>imprescindible</i> en la informática.
 </p>
-<div class="EjemploN">
-	<a class="Ref" href="index.html">Volver al inicio</a>
+<ul class="ListaContenido">
+	<li id="1L"><span>Idea de recursión</span></li>
+	<li id="2L"><span>Problema recursivo</span></li>
+	<li id="3L"><span>Razonando una solución</span></li>
+	<li id="4L"><span>Generando la llamada recursiva</span></li>
+	<li id="5L"><span>Condición de salida</span></li>
+	<li id="6L"><span>Recuento de los hechos</span></li>
+	<li id="7L"><span>Conclusión</span></li>
+	<li id="8L"><span>Iteración vs recursión</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Idea de recursión
+</div>
+<p>
+	En esta sección se explicará la recursión específicamente aplicada en el lenguaje <i>C++</i>, pero es requisito <i>indispensable</i> conocer el concepto de recursión, el cual podemos resumir de la forma:
+</p>
+<blockquote>
+	La idea básica de la recursión es <b>aplicar un proceso a una cosa, y después, al resultado de eso volver a aplicar ese proceso otra vez</b> y seguir haciéndolo hasta lograr lo que buscamos.
+</blockquote>
+<p>
+	Es muy, <i>muy</i> recomendable que asientes bien el concepto de recursión, y qué mejor que en la  <a href="{{ site.url }}/Karel/Recursion/" class="Ref" target="_blank">sección especialmente dedicada para ello</a>. Una vez que ya lo tengas entendido completamente, puedes seguir aquí.
+</p>
+
+<div class="Subtitulo" id="2">
+	Problema recursivo
+</div>
+<p>
+	Como ya sabemos, en la recursión necesitaremos una <i>llamada recursiva</i>, que será la que desencadenará todo. Para esto, necesitamos llamar a una función dentro de la misma función. Recuerda que no podemos hacerlo desde la función principal <code>main</code>. Por lo tanto declararemos una nueva función.
+</p>
+<p>
+	Ahora, el punto más importante, <int>¿Qué queremos hacer en la recursión?</int> Vamos a crear un programa que sume todos los números enteros del \(1\) al \(n\), donde \(n\) es un número que ingresa el usuario. Dicho lo anterior podemos tener un esqueleto del programa como sigue: 
+</p>
+
+<textarea class="editor">
+#include <iostream>
+using namespace std;
+
+int sumatoria( void ){
+
+}
+
+int main(){
+	int n;
+	cin >> n;
+
+	int resultado = 0;
+
+	cout << resultado;
+
+	return 0;
+}</textarea>
+
+<p>
+	Nota que por el momento la función <code>sumatoria</code> no realiza nada. Al final devolverá un entero, porque esperamos que nos regrese el resultado de nuestra suma. Tampoco se ha hecho ninguna llamada a función por el momento.  Por el momento nuestra función tampoco tiene parámetros. 
+	<br>
+	Toma en cuenta que queremos resolver este problema usando <i>recursión</i>.
+</p>
+
+<div class="Subtitulo" id="3">
+	Razonando una solución
+</div>
+<p>
+	Primero sinteticemos los datos que tenemos.<br>
+	<b>Objetivo general</b>: Sumar todos los números enteros \(x\) donde \(1 \le x \le n\) y además \(n\) es un número proporcionado por el usuario.<br>
+	<b>Consideraciones especiales</b>: Uso forzoso de recursión <br>
+	Ahora consideremos cómo resolvemos el problema manualmente, usando un razonamiento muy sencillo:<br>
+	<b>Método</b>: Como debemos sumar una serie de números enteros consecutivos, comenzamos siempre en \(1\), y después podemos simplemente ir sumando \(1\) al número anterior sumado, generando la serie \(1, 2, 3, 4...\)
+	<br>
+	<b>Condición para recursión</b>: Sabemos que vamos a estar agregando un número siempre a un resultado, y vamos a estar haciendo eso, siempre y cuando el número a sumar no sea mayor a \(n\)
+	<br>
+	<b>Fin de recursión</b>: Siguiendo el razonamiento anterior, una vez que el número a sumar sea igual que el número final, agregaremos \(n\) al resultado y terminaremos ahí.
+</p>
+<p>
+	Ahora tenemos que traducir nuestro procedimiento al lenguaje de programación en cuestión, es decir C++.
+	<br>
+	Notemos que podemos estar tomando el número a sumar como un parámetro de la función que realizará la magia, y además, cada que estemos agregando un número tenemos que considerar el número final, por lo que también lo pasaremos como un parámetro. Lo anterior se vería como:
+</p>
+<textarea class="editor">
+#include <iostream>
+using namespace std;
+
+int sumatoria(int actual, int final){
+
+}
+
+int main(){
+	int n;
+	cin >> n;
+
+	int resultado = sumatoria(1, n);
+
+	cout << resultado;
+
+	return 0;
+}</textarea>
+
+<p>
+	Nota que hacemos la llamada a <code>sumatoria</code> desde <code>main</code>, pasando como parámetros el \(1\) que es el primer número a sumar, y también el número final, es decir \(n\).
+</p>
+
+<div class="Subtitulo" id="4">
+	Generando la llamada recursiva
+</div>
+<p>
+	Para hacer la llamada recursiva, tomemos en cuenta que la función <code>sumatoria</code> desde donde sea que sea citada, va a devolver un entero, por lo que podemos usar ese valor que está regresando a nuestro favor. También recordemos que el número que estamos agregando al total, es una unidad menor al siguiente, por lo que la próxima vez que llamemos a la función, (ya dentro de la recursión), debemos de sumarle \(1\) al número que recién se sumó. El número final debe mantenerse igual, pues el valor final es siempre el mismo.
+</p>
+<textarea class="editor">
+#include <iostream>
+using namespace std;
+
+int sumatoria(int actual, int final){
+	int siguiente;
+	siguiente = actual + 1;
+	
+	sumatoria(siguiente, final);
+}
+
+int main(){
+	int n;
+	cin >> n;
+
+	int resultado = sumatoria(1, n);
+
+	cout << resultado;
+
+	return 0;
+}</textarea>
+<p>
+	Nota que el programa anterior tiene un gran error, pues la función <code>sumatoria</code> regresa un entero que no se está solicitando en ningún momento en la línea 8. Es aquí donde debemos ver qué hay que hacer o más bien, cómo aprovechar ese valor que se genera ahí.
+</p>
+<p>
+	Si tuviéramos \(n = 2\) entonces sólo tendríamos que tomar nuestro \(1\), sumarle \(2\) y devolvemos el resultado. Ahora, si lo pensamos un poco más, cualquier sumatoria de esta serie, se compone de sus sumatorias anteriores, es decir, si tenemos \(1 + 2 + 3 + 4 + 5 = 15\), podemos decir que es lo mismo que \((1 + 2 + 3 + 4) + 5 = 15\), es decir, la sumatoria hasta \(5\) es igual a la sumatoria hasta \(4\) más \(5\), a su vez, la sumatoria hasta \(4\) es igual a la sumatoria hasta \(3\) más el \(4\).
+</p>
+<p>
+	Por lo anterior, podemos ver, que el método que nos está generando el resultado de todas las respuestas, está en la línea 8. Siendo ahí donde generamos el resultado, es el valor que debemos regresar, sumado, claro, al número actual sumado, pues juntos irán generando la serie.
+</p>
+<textarea class="editor">
+#include <iostream>
+using namespace std;
+
+int sumatoria(int actual, int final){
+	int siguiente;
+	siguiente = actual + 1;
+
+	return actual + sumatoria(siguiente, final);
+}
+
+int main(){
+	int n;
+	cin >> n;
+
+	int resultado = sumatoria(1, n);
+
+	cout << resultado;
+
+	return 0;
+}</textarea>
+<p>
+	Sin embargo, sucede una cosa, la primera vez que la ejecución toca la línea 8, y trata de regresar el resultado, va a tener que ejecutar otra vez la función <code>sumatoria</code>. Y lo seguirá haciendo hasta el fin de los tiempos. Es aquí donde tenemos que crear la mágica <i>condición de salida</i>.
+</p>
+
+<div class="Subtitulo" id="5">
+	Condición de salida
+</div>
+<p>
+	Ya lo habíamos dicho cuando sintetizamos la información, sabemos que terminamos cuando el próximo número a sumar sea \(n\), por lo tanto, mientras ese número actual, no sea \(n\), podemos seguir con la recursión, y si el número a sumar ya es igual al final, lo que nos faltaría por sumar, sería precisamente ese número final, por lo que sería el valor a devolver.
+</p>
+<textarea class="editor">
+#include <iostream>
+using namespace std;
+
+int sumatoria(int actual, int final){
+	int siguiente;
+	siguiente = actual + 1;
+
+	if (actual != final){
+		return actual + sumatoria(siguiente, final);
+	} else {
+		return final;
+	}
+}
+
+int main(){
+	int n;
+	cin >> n;
+
+	int resultado = sumatoria(1, n);
+
+	cout << resultado;
+
+	return 0;
+}</textarea>
+<p>
+	De esta manera, en el momento en que <code>actual</code> sea igual a <code>final</code> no se hará otra llamada recursiva, sino que sólo se devolvería el valor final, que es el que faltaría por sumar. La pila de <i>llamadas</i> y de <i>valores devueltos</i> con una entrada de <code>5</code>, sería así:
+</p>
+<textarea class="output">
+Llamadas:				| Valor de la función	| Valor total devuelto
+4 + sumatoria(5, 5)		| 5						| 9
+3 + sumatoria(4, 5)		| 9						| 12
+2 + sumatoria(3, 5)		| 12					| 14
+1 + sumatoria(2, 5)		| 14					| 15
+sumatoria(1, 5)			| 15					| 15
+</textarea>
+<p>
+	Es decir, cuando en la línea 2 (de este cuadro) se hizo <code>4 + sumatoria(5, 5)</code> el valor que terminó regresando la función <code>sumatoria</code> en esa llamada, fue \(5\) que sumado al \(4\) daba el total de \(9\). Al final, la función llamada desde <code>main</code> regresó el \(15\) <br>
+	Analiza esa tabla anterior para que te quede muy claro qué fue lo que pasó.
+</p>
+
+<div class="Subtitulo" id="6">
+	Recuento de los hechos
+</div>
+<p>
+	Lo que hicimos fue ir pasando una sucesión de números, como parámetros de la función recursiva, cada vez que se hacía una nueva llamada, se pasaba el parámetro aumentado en \(1\), para de esta manera cubrir el siguiente número de la sucesión. La función devolvía la suma de dos números, excepto por la última llamada recursiva, que sólo devolvería un número, el número final de la sucesión, de esta manera, al regresar en la recursión, ese número final se sumaría con su anterior, generando un nuevo resultado, que a su vez se sumaría con el número anterior, y así hasta llegar a la primera llamada recursiva, que sería la que se hizo desde <code>main</code>.
+</p>
+<p>
+	Por lo anterior, podría verse como que la suma se realizó desde el final y hasta el inicio, pues el primer número en ser agregado realmente al resultado fue el valor final, sumado con su anterior, y luego su anterior y así sucesivamente.
+</p>
+
+<div class="Subtitulo" id="7">
+	Conclusión
+</div>
+<p>
+	En la mayoría de las funciones recursivas de C++, las dos partes que juegan los papeles más importantes son el valor que devuelve la función y los parámetros con los que trabaja. Es el trabajo en conjunto, de estas dos partes las que hacen la magia.
+</p>
+<p>
+	Sin nunca dejar de lado, ni restarle importancia a la condición de quiebre de la recursión, pues de esto dependerá el resultado final, y también muchas veces, de que el programa no se cicle. Para esto también hay que estar cambiando los parámetros de la función, o la condición de quiebre, o ambas, y asegurarnos de que en algún momento la recursión terminará.
+</p>
+
+<div class="Subtitulo" id="8">
+	Iteración vs recursión
+</div>
+<p>
+	Aunque el problema anterior pudo haber sido resuelto fácilmente por un programa iterativo, usando una estructura cíclica, por ejemplo, sin embargo, la recursión simplifica la resolución de muchos problemas cuando está bien aplicada, por ello es importante saber distinguir cuando es más sencillo usar iteración o cuando es necesario usar recursión.
+</p>
+
+<div class="Nav">
+	<a href="{{ site.url }}/C++/STL/Pair/" id="NIzq">Tema anterior</a>
 </div>
