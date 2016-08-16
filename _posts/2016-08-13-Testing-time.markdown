@@ -3,6 +3,7 @@ layout: PostPoetry
 title: Sesión de pruebas
 author: rivel_co
 tags: [develop, prueba]
+published: false
 ---
 
 Antes de que el sitio sea formalmente anunciado, y dado de alta en la *Search Console* de Google, debe ser sometido a un chequeo general de contenidos, así como funcionamiento general del sitio.
