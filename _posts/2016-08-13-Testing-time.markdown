@@ -20,7 +20,7 @@ A la par los aspectos anteriores en dispositivos móviles y de escritorio, así 
 
 ## ¿Qué hay de ti?
 
-Si puedes ver esta publicación es porque eres muy shido y pedí tu opinión sobre el sitio antes de que sea "publicado" oficialmente. Así que cualquier opinión, consejo, o cosa rara que notes me será de gran ayuda conocerla.
+Si puedes ver esta publicación es porque eres muy shido y pedí tu opinión sobre el sitio antes de que sea "publicado" oficialmente. Eso o llegaste aquí antes de lo previsto, de cualquier forma cualquier opinión, consejo, o cosa rara que notes me será de gran ayuda conocerla.
 
 ## ¿Y todo una publicación para esto?
 
