@@ -3,7 +3,6 @@ layout: PostPoetry
 title: Próximamente en &#35;iP
 author: rivel_co
 tags: IncludePoetry
-published: false
 ---
 
 ¡La primera fase del sitio está lista, y aún nos quedan muchas ganas de seguir trabajando! Y como seguramente estarás pensando, regresaremos con nuevos temas, más material y más secciones todavía, para que nunca te quedes sin cosas nuevas por aprender.
