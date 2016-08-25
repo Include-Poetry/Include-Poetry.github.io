@@ -47,6 +47,9 @@ collections:
   Apuntes-Bio:
     output: true
     permalink: /biology/:year/:month/:day/:title/
+  Apuntes-Qui:
+    output: true
+    permalink: /chemistry/:year/:month/:day/:title/
   posts:
     output: true
     permalink: /Poetry/:year/:month/:day/:title/

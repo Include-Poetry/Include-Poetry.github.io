@@ -22,3 +22,5 @@ Y para que te des una idea, y te emociones al igual que nosotros con lo que est�
 - Algoritmos
 
 No te pierdas además las constantes actualizaciones en los ***Tópicos adicionales*** de cada sección, además de nuestra siguiente sección de ***problemario*** para que nunca te falten problemas tanto de Karel como de C++, no olvides que sólo practicando podrás llegar a dominarlo.
+
+[Apuntes de química]({{ site.url }}/chemistry/ "Link prueba") 
