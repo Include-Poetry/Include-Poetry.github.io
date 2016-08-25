@@ -317,6 +317,12 @@ footer span{
 		height: 92px;
 		visibility: hidden;
 	}
+  blockquote:before {
+     font-size: 3em;
+  }
+   blockquote:after {
+     font-size: 3em;
+  }
 	p, ul{
 		font-size: 1em;
 	}
