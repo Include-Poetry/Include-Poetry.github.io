@@ -1,9 +1,14 @@
-
 # Nombre del sitio
 name: Include Poetry
 
 # Título
 title: Include Poetry
+
+# Descripcón del sitio
+description: Aprende a programar C/C++ y Karel de la manera más fácil y con enfoque en la OMI.
+
+# Autor
+author: rivel_co
 
 # Versión de Markdown
 markdown: kramdown
@@ -11,15 +16,12 @@ markdown: kramdown
 # Email
 email: includepoetry@gmail.com
 
-# Descripcón del sitio
-description: Aprende a programar C/C++ y Karel.
-
 # Google services
 google_analytics: UA-74086952-1
 
 # Base del sitio
 url: "https://include-poetry.github.io"
-host: 0.0.0.0
+#host: 0.0.0.0
 
 # Excuidos de la conversión
 exclude: [No en git]
@@ -29,7 +31,7 @@ incremental: true;
 paginate: 8
 paginate_path: "/Poetry/Pagina-:num/"
 
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 
 collections:
   C: 
