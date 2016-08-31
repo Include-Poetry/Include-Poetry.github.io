@@ -1,4 +1,7 @@
 ![Logo](Recursos/Multimedia/Include.png)
+[Ir al sitio](https://include-poetry.github.io "El sitio real") |
+[Únete al equipo](https://include-poetry.github.io/Reclutamiento/ "Reclutamiento") |
+[El blog](https://include-poetry.github.io/Poetry/ "Blog oficial")
 
 ***&#35;include&lt;poetry&gt;*** nace como una iniciativa que pretende servir de apoyo en el estudio de las diversas disciplinas que conforman las **Olimpiadas Nacionales de Ciencias en México**, como lo es, la **OMI** (*Olimpiada Mexicana de Informática*), **OMM** (*Olimpiada Mexicana de Matemáticas*), **OMF** (*Olimpiada Mexicana de Física*), **OMB** (*Olimpiada Mexicana de Biología*) y **ONQ** (*Olimpiada Nacional de Química*) utilizando un sitio web como herramienta principal. El proyecto comienza enfocado en la *OMI*, y desarrollado por Ricardo Velázquez Contreras.
 
