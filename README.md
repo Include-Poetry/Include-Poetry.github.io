@@ -1,4 +1,5 @@
 ![Logo](Recursos/Multimedia/Include.png)
+
 [Ir al sitio](https://include-poetry.github.io "El sitio real") |
 [Únete al equipo](https://include-poetry.github.io/Reclutamiento/ "Reclutamiento") |
 [El blog](https://include-poetry.github.io/Poetry/ "Blog oficial")
