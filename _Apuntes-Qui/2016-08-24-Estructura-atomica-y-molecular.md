@@ -11,7 +11,7 @@ Perteneciente a la unidad 2.
 
 > La masa total de las sustancias no cambia durante una reacción química la masa consumida de los reactivos es igual a la masa obtenida de los productos
 
-## Aplicación de la ley de la conservación de la masa
+** Ejemplo **
 
 - - -
 
