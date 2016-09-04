@@ -21,3 +21,24 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 - Lorem ipsum
 
 > Esta vida tan shidori
+
+Algo bien shidori
+
+- [x] Algo
+- [ ] Algo no
+- [ ] sadsad
+- [ ] sad
+
+`Algo` jsahdjksad jsa djs ajdnsaj d
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(){
+    int algo;
+    return 0;
+}
+```
+
+sadasd
