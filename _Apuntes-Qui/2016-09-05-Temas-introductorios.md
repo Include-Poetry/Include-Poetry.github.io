@@ -1,8 +1,8 @@
 ---
 layout: PostPoetry
-title: Términos introductorios
+title: Temas introductorios
 author: rivel_co
-tags: [Introducción, conceptos]
+tags: [Introducción, Conceptos]
 category: Parcial-1
 ---
 
