@@ -1,0 +1,122 @@
+---
+layout: Bio
+title: Categorías en biología
+---
+
+{% assign pagina = "Biology" %}
+{% assign coleccion = site.Apuntes-Bio %}
+
+{% assign rawcats = "" %}
+{% for post in coleccion %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+
+{% assign rawcats = rawcats | split:'|' | sort %}
+
+{% assign cats = "" %}
+
+{% for cat in rawcats %}
+{% if cat != "" %}
+
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<h1>
+    Todas las categorías
+</h1>
+
+<p>
+{% for ct in cats %}
+    <a href="#{{ ct | slugify }}"> {{ ct }} </a> &nbsp;&nbsp;
+{% endfor %}
+    <a href="#Sin-categoria"> Sin categoría </a> &nbsp;&nbsp;
+</p>
+
+{% for ct in cats %}
+<h2 class="ancla" id="{{ ct | slugify }}">{{ ct }}</h2>
+<ul class="ListaTags">
+    {% for post in coleccion %}
+        {% if post.category contains ct %}
+        <li>
+            <h3>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </h3>
+            <small>
+                {% assign m = post.date | date: "%-m" %}
+                {{ post.date | date: "%-d" }}
+                {% case m %}
+                    {% when '1' %}Enero
+                    {% when '2' %}Febrero
+                    {% when '3' %}Marzo
+                    {% when '4' %}Abril
+                    {% when '5' %}Mayo
+                    {% when '6' %}Junio
+                    {% when '7' %}Julio
+                    {% when '8' %}Agosto
+                    {% when '9' %}Septiembre
+                    {% when '10' %}Octubre
+                    {% when '11' %}Noviembre
+                    {% when '12' %}Diciembre
+                {% endcase %}
+                {{ post.date | date: "%Y" }} | Por: {{ post.author }}
+            </small>
+            <p>
+                {% for tag in post.tags %}
+                    <a href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}" class="TagPost"> <i class="fa fa-tag"></i> {{ tag }}</a>
+                {% endfor %}
+            </p>
+        </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}
+
+
+<h2 class="ancla" id="Sin-categoria">Sin categoría</h2>
+<ul class="ListaTags">
+    {% for post in coleccion %}
+        {% unless post.category %}
+        <li>
+            <h3>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </h3>
+            <small>
+                {% assign m = post.date | date: "%-m" %}
+                {{ post.date | date: "%-d" }}
+                {% case m %}
+                    {% when '1' %}Enero
+                    {% when '2' %}Febrero
+                    {% when '3' %}Marzo
+                    {% when '4' %}Abril
+                    {% when '5' %}Mayo
+                    {% when '6' %}Junio
+                    {% when '7' %}Julio
+                    {% when '8' %}Agosto
+                    {% when '9' %}Septiembre
+                    {% when '10' %}Octubre
+                    {% when '11' %}Noviembre
+                    {% when '12' %}Diciembre
+                {% endcase %}
+                {{ post.date | date: "%Y" }} | Por: {{ post.author }}
+            </small>
+            <p>
+                {% for tag in post.tags %}
+                    <a href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}" class="TagPost"> <i class="fa fa-tag"></i> {{ tag }}</a>
+                {% endfor %}
+            </p>
+        </li>
+        {% endunless %}
+    {% endfor %}
+</ul>

@@ -3,8 +3,11 @@ layout: Qui
 title: Etiquetas de química
 ---
 
+{% assign pagina = "Chemistry" %}
+{% assign coleccion = site.Apuntes-Qui %}
+
 {% assign rawtags = "" %}
-{% for post in site.Apuntes-Qui %}
+{% for post in coleccion %}
 {% assign ttags = post.tags | join:'|' | append:'|' %}
 {% assign rawtags = rawtags | append:ttags %}
 {% endfor %}
@@ -38,7 +41,7 @@ title: Etiquetas de química
 {% for tag in tags %}
 <h2 class="ancla" id="{{ tag | slugify }}">{{ tag }}</h2>
 <ul id="ListaTags">
-  {% for post in site.Apuntes-Qui %}
+  {% for post in coleccion %}
 	  {% if post.tags contains tag %}
 	  <li>
 	    <h3>

@@ -3,6 +3,8 @@ layout: PostPoetry
 title: Conceptos introductorios
 author: rivel_co
 tags: [Introducción, conceptos]
+category: Parcial-1
+published: false
 ---
 
 Antes de empezar con el curso de biología, es importante conocer primero los *términos* principales en los que nos estaremos apoyando a lo largo del curso. Por lo tanto, es de suma importancia que estos dominios queden bien comprendidos y fundamentados, para de esa manera tener mayor facilidad de comprensión en los temas siguientes.

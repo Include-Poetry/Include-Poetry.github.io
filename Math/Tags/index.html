@@ -1,10 +1,13 @@
 ---
-layout: Bio
-title: Etiquetas de biología
+layout: Mat
+title: Etiquetas de matemáticas
 ---
 
+{% assign pagina = "Math" %}
+{% assign coleccion = site.Apuntes-Mat %}
+
 {% assign rawtags = "" %}
-{% for post in site.Apuntes-Bio %}
+{% for post in coleccion %}
 {% assign ttags = post.tags | join:'|' | append:'|' %}
 {% assign rawtags = rawtags | append:ttags %}
 {% endfor %}
@@ -38,7 +41,7 @@ title: Etiquetas de biología
 {% for tag in tags %}
 <h2 class="ancla" id="{{ tag | slugify }}">{{ tag }}</h2>
 <ul id="ListaTags">
-  {% for post in site.Apuntes-Bio %}
+  {% for post in coleccion %}
 	  {% if post.tags contains tag %}
 	  <li>
 	    <h3>
