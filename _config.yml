@@ -31,8 +31,8 @@ incremental: true;
 paginate: 8
 paginate_path: "/Poetry/Pagina-:num/"
 
-#gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+#gems: [jekyll-paginate]
 
 collections:
   C: 
