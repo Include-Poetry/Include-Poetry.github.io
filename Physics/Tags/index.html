@@ -1,0 +1,75 @@
+---
+layout: Fis
+title: Etiquetas de física
+---
+
+{% assign pagina = "Physics" %}
+{% assign coleccion = site.Apuntes-Fis %}
+
+{% assign rawtags = "" %}
+{% for post in coleccion %}
+{% assign ttags = post.tags | join:'|' | append:'|' %}
+{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+
+{% for tag in rawtags %}
+{% if tag != "" %}
+
+{% if tags == "" %}
+{% assign tags = tag | split:'|' %}
+{% endif %}
+
+{% unless tags contains tag %}
+{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<h1>
+	Todas las etiquetas
+</h1>
+<p>
+	{% for tag in tags %}
+		<a href="#{{ tag | slugify }}" class="TagPost"> <i class="fa fa-tag"></i> {{ tag }}</a>
+	{% endfor %}
+</p>
+
+{% for tag in tags %}
+<h2 class="ancla" id="{{ tag | slugify }}">{{ tag }}</h2>
+<ul id="ListaTags">
+  {% for post in coleccion %}
+	  {% if post.tags contains tag %}
+	  <li>
+	    <h3>
+	      <a href="{{ post.url }}">
+	        {{ post.title }}
+	      </a>
+	    </h3>
+	    <small>
+			{% assign m = post.date | date: "%-m" %}
+			{{ post.date | date: "%-d" }}
+			{% case m %}
+				{% when '1' %}Enero
+				{% when '2' %}Febrero
+				{% when '3' %}Marzo
+				{% when '4' %}Abril
+				{% when '5' %}Mayo
+				{% when '6' %}Junio
+				{% when '7' %}Julio
+				{% when '8' %}Agosto
+				{% when '9' %}Septiembre
+				{% when '10' %}Octubre
+				{% when '11' %}Noviembre
+				{% when '12' %}Diciembre
+			{% endcase %}
+			{{ post.date | date: "%Y" }} | Por: {{ post.author }}
+		</small>
+	  </li>
+	  {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}

@@ -31,7 +31,8 @@ incremental: true;
 paginate: 8
 paginate_path: "/Poetry/Pagina-:num/"
 
-gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+#gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+gems: [jekyll-paginate]
 
 collections:
   C: 
@@ -48,10 +49,16 @@ collections:
     permalink: /Topicos-adicionales/Karel/:categories/:title/
   Apuntes-Bio:
     output: true
-    permalink: /biology/:year/:month/:day/:title/
+    permalink: /Biology/:categories/:year/:month/:day/:title/
   Apuntes-Qui:
     output: true
-    permalink: /chemistry/:year/:month/:day/:title/
+    permalink: /Chemistry/:categories/:year/:month/:day/:title/
+  Apuntes-Fis:
+    output: true
+    permalink: /Physics/:categories/:year/:month/:day/:title/
+  Apuntes-Mat:
+    output: true
+    permalink: /Math/:categories/:year/:month/:day/:title/
   posts:
     output: true
-    permalink: /Poetry/:year/:month/:day/:title/
+    permalink: /Poetry/:categories/:year/:month/:day/:title/
