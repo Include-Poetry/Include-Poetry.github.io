@@ -40,7 +40,7 @@ title: Etiquetas de matemáticas
 
 {% for tag in tags %}
 <h2 class="ancla" id="{{ tag | slugify }}">{{ tag }}</h2>
-<ul id="ListaTags">
+<ul class="ListaTags">
   {% for post in coleccion %}
 	  {% if post.tags contains tag %}
 	  <li>
