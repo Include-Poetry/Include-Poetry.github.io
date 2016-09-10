@@ -3,10 +3,10 @@ layout: PostPoetry
 title: Temas introductorios
 author: rivel_co
 tags: [Introducción, Conceptos]
-category: Parcial-1
+category: [Semestre-1, Parcial-1]
 ---
 
-**Unidad 1**. Temas introductorios para el curso de química, se abordan ligeramente cada uno considerando esto más como un repaso de los temas que una explicación a profundidad de cada término.
+Temas introductorios para el curso de química, se abordan ligeramente cada uno considerando esto más como un repaso de los temas que una explicación a profundidad de cada término.
 
 Química
  : Es la ciencia que estudia la composición y propiedades de la materia
@@ -57,13 +57,13 @@ Maleabilidad                |
 
 Hay que considerar además que **las propiedades de los compuestos son diferentes a las de los elementos constituyentes**.
 
-Propiedades de la materia
+### Propiedades de la materia
 
 Extensivas              |           Intensivas
                       --|--
 Dependen de la cantidad de materia que se considera | No dependen de la cantidad de materia considerada.
 
-Cambios en la materia
+### Cambios en la materia
 
 Físicos                 |           Químicos
                       --|--

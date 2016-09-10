@@ -31,7 +31,7 @@ title: Poetry
 	    </h3>
 	    <p class="iResumen">{{ post.excerpt }}</p>
 	    {% for tag in post.tags %}
-            <a class="TagPost" href="{{ site.url }}/{{ pagina }}/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+            <a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
         {% endfor %}
     </li>
   {% endfor %}
