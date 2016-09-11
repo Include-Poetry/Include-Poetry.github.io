@@ -32,7 +32,7 @@ El sitio continúa en crecimiento y por lo tanto, hemos fijado distintos objetiv
 
 - [x] Desarrollar los temas básicos de estudio para una olimpiada
 - [x] Poner el sitio en línea
-- [ ] Obtener un dominio propio
+- [x] Obtener un dominio propio
 - [ ] Desarrollar los temas básicos de estudio para una segunda olimpiada
 
 Como objetivos más específicos, y sin  tener un orden particular de realización:
