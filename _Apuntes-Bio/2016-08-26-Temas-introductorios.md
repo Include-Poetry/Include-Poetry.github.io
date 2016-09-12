@@ -2,7 +2,7 @@
 layout: PostPoetry
 title: Conceptos introductorios
 author: rivel_co
-tags: [Introducción, Conceptos]
+tags: Conceptos
 category: [Semestre-1, Parcial-1]
 ---
 
