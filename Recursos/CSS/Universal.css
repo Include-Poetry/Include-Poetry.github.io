@@ -57,14 +57,14 @@ h1{
 .Pre-img{
 	background: url('../Multimedia/Loading.gif') no-repeat center;
 	background-size: cover;
-	width: 200px;
-	height: 200px;
-	border-radius: 200px;
+	width: 120px;
+	height: 120px;
+	border-radius: 120px;
 	position: absolute;
 	left:50%;
 	top: 50%;
-	margin-left: -100px;
-	margin-top: -100px;
+	margin-left: -60px;
+	margin-top: -60px;
 	z-index: 9999999999999;
 }
 

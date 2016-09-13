@@ -239,8 +239,7 @@ var fondos = ['url(Recursos/Multimedia/Fondos/01.jpg)',
 	'url(Recursos/Multimedia/Fondos/13.jpg)',
 	'url(Recursos/Multimedia/Fondos/14.jpg)',
 	'url(Recursos/Multimedia/Fondos/15.jpg)',
-	'url(Recursos/Multimedia/Fondos/16.jpg)',
-	'url(Recursos/Multimedia/Fondos/17.jpg)'
+	'url(Recursos/Multimedia/Fondos/16.jpg)'
 ];
 
 var x = Math.floor((Math.random() * fondos.length) + 1);
