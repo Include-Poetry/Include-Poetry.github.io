@@ -78,6 +78,13 @@ header{
 	background: #fcfcfc;
 	z-index: 99;
 }
+.CabFalso{
+	min-height: 144px;
+	border-bottom: 2px solid #fcfcfc;
+	width: 100%;
+	color: #fcfcfc;
+	background: #fcfcfc;
+}
 img{
 	display: block;
 	position: relative;
@@ -191,7 +198,7 @@ table td{
 	padding: 6px 8px;
 }
 
-#Titulo{
+.Titulo{
 	text-align: center;
 	font-size: 4em;
 }
@@ -211,7 +218,15 @@ header h4{
 	margin-bottom: 15px;
 	text-align: center;
 }
-#MDA{
+.CabFalso h4{
+	font-family: 'Inconsolata', 'Consolas';
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.MDA{
 	width: 100%;
 	display: inline-block;
 	font-size: .7em;
@@ -222,7 +237,7 @@ header h4{
 	margin-top: 0;
 	color: #D2D3D5;
 }
-#CabPost{
+.CabPost{
 	height: auto;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #D2D3D5;
@@ -230,6 +245,14 @@ header h4{
 	position: fixed;
 	background: #fcfcfc;
 	z-index: 99;
+}
+.CabPostFalso{
+	height: auto;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #fcfcfc;
+	width: 100%;
+	color: #fcfcfc;
+	background: #fcfcfc;
 }
 .Kau{
 	font-family: 'Kaushan Script', cursive;
@@ -241,7 +264,6 @@ header h4{
 	min-height: 100%;
 }
 #Contenido{
-	margin-top: 150px;
 	width: 80%;
 	margin-left: 10%;
 	padding-top: 50px;
@@ -389,20 +411,19 @@ footer span{
 }
 @media only screen and (max-width: 768px){
 	#Contenido{
-		margin-top: 92px;
 		padding-top: 20px;
 	}
-	#Titulo{
+	.Titulo{
 		font-size: 2em;
 	}
 	.TagPost{
 		font-size: .8em;
 	}
-	header h4{
+	header h4, .CabFalso h4{
 		font-size: 1em;
 		margin-top: 0px;
 	}
-	header{
+	header, .CabFalso{
 		padding-bottom: 15px;
 		min-height: 92px;
 		box-sizing: border-box;
@@ -433,7 +454,7 @@ footer span{
 	blockquote:after {
 		font-size: 3em;
 	}
-	p, ul, dl, table{
+	p, ul, ol, dl, table{
 		font-size: 1em;
 	}
 	h1{
