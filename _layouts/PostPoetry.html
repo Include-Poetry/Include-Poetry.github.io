@@ -1,6 +1,24 @@
 {% if jekyll.environment == 'production' %}
 {% include Comentario.html %}
 {% endif %}
+
+{% if page.url contains "Biology/" %}
+{% assign pagina = "Biology" %}
+{% endif %}
+{% if page.url contains "Chemistry/" %}
+{% assign pagina = "Chemistry" %}
+{% endif %}
+{% if page.url contains "Math/" %}
+{% assign pagina = "Math" %}
+{% endif %}
+{% if page.url contains "Physics/" %}
+{% assign pagina = "Physics" %}
+{% endif %}
+{% if page.url contains "Poetry/" %}
+{% assign pagina = "Poetry" %}
+{% endif %}
+
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -33,6 +51,7 @@
 	<body>
 		{% include CabeceraPp.html %}
 		<div id="Cuerpo">
+			{% include CabPostFalso.html %}
 			<div id="Contenido">
 				<h3 class="iAutor">
 					{% if page.date %}
@@ -52,11 +71,11 @@
 							{% when '11' %}Noviembre
 							{% when '12' %}Diciembre
 						{% endcase %}
-						{{ page.date | date: "%Y" }} | {% endif %}
+						{{ page.date | date: "%Y" }} | {% endif %} Tiempo de lectura: {% include TiLec.html %} |
 						Por: {{ page.author }}
 			    </h3>
 			    {% for tag in page.tags %}
-		            <a class="TagPost" href="{{ site.url }}/Poetry/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+		            <a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
 		        {% endfor %}
 				{{ content }}
 			</div>
