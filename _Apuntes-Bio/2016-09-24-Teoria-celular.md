@@ -13,7 +13,7 @@ Las células, siendo tan pequeñas, pasaron desapercibidas del conocimiento huma
 
 Mucho después del descubrimiento de la célula, se consideró que éstas eran parte de un sistema continuo de membrana en los organismos multicelulares, y no entidades separadas. La creación de la teoría celular se debe a una gran serie de observaciones y descubrimientos. Si los vemos en orden, los más importantes fueron:
 
-- *Robert Brown* identifica por primera vez el núcleo de una célula vegetal.
+- ***Robert Brown*** identifica por primera vez el núcleo de una célula vegetal.
 - ***Matthias Schleiden*** propone la hipótesis de que una célula vegetal es una unidad viva independiente aunque forme parte de una planta.
 - ***Schleiden*** y ***Theodor Schwann*** concluyen que los tejidos de los animales y vegetales están formados por células y sus productos.
 - ***Rudolf Virchow*** al analizar la reproducción celular concluye que cada célula desciende de otra célula viva.

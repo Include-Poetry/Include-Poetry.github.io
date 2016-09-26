@@ -11,6 +11,26 @@ La palabra **procarionte** significa "*antes del núcleo*", por lo que nos hace 
 
 Los dominios *Bacteria* y *Archaea* incluyen a todos los procariontes, sin embargo estos reinos tienen diferencias en estructura y detalles metabólicos. Algunas de estas diferencias en las arqueas indican que están relacionadas de manera más cercana con las células eucariontes que con las bacterias.
 
+## Estructura general
+
+- Glucocáliz
+    + Protege a la célula de depredadores y toxinas
+    + Permite la adhesión
+    + Resiste muchos patógenos
+    + Envuelve a la pared celular
+- Pared celular
+- Membrana plasmática
+- Nucleoide/área nuclear
+- ARN y ribosomas
+- Mesosomas
+    + Pliegues de la membrana plasmática donde ocurren procesos dependientes de la membrana
+- Citosol
+- Fibras
+    + Pilus sexuales: conjugación
+    + Fimbrias: adhesión
+    + Flagelos: locomoción
+- Gránulos de almacenamiento
+
 ### Pared celular
 
 La mayoría de los procariontes, tienen una ***pared celular*** que rodea la membrana plasmática. Esta pared es permeable por lo que las sustancias pueden atravesarla con facilidad, la mayoría de las bacterias consta de ***peptidoglicano*** el cual es un polímero que contiene péptidos entrecruzados y polisacáridos, la pared de la mayoría de las arqueas consta de proteínas.

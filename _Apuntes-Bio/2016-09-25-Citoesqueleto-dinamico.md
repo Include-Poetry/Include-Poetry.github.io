@@ -7,7 +7,18 @@ tags: Célula
 category: [Semestre-1, Parcial-2]
 ---
 
-Entre el núcleo y la membrana plasmática de las células eucariontes se encuentra el citoesqueleto, que es un sistemas interconectado formado por muchos filamentos proteicos.  Partes de este sistema refuerzan, organizan y mueven las estructuras de la célula a menudo de toda ella. Algunos son permanentes y otros sólo se forman en determinados momentos.
+Entre el núcleo y la membrana plasmática de las células eucariontes se encuentra el citoesqueleto, que es un sistema interconectado formado por muchos filamentos proteicos. Algunos son permanentes y otros sólo se forman en determinados momentos.
+
+Los organelos y otras estructuras dentro de las células eucarióticas no se desplazan a la deriva o de manera aleatoria dentro del citoplasma; la mayoría de ellos están adheridos al armazón de fibras proteicas que forma el citoesqueleto.
+
+## Principales funciones
+
+- ***Da forma a la célula***. En las células sin pared celular, el citoesqueleto, en especial, la red de filamentos intermedios, determina la forma de la célula.
+- ***Movimiento celular***. El ensamblado, desensamblado, y deslizamiento de los microfilamentos y microtúbulos producen el movimiento celular. 
+- ***Movimiento de organelos***. Los microtúbulos y microfilamentos, mueven organelos de un lugar a otro dentro de la célula.
+- ***División celular***. Los microtúbulos y microfilamentos son esenciales para la división de las células eucariontes.
+
+## Componentes del citoesqueleto
 
 ### Microtúbulos
 
@@ -27,11 +38,21 @@ En las células eucariontes los microtúbulos y microfilamentos desempeñan pape
 
 Algunas proteínas motoras desplazan cromosomas, mientras que otras desplazan un microtúbulo sobre otro. Muchos motores están organizados en serie y cada uno desplaza alguna vesícula una parte del camino a lo largo de las vías antes de cederla en la siguiente línea. En las células vegetales, las ***cinesinas*** alejan a los cloroplastos lejos de la luz demasiado intensa o hacia una fuente luminosa cuando hay poca luz.
 
-## Flagelos y pies falsos
+### Tabla comparativa de componentes
+
+| Componente | Estructura | Tipo de proteína | Funciones |
+|:----------:|:----------:|:----------------:|:---------:|
+| Microfilamentos | Cadenas dobles de proteínas enrolladas; diámetro de alrededor de 7nm | Actina | Participan en la contracción de los músculos; permiten cambiar la forma de la célula; facilitan la división del citoplasma en las células animales |
+| Filamentos intermedios | Unidades helicoidales enrolladas una alrededor de otra y unidas en grupos de cuatro, los cuales pueden enrollarse aún más | Las proteínas varían según el tipo de célula | Proporcionan un marco de soporte dentro de la célula; sostienen la membrana plasmática; afianzan varios organelos en el citoplasma; unen células |
+| Microtúbulos | Tubos consistentes en espirales de dos proteínas; diámetro de aproximadamente 25nm | Tubulina | Permiten el movimiento de los cromosomas durante la división celular; forman centriolos y cuerpos basales; son un componente importante de cilios y flagelos |
+
+## Cilios flagelos y pies falsos
 
 Hay arreglos organizados de microtúbulos en los flagelos eucariontes y cilios, estructuras similares a látigos que impulsan a células como los espermatozoides en el medio líquido. Los flagelos tienden a ser más largos y menos profusos que los cilios. 
 
-Hay un arreglo especial de microtúbulos que se extiende a lo largo de un flagelo o cilio. Este arreglo 9+2 consta de nueve pares de microtúbulos que circundan a otro par que se encuentra en el centro. Los microtúbulos crecen a partir de un organelo con forma de barril llamado ***centriolo***, que permanece debajo del cuerpo terminado y como cuerpo basal.
+Los cilios y los flagelos son extensiones finas de la membrana plasmática, sostenidas internamente por microtúbulos con otro par en el centro. Hay un arreglo especial de microtúbulos que se extiende a lo largo de un flagelo o cilio. Este arreglo 9+2 consta de nueve pares de microtúbulos que circundan a otro par que se encuentra en el centro. Los microtúbulos crecen a partir de un organelo con forma de barril llamado ***centriolo***, que permanece debajo del cuerpo terminado y como cuerpo basal, además los ancla a la membrana plasmática.
+
+Para que los cilios y flagelos se muevan, diminutos "*brazos*" de proteínas afianzan pares contiguos de microtúbulos. Estos brazos pueden flexionarse usando energía liberada del adenosín trifosfato (ATP) para impulsar su movimiento. La flexión de los brazos desliza un par de microtúbulos sobre el par adyacente y hace que se doblen los cilios o flagelos.
 
 Amibas y otros tipos de células eucariontes forman ***pseudópodos*** o "*pies falsos*". A medida que estos lóbulos irregulares temporales se abultan hacia el exterior, desplazan la célula y engloban algún blanco como presa.
 

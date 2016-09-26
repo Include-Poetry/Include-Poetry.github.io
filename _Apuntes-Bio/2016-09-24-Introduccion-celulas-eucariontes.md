@@ -7,7 +7,9 @@ tags: [Célula, Introducción]
 category: [Semestre-1, Parcial-2]
 ---
 
-*Eu* significa *verdadero* y *karyon* significa núcleo, de aquí se desprende el término *eucarionte*, que hace referencia a las células que ***poseen núcleo***. El núcleo a su vez, es un ***organelo***.
+*Eu* significa *verdadero* y *karyon* significa núcleo, de aquí se desprende el término *eucarionte*, que hace referencia a las células que ***poseen núcleo***. El núcleo a su vez, es un ***organelo***. Las células eucarióticas se localizan en animales, plantas, protistas y hongos.
+
+## Organelo
 
 Organelo
  : Estructura que lleva a cabo una función especializada dentro de la célula.
@@ -28,6 +30,24 @@ Un lisa general típica de organelos en células eucariontes, y con funciones mu
 | Peroxisoma                | Inactivar toxinas                         |
 | Vacuola                   | Almacenamiento                            |
 | Ribosomas                 | No tiene membrana, ensambla cadenas de polipéptido. |
+
+## Diferencias con células procarióticas
+
+- Las células eucariotas por lo regular son más grandes que las procariotas.
+- El citoplasma de las células eucariotas alberga una diversidad de organelos.
+- El citoesqueleto, que es una red de fibras proteicas, da forma y organización al citoplasma de las células eucariotas.
+
+## Cuadro comparativo procariontes y eucariontes
+
+| Procariontes                          | Eucariontes                        |
+|:--------------------------------------|:-----------------------------------|
+| Bacteria y archea                     | Protista, fungi, platae, animalia  |
+| Citosol                               | Citosol/citoplasma                 |
+| Nucleoide o área nuclear              | Núcleo y nucleoplasma              |
+| Un cromosoma circular                 | N cromosomas lineales              |
+| Ribosomas característicos             | Ribosomas característicos          |
+| 10% de una célula eucarionte          | Organelos delimitados por membrana |
+| Pared celular                         | Pared celular (en plantae y fungi) |
 
 ## Resumen
 
