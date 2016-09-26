@@ -348,6 +348,27 @@ header h4{
 	color: #000;
 }
 
+.PagNav {
+	font-size: 1em;
+	padding: 5px 0;
+	border-top: 1px solid #D2D3D5;
+	margin-top: 50px;
+	display: block;
+	width: auto;
+	overflow: hidden;
+	font-family: 'Roboto Condensed',sans-serif;
+}
+.PagNav a {
+	display: block;
+	width: 50%;
+	float: left;
+	margin: 1em 0;
+}
+.PagNav .PostSig {
+	text-align: right;
+}
+
+
 .footnotes{
 	color: #6d6d73;
 	font-size: .7em;
@@ -431,6 +452,9 @@ footer span{
 	dl{
 		width: 100%;
 	}
+	.PagNav{
+		font-size: .8em;
+	}
 	.footnotes{
 		font-size: .6em;
 	}
@@ -456,6 +480,9 @@ footer span{
 	}
 	p, ul, ol, dl, table{
 		font-size: 1em;
+	}
+	ul li, ol li{
+		line-height: 1.2em;
 	}
 	h1{
 		font-size: 2em;
