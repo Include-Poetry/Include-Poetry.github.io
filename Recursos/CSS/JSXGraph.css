@@ -1,0 +1,58 @@
+.jxgbox {
+    /* for IE 7 */
+    overflow: hidden;
+    background-color: #ffffff;
+    border: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -ms-touch-action: none;
+}
+
+.JXGtext {
+    /* May produce artefacts in IE. Solution: setting a color explicitly. */
+    background-color: transparent;
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.JXGinfobox {
+    border-style: none;
+    border-width: 1px;
+    border-color: black;
+}
+
+.JSGmini{
+    float: right;
+    width: 400px; 
+    height: 300px; 
+    margin: 0 2px 2px 20px;
+}
+.JSGmax{
+    width: 80%; 
+    height: 500px; 
+    margin: 20px auto;
+}
+/* CSS attributes will (permantely) overwrite attributes set in JSXGraph */
+.JXGimage {
+    /* opacity: 1.0; */
+}
+
+.JXGimageHighlight {
+    /* opacity: 0.6; */
+}
+
+@media only screen and (max-width: 768px){
+    .JSGmini{
+        width: 250px;
+        height: 250px;
+        margin: 15px auto;
+    }
+    .JSGmax{
+        width: 100%; 
+        height: 300px; 
+        margin: 15px auto;
+    }
+}

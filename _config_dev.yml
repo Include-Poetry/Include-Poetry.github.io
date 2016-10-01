@@ -20,7 +20,7 @@ email: includepoetry@gmail.com
 google_analytics: UA-74086952-1
 
 # Base del sitio url: "http://localhost:4000"  url: "http://169.254.223.56:4000"
-url: "http://192.168.1.73:4000"
+url: "http://192.168.1.65:4000"
 host: 0.0.0.0
 
 # Excuidos de la conversión

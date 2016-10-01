@@ -53,5 +53,6 @@ Como objetivos más específicos, y sin  tener un orden particular de realizaci�
 	- Ace
 	- MathJax
 	- FontAwesome
+    - JSXGraph
 - Desarrollado desde el 20 de febrero del 2016
 - En línea oficialmente desde el 13 de Agosto del 2016
