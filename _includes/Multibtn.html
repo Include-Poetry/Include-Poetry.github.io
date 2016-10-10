@@ -1,9 +1,26 @@
+{% assign Home = "" %}
+{% if page.url contains "Poetry/" %}
+	{% assign Home = "Poetry/" %}
+{% endif %}
+{% if page.url contains "Biology/" %}
+	{% assign Home = "Biology/" %}
+{% endif %}
+{% if page.url contains "Chemistry/" %}
+	{% assign Home = "Chemistry/" %}
+{% endif %}
+{% if page.url contains "Physics/" %}
+	{% assign Home = "Physics/" %}
+{% endif %}
+{% if page.url contains "Math/" %}
+	{% assign Home = "Math/" %}
+{% endif %}
+
 <div class="btn-multi">
 	<input type="checkbox" id="multi-btn" name="multi-btn" />
 	<label for="multi-btn" id="lgrande"></label>
 	<label for="multi-btn" id="botonsitos">
 		<span class="btn btn-circle">
-			<a href="{{ site.url }}/Poetry/" title="Ir al inicio"><i class="fa fa-home icon" aria-hidden="true"></i></a>
+			<a href="{{ site.url }}/{{ Home }}" title="Ir al inicio"><i class="fa fa-home icon" aria-hidden="true"></i></a>
 		</span>
 		<span class="btn btn-circle">
 			<a href="{{ site.url }}/Poetry/Contacto/" title="Contacto"><i class="fa fa-comment icon" aria-hidden="true"></i></a>
