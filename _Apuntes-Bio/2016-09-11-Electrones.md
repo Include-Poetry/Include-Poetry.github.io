@@ -4,6 +4,7 @@ title: Electrones
 author: rivel_co
 tags: [Bases químicas]
 category: [Semestre-1, Parcial-1]
+published: false
 ---
 
 Los electrones son partículas subatómicas que se encuentran orbitando el núcleo del átomo en forma de nebulosas. Tienen carga negativa.

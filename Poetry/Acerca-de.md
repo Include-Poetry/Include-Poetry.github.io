@@ -5,20 +5,29 @@ author: rivel_co
 permalink: /Poetry/Acerca-de/
 ---
 
-A diferencia del resto del sitio, que se enfoca en impartir los conocimientos de la materia, el blog se enfoca en compartir cosas que, si bien no son del todo diferentes a la materia, sí son fuera de la enseñanza de esta. Así que aquí se encontrará contenido aleatorio, que puede ser de utilidad o no, pero mayormente de entretenimiento.
+## Sobre el blog
 
-Las publicaciones en este espacio pueden tener también diversas autorías, y están organizadas por fechas.
-
-Este blog pertenece al sitio de **#include &lt;poetry&gt;**, por lo que también contendrá abundantes noticias del sitio, todas las cosas geniales y reelevantes pasando en *&#35;iP* estarán aquí narradas.
+Este blog pertenece al sitio de ***#include &lt;poetry&gt;***, por lo que contendrá principalmente abundantes noticias del sitio y de la iniciativa, todas las cosas geniales y relevantes pasando en *&#35;iP* estarán aquí narradas.
 
 ### Páginas importantes del blog
 * [Acerca de](# "Esta página")
 * [Contacto]({{ site.url }}/Poetry/Contacto/ "Manda un mensaje")
 
-### Páginas importantes del sitio
-* [Acerca de]({{ site.url }}/Acerca-de/ "Acerca de #iP")
-* [Contacto]({{ site.url }}/Contacto/ "Contacto de #iP")
-* [Únete al equipo]({{ site.url}}/Reclutamiento/ "Reclutamiento")
-* [Inicio]({{ site.url }} "A programar")
-
 ![Nuestro logo]({{ site.url }}/Recursos/Multimedia/Include.png "#iP")
+
+## Sobre la libreta de apuntes
+
+La ***libreta de apuntes*** es un condensado digital de los temas vistos en clases de la *licenciatura en biología de la UASLP*.
+
+### Biología
+
+Docente que imparte: Dra. Nadia Saderi
+
+Bibliografía principal:
+
+- Audesirk, T. (2008). Biología: La vida en la Tierra (8 ed.). México: Pearson.
+- Curtis, E. (2000). Biología (7 ed.). México: Editorial Médica Panamericana.
+- Solomon, E. P. (2013). Biología (9 ed.). México: Cengage learning.
+- Starr, C. (2009). Biología. La unidad y la diversidad de la vida (12 ed.). México: Cengage Learning.
+
+

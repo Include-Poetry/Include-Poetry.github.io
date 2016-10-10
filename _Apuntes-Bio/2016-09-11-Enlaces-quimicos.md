@@ -4,6 +4,7 @@ title: Enlaces químicos
 author: rivel_co
 tags: [Bases químicas]
 category: [Semestre-1, Parcial-1]
+published: false
 ---
 
 Un enlace químico es la fuerza de atracción entre átomos debida a la interacción de sus electrones. Estos enlaces pueden ser de diversos tipos, y aún los mismo bloques atómicos, cuando se ordenan de otro modo, dan a lugar a moléculas diferentes. En este artículo se abarcan los tres tipos de enlace ás comunes en las biomoléculas.

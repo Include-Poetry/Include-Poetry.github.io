@@ -4,7 +4,6 @@ title: Prueba funciones
 author: rivel_co
 tags: []
 category: Parcial-1
-published: false
 ---
 
 Post de prueba sobre funciones.
