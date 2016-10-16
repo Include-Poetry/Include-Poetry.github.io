@@ -274,6 +274,12 @@ ol{
 #search-results a{
 	color: #585858;
 }
+#search-results li a .Subtitulo{
+	font-size: 1.3em;
+}
+#search-results li p{
+	font-size: 1em;
+}
 form{
 	width: 100%;
 	display: block;
@@ -431,7 +437,14 @@ form{
 	list-style: square;
 }
 #ListaTags li a{
+	line-height: 1.5em;
 	color: #383838;
+}
+.ProblemaTag{
+	font-family: 'Roboto', sans-serif;
+}
+.ProblemaTag:after{
+	background-image: none;
 }
 /* ------ Celular ------- */
 @media only screen and (max-width: 600px){
