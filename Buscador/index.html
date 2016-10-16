@@ -20,22 +20,67 @@ title: Resultados de la búsqueda
 
 <script>
   window.store = {
+    {% for tema in site.Resueltos-C %}
+      "{{ tema.url | slugify }}": {
+        "title": "{{ tema.title | xml_escape }}",
+        "author": "{{ tema.author | xml_escape }}",
+        "category": "{{ tema.category | xml_escape }}",
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
+        "url": "{{ tema.url | xml_escape }}"
+      },
+    {% endfor %}
+     {% for tema in site.Apuntes-Bio %}
+      "{{ tema.url | slugify }}": {
+        "title": "{{ tema.title | xml_escape }}",
+        "author": "{{ tema.author | xml_escape }}",
+        "category": "{{ tema.category | xml_escape }}",
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
+        "url": "{{ tema.url | xml_escape }}"
+      },
+    {% endfor %}
+    {% for tema in site.Topicos-C %}
+      "{{ tema.url | slugify }}": {
+        "title": "{{ tema.title | xml_escape }}",
+        "author": "{{ tema.author | xml_escape }}",
+        "category": "{{ tema.category | xml_escape }}",
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
+        "url": "{{ tema.url | xml_escape }}"
+      },
+    {% endfor %}
+    {% for tema in site.Topicos-Karel %}
+      "{{ tema.url | slugify }}": {
+        "title": "{{ tema.title | xml_escape }}",
+        "author": "{{ tema.author | xml_escape }}",
+        "category": "{{ tema.category | xml_escape }}",
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
+        "url": "{{ tema.url | xml_escape }}"
+      },
+    {% endfor %}
+    {% for tema in site.posts %}
+      "{{ tema.url | slugify }}": {
+        "title": "{{ tema.title | xml_escape }}",
+        "author": "{{ tema.author | xml_escape }}",
+        "category": "{{ tema.category | xml_escape }}",
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
+        "url": "{{ tema.url | xml_escape }}"
+      },
+    {% endfor %}
     {% for tema in site.Karel %}
       "{{ tema.url | slugify }}": {
         "title": "{{ tema.title | xml_escape }}",
         "author": "{{ tema.author | xml_escape }}",
         "category": "{{ tema.category | xml_escape }}",
-        "content": {{ tema.content | strip_html | strip_newlines | jsonify }},
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
         "url": "{{ tema.url | xml_escape }}"
       },
     {% endfor %}
-    {% for otra in site.C %}
-      "{{ otra.url | slugify }}": {
-        "title": "{{ otra.title | xml_escape }}",
-        "author": "{{ otra.author | xml_escape }}",
-        "category": "{{ otra.category | xml_escape }}",
-        "content": {{ otra.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ otra.url | xml_escape }}"
+    {% for tema in site.C %}
+      "{{ tema.url | slugify }}": {
+        "title": "{{ tema.title | xml_escape }}",
+        "author": "{{ tema.author | xml_escape }}",
+        "category": "{{ tema.category | xml_escape }}",
+        "content": {{ tema.content | strip_html | remove: "*" | remove: "#" | strip_newlines | jsonify }},
+        "url": "{{ tema.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}

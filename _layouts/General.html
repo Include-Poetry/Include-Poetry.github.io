@@ -1,6 +1,24 @@
 {% if jekyll.environment == 'production' %}
 {% include Comentario.html %}
 {% endif %}
+
+{% if page.url contains "Topicos-adicionales/" %}
+	{% if page.url contains "Karel/" %}
+		{% assign pagina = "Topicos-adicionales/Karel" %}
+	{% endif %}
+	{% if page.url contains "C++/" %}
+		{% assign pagina = "Topicos-adicionales/C++" %}
+	{% endif %}
+{% endif %}
+{% if page.url contains "Problemas-resueltos/" %}
+	{% if page.url contains "Karel/" %}
+		{% assign pagina = "Problemas-resueltos/Karel" %}
+	{% endif %}
+	{% if page.url contains "C++/" %}
+		{% assign pagina = "Problemas-resueltos/C++" %}
+	{% endif %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -34,15 +52,9 @@
 				</div>
 				{{ content }}
 				<p>
-				{% if page.url contains "Karel/" %}
 					{% for tag in page.tags %}
-			            <a class="TagPost" href="{{ site.url }}/Topicos-adicionales/Karel/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+			            <a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
 			        {% endfor %}
-			    {% else %}
-			    	{% for tag in page.tags %}
-			            <a class="TagPost" href="{{ site.url }}/Topicos-adicionales/C++/tag/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
-			        {% endfor %}
-			    {% endif %}
 		        </p>
 				{% include facebookC.html %}
 			</div>
