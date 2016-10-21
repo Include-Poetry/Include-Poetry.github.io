@@ -259,6 +259,9 @@ ol{
 	color: #000;
 	
 }
+.footnotes p, .footnotes{
+	font-size: 0.9em;
+}
 #NIzq:hover{
 	padding-right: 10px;
 }
