@@ -1,6 +1,6 @@
 ---
 layout: General
-title: Inscripción al curso en VRH
+title: Curso en Vicente Rivera Hernández
 permalink: /Inscripcion-VRH/
 ---
 
