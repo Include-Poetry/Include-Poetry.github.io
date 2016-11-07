@@ -1,0 +1,267 @@
+---
+layout: General
+title: Arreglos en C++
+---
+<p>
+	Así como una variable tipo <code>int</code> almacena números enteros, <code>char</code> carácters, <code>bool</code> valores booleanos, etc. Se podría decir que existen variables que almacenan, nada más y nada menos que <i>otras variables</i>. Esta es una manera de concebir a los <i>arreglos</i>.
+</p>
+<ul class="ListaContenido">
+	<li id="1L"><span>Creación de una variable</span></li>
+	<li id="2L"><span>Declaración de un arreglo</span></li>
+	<li id="3L"><span>Inicialización de un arreglo</span></li>
+	<li id="4L"><span>Manejo de un arreglo</span></li>
+	<li id="5L"><span>Arreglo de caracteres</span></li>
+	<li id="6L"><span>Máximo de un arreglo</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Creación de una variable
+</div>
+<p>
+	¿Recuerdas que antes de utilizar el valor de una variable debemos <i>inicializarla</i>? Y esto era porque cuando declaramos una variable el compilador le asigna un valor <i>aleatorio</i>. La respuesta técnicamente más correcta a esto, es el hecho de como se organiza la memoria de una computadora.
+</p>
+<p>
+	Imagina la memoria como una caja compuesta por muchos pequeños compartimentos cuadrados, organizados como en una gran cuadrícula. En estos compartimentos es donde almacenamos la información. Cuando nosotros declaramos una variable, el compilador busca un espacio de la memoria donde pueda <i>poner</i> ese valor, una vez que lo encuentra <i>anota</i> dónde lo guardó, y vincula esa dirección de la memoria a un nombre. Ese nombre es el nombre de la variable.
+</p>
+<p>
+	Ese lugar donde el compilador guardará tu variable, es un lugar donde aún hay información, datos de algún proceso ya finalizado, o archivos temporales, por lo que, ese espacio no está del todo vacío, pero sí lo podemos ocupar. Es por eso que las variables no inicializadas tienen un valor <i>basura</i>, y es hasta que nosotros inicializamos que ese valor se limpia para guardar ahora el valor que nosotros le dimos.
+</p>
+<p>
+	Cada que nosotros hacemos una referencia en nuestro código a una variable, el compilador va a ese espacio de la memoria y hace las modificaciones que nosotros señalamos. La manera que usa la computadora para seleccionar un espacio de memoria, es digamos, poco organizado, lo que provoca que en la cuadrícula (que imaginamos como la memoria) hayan espacios <i>huecos</i> en donde no hay información que se esté usando. En esos espacios huecos es en donde guarda nuestras variables, o más bien los valores de éstas. Este sistema provoca que las variables que declaramos en nuestro programa no queden <i>juntas</i>, o más bien dicho, en espacios de memoria <a href="http://dle.rae.es/?id=AVOhPla" class="Ref" target="_blank">contiguos</a>.
+</p>
+<p>
+	Por ahora no hay problema que las variables que declaramos no estén una junto a la otra, es decir, de todas maneras el compilador recuerda donde están y gracias a ello todo funciona bien.<br>
+	Sin embargo, si las variables estuvieran contiguas no tendría que recordar tantas direcciones donde están, pues podría recordar <i>un bloque</i> donde las dejó, y ya en ese bloque sería más sencillo ubicar a cada una individualmente.
+</p>
+<p>
+	Bajo este principio es como existen y usamos los arreglos. Como un <i>conjunto de espacios de memoria contiguos</i> en donde guardamos nuestros valores. Al usarlos, nos referimos a ese bloque de variables por un nombre, y a cada variable de ese bloque por un índice.
+</p>
+
+<div class="Subtitulo" id="2">
+	Declaración de un arreglo
+</div>
+<p>
+	Para declarar un arreglo primero tenemos que decir de qué tipo será, puede ser de cualquiera de los tipos de variables que ya vimos. Luego el nombre que tendrá el arreglo y al final y entre corchetes la cantidad de variables que tendrá este arreglo. Por ejemplo:
+</p>
+<textarea class="editor">
+// Declaración de un arreglo
+int primero[10];
+char segundo[5];
+bool otro[22];
+</textarea>
+<p>
+	En estos casos tendremos \(10\) variables tipo <code>int</code>, \(5\) tipo <code>char</code> y \(22\) tipo <code>bool</code>. Ahora, recuerda que el valor de cada variable dentro del arreglo es independiente al resto de los valores de ese mismo arreglo. Para acceder a cada variable individualmente tenemos que mencionar primero su <i>índice</i>.
+</p>
+<p>
+	Al manejar arreglos tenemos que tener en mente siempre que son variables ordenadas, una junto a otra en la memoria de la computadora, para tenerlas ordenadas la computadora las numera, esta numeración está <a href="http://dle.rae.es/?id=LNTIjYS" class="Ref" target="_blank">indexada</a> en \(0\), es decir, está numerada iniciando por el \(0\). Por lo que el índice de la primer variable del arreglo es \(0\). Y por lo tanto, el índice de la última variable de nuestro arreglo <code>primero</code> es \(9\). ¿Por qué nueve? Recuerda que empezamos a contar por el \(0\), para cuando lleguemos al \(9\), tendremos las \(10\) variables que declaramos.
+</p>
+
+<div class="Subtitulo" id="3">
+	Inicialización de un arreglo
+</div>
+<p>
+	Al igual que cualquier otra variable ya vista, los arreglos y sus locaciones necesitan inicializarse para que podamos empezar a usar sus valores, hay varias maneras:
+</p>
+<textarea class="editor">
+// Inicialización 
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arreglo[10]; // Arreglo de 10 "locaciones"
+    arreglo[0] = 12;
+    arreglo[3] = 5;
+    arreglo[8] = 9;
+    arreglo[9] = 2;
+    cout << arreglo[3] << " ";
+    cout << arreglo[0] << " ";
+    cout << arreglo[9];
+    return 0;
+}
+</textarea>
+<p>
+	La salida del código anterior es <code>5 12 2</code>. Las <i>locaciones</i> o variables del arreglo que no inicializamos, al igual que una variable no inicializada, tiene un valor <i>basura</i> que no debemos usar. Tampoco debemos usar la locación con índice del tamaño de nuestro arreglo, (en el ejemplo \(10\)), o de un valor mayor, pues ese valor es <i>inestable</i> y para nada confiable. Hacer lo que llamamos "<i>salirse de un arreglo</i>" (es decir, referirse a una locación mayor o igual al número de locaciones declarado) puede causar muchos errores en el compilador, si necesitas un arreglo más grande, entonces declara uno con más locaciones. En este ejemplo se han inicializado algunas locaciones de manera manual.
+</p>
+<p>
+	También podemos inicializarlo todo de una vez, sin hacer uso de tantas asignaciones, de la siguiente manera:
+</p>
+<textarea class="editor">
+// Inicialización de un arreglo
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arreglo[5] = {5, 213, 212, 2312, 21}; 
+    cout << arreglo[2] << " ";
+    cout << arreglo[0] << " ";
+    cout << arreglo[3];
+    return 0;
+}
+</textarea>
+<p>
+	De esta manera, separamos con comas cada valor dentro de las llaves, estos valores se irán asignando a cada locación, en el mismo orden en el que se especifica dentro de las llaves. De esta manera el programa anterior nos daría la salida <code>212 5 2312</code>. También podemos inicializar sólo una parte del arreglo, pero en el mismo orden anterior.
+</p>
+<textarea class="editor">
+// Inicialización de un arreglo
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arreglo[5] = {5, 213, 2312}; 
+    cout << arreglo[0] << " ";
+    cout << arreglo[1] << " ";
+    cout << arreglo[2];
+    cout << "\n";
+    
+    char otro[10] = {'A', 'n', '!', 'p'};
+    cout << otro[1] << " ";
+    cout << otro[3] << " ";
+    cout << otro[2];
+    return 0;
+}
+</textarea>
+<p>
+	La salida del anterior código es <code>5 213 2312</code> en la primera línea y <code>n p !</code>
+</p>
+
+<div class="Subtitulo" id="4">
+	Manejo de un arreglo
+</div>
+<p>
+	En el ejemplo anterior, nos referimos a algunas locaciones del arreglo de manera manual, es decir, nosotros pusimos una constante (un número) para referirnos a su índice. Este método, aunque funciona, es poco práctico, es mejor manejarlo de manera <i>dinámica</i>, es decir, usando variables.
+</p>
+<p>
+	Ahora imagina la siguiente situación; necesitas hacer un programa que lea del teclado una 10 números, y que después de haberlos ingresado todos, los muestre en pantalla en el mismo orden en el que fueron ingresados. De manera manual tendríamos que poner \(10\) <code>cin</code> pidiendo en cada una una locación distinta, para después poner \(10\) <code>cout</code> mostrando cada una. Sin embargo de manera dinámica esto sería mucho más sencillo:
+</p>
+<textarea class="editor">
+// Uso de un arreglo
+#include <iostream>
+using namespace std;
+
+int main(){
+    int numeros[10], i;
+    for (i=0; i < 10; i++){ // Pedimos 10 números
+       cin >> numeros[i];
+    }
+    // Aquí ya terminamos de pedir
+    for (i=0; i < 10; i++){ // Mostramos 10 números
+       cout << numeros[i] << " ";
+    }
+    return 0;
+}
+</textarea>
+<p>
+	Nota como la variable <code>i</code> irá cambiando a medida que el ciclo se repite, y para cada cambio su valor hace referencia a una locación de memoria distinta. De esta manera podemos manejar el arreglo con muy pocas líneas. <int>genial ¿no crees?</int>
+</p>
+
+<div class="Subtitulo" id="5">
+	Arreglo de caracteres
+</div>
+<p>
+	El término <i>arreglo</i> en realidad se desprende del término original (en inglés) <i>array</i> cuya traducción inmediata al español es <i>formación</i> u <i>ordenación</i>. Sin embargo, para nosotros la palabra <i>arreglo</i> también encaja con la descripción que ya dimos.
+</p>
+<p>
+	Tomemos entonces la definición de un arreglo como una composición de partes ordenadas. Ahora, ya vimos que cada parte es una variable. Si estas variables son enteros, tenemos entonces una composición de números enteros. ¿y si estas variables son letras o simplemente caracteres?
+</p>
+<textarea class="editor">
+// Arreglo de caracteres
+#include <iostream>
+using namespace std;
+
+int main(){
+    char arreglo[4];
+    arreglo[0] = 'H';
+    arreglo[1] = 'o';
+    arreglo[2] = 'l';
+    arreglo[3] = 'a';
+    
+    for (int i=0; i < 4; i++){
+        cout << arreglo[i];
+    }
+    
+    return 0;
+}
+</textarea>
+<p>
+	La salida del anterior código es <code>Hola</code>. Tras este principio es como usamos <i>palabras</i> como variables. Sin embargo hay varias cosas importantes a notar, por ejemplo, en el ejemplo declaramos un arreglo de \(4\) locaciones, que es exactamente la misma cantidad de letras que tiene la palabra que definimos con ella. ¿Qué pasaría si usamos más letras que locaciones declaradas? Pues nos estaríamos saliendo del arreglo, y eso, como ya dijimos, no puede ser bueno.
+</p>
+<p>
+	¿Y qué pasaría si hubiéramos usado menos letras que locaciones? Pues tendríamos espacios sin <i>inicializar</i>, por lo que al recorrer el arreglo completo para mostrar la palabra, obtendríamos un resultado extraño. Por ejemplo:
+</p>
+<textarea class="editor">
+// Arreglo de caracteres
+#include <iostream>
+using namespace std;
+
+int main(){
+    char arreglo[10];
+    arreglo[0] = 'H';
+    arreglo[1] = 'o';
+    arreglo[2] = 'l';
+    arreglo[3] = 'a';
+    
+    for (int i=0; i < 10; i++){
+        cout << arreglo[i];
+    }
+    
+    return 0;
+}
+</textarea>
+<p>
+	Al correr el código anterior, obtuve como salida <code>Hola  ê "</code> que muy seguramente es distinta a la que tú obtendrías. Esos valores que no aparecen o son caracteres extraños, pertenecen a los espacios sin inicializar. Teniendo este problema de la cantidad de locaciones y la cantidad de caracteres utilizados, <i>C++</i> nos da una gran ventaja.
+</p>
+<textarea class="editor">
+// Arreglo de caracteres
+#include <iostream>
+using namespace std;
+
+int main(){
+    char palabra[10]; // Máximo 10 letras
+    
+    cin << palabra; 
+	/* Utilizamos la entrada estándar para pedir
+	nuestra palabra. No usamos índices pues no estamos
+	pidiendo una sóla locación, sino el arreglo entero */
+    
+    cout << palabra; // Mostramos el arreglo completo
+    
+    return 0;
+}
+</textarea>
+<p>
+	De esta manera no nos preocupamos si se ingresa una cantidad menor de caracteres, el compilador sabrá cuántas hemos inicializado, y además para cuando queramos mostrarlo, mostrará sólo las locaciones utilizadas. Ten en cuenta que este método de solicitar y mostrar el arreglo por su nombre y sin índices, sólo funciona con arreglos tipo <code>char</code>. El programa anterior con entrada <code>Prueba</code> mostrará como salida <code>Prueba</code>. Nota que tenemos como máximo la cantidad total de locaciones, así que una entrada como <code>parangaricutirimicuaro</code> no podrá ser almacenada en su totalidad, y por lo tanto no se podrá mostrar más allá de los primero \(10\) caracteres, que son los que se almacenaron. Una entrada así produciría la salida: <code>parangaric</code>, es decir, sólo las primeras \(10\) letras.
+</p>
+<p>
+	Recuerda que aún con el método anterior, la palabra ingresada sigue perteneciendo a un arreglo, y como tal, podemos referirnos a cada locación individualmente. También podemos inicializar un arreglo de caracteres de la siguiente manera:
+</p>
+<textarea class="editor">
+// Inicialización de un arreglo
+#include <iostream>
+using namespace std;
+
+int main(){
+    char palabra[10] = "Prueba";
+    cout << palabra[2] << " ";
+    cout << palabra[0] << " ";
+    cout << palabra[5] << " ";
+    cout << palabra[1];
+    return 0;
+}
+</textarea>
+<p>
+	Se mostraría la salida <code>u P a r</code>. Con todo esto en mente ¿cómo mostrarías una palabra de 8 letras al revés?
+</p>
+<div class="Subtitulo" id="6">
+	Máximo de un arreglo
+</div>
+<p>
+	Como ya sabes, cuando declaramos un arreglo, el compilador busca en la memoria un bloque de locaciones en donde estén todas éstas juntas, si pedimos \(10\) locaciones, no le será muy difícil encontrar un espacio en donde hay \(10\) espacios disponibles y contiguos. Pero a medida que aumentamos la cantidad de locaciones solicitadas, se vuelve una tarea más complicada encontrar un bloque más grande de espacios disponibles.
+</p>
+<p>
+	Debido a esto, no podemos declarar arreglos excesivamente grandes, de hecho los compiladores suelen marcar un error de compilación cuando se trata de hacer algo así, por esto y por razones de arbitrariedad, tomaremos el número \(1000000\) (un millón) como máximo para declarar un arreglo. Si estás tratando de resolver un problema y crees que tu solución necesita de un arreglo mayor a \(1000000\) entonces es mejor que busques otra solución.
+</p>
+<p>
+	Recordemos además el hecho de que tenemos que ser considerados con la memoria, si declaramos un arreglo tipo <code>int</code> de \(1000000\) de locaciones, y cada variable <code>int</code> mide \(32\) bits, y además \(1000\) bits equivalen a un <i>kilobit</i> y a su vez, \(1000\) kilobits equivalen a un <i>megabit</i>, el arreglo mencionado nos constaría ¡\(32\) <i>mb</i> de memoria!
+</p>
+<div class="Nav">
+    <a href="{{ site.url }}/C++/Introduccion/Sentencias/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C++/Introduccion/Estructuras/" id="NDer">Tema siguiente</a>
+</div>
