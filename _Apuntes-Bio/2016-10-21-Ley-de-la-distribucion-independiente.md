@@ -1,4 +1,3 @@
-
 ---
 layout: PostPoetry
 title: Ley de la distribución independiente de Mendel
