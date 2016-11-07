@@ -1,0 +1,105 @@
+---
+layout: General
+title: Estructura pair
+---
+
+<p>
+	La estructura <content>pair</content> es una plantilla que permite almacenar dos variables en un sólo objeto.
+</p>
+<ul class="ListaContenido">
+	<li id="1L"><span>Funcionamiento</span></li>
+	<li id="2L"><span>Eficiencia</span></li>
+	<li id="3L"><span>Funciones miembro</span></li>
+	<li id="4L"><span>Funciones no miembro</span></li>
+	<li id="5L"><span>Ejemplo general</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Funcionamiento
+</div>
+<p>
+	Al ser una estructura, nos permite de manera muy sencilla almacenar dos variables, bajo un mismo nombre. Su funcionamiento puede ser implementado fácilmente con <code>struct</code> sin embargo, sigue siendo un método práctico y fácil de implementar.
+</p>
+
+<div class="Subtitulo" id="2">
+	Eficiencia
+</div>
+<p>
+	Acceder a un elemento | constante | \(o(l)\)
+</p>
+
+<div class="Subtitulo" id="3">
+	Funciones miembro
+</div>
+<table class="Tabla">
+	<tr>
+		<th>Función</th>
+		<th>Definición</th>
+	</tr>
+	<tr>
+		<td>(constructor)</td>
+		<td>Construye un nuevo elemento <code>pair</code></td>
+	</tr>
+	<tr>
+		<td>Operador <code>=</code></td>
+		<td>Asigna contenidos</td>
+	</tr>
+	<tr>
+		<td><code>swap</code></td>
+		<td>Intercambia contenidos de dos elementos <code>pair</code></td>
+	</tr>
+</table>
+
+<div class="Subtitulo" id="4">
+	Funciones no miembro
+</div>
+<table class="Tabla">
+	<tr>
+		<th>Función</th>
+		<th>Definición</th>
+	</tr>
+	<tr>
+		<td><code>make_pair</code></td>
+		<td>Crea un elemento <code>pair</code> definido por dos argumentos</td>
+	</tr>
+	<tr>
+		<td>Operadores <code>==</code>, <code>!=</code>, <code><</code>, <code><=</code>, <code>></code>, <code>>=</code></td>
+		<td>Compara lexicográficamente los valores del contenedor</td>
+	</tr>
+</table>
+
+<div class="Subtitulo" id="5">
+	Ejemplo general
+</div>
+<textarea class="editor">
+#include <iostream>
+#include <algorithm> // Librería
+using namespace std;
+
+int main(){
+
+	pair<int, int> dupla;
+
+	dupla.first = 4;
+	dupla.second = 10;
+
+	cout << dupla.second << " " << dupla.first << '\n';
+
+	pair<int, char> otro;
+
+	otro.first = 89;
+	otro.second = 'T';
+
+	cout << otro.first << " " << otro.second << '\n';
+	
+	return 0;
+}</textarea>
+
+<textarea class="output">
+/* Salida */
+10 4
+89 T
+</textarea>
+
+<div class="Nav">
+	<a href="{{ site.url }}/C++/STL/List/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C++/Recursion/" id="NDer">Tema siguiente</a>
+</div>

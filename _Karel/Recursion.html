@@ -1,0 +1,126 @@
+---
+layout: General
+title: Recursión en programación
+---
+<p>
+	La idea y uso de la recursión entre otras cosas, ha permitido a la informática ser la potencia que es actualmente, así es que sí, se podría decir que <b>es una de las ideas centrales de la computación</b>.
+	<br>
+	La recursión como técnica de resolver problemas es tan útil que la utilizamos en la vida cotidiana sin siquiera darnos cuenta, comprender el funcionamiento de la recursión es un arma <b><a href="http://dle.rae.es/?id=M27S7Oj" class="Ref" target="_blank">invaluable</a> e <a href="http://dle.rae.es/?id=L6eq745" class="Ref" target="_blank">imprescindible</a></b> en la informática.
+</p>
+<p>
+	(<int>En este apartado no se explicará la recursión en un lenguaje de programación en especial, sino la idea general de ella en la programación</int>)
+</p>
+<ul class="ListaContenido">
+	<li id="1L"><span>Definición</span></li>
+	<li id="2L"><span>Matrioskas</span></li>
+	<li id="3L"><span>Fin de la recursión</span></li>
+	<li id="4L"><span>Condición en la recursión</span></li>
+	<li id="5L"><span>Más recursión</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Definición
+</div>
+<p>
+	Se podrían dar muchas versiones de lo que es la recursión, sin embargo, partiremos de la más sencilla y útil para esta explicación, que es la segunda que nos da el DRAE:
+</p>
+<div class="EjemploN">
+	<a href="http://dle.rae.es/?id=VXkDTwd" class="Ref" target="_blank">Recursivo, va</a>
+	<br>
+	Dicho especialmente de un proceso: Que se aplica de nuevo al resultado de haberlo aplicado previamente.
+</div>
+<p>
+	Es decir, es la acción de aplicar un procedimiento a una cosa, y después, al resultado de eso volver a aplicar el procedimiento otra vez.
+	<br>
+	De esta manera podemos solucionar un problema si lo vemos como un conjunto de problemas más pequeños.
+</p>
+<p>
+	<int>¿Qué nos dice esto?</int>
+	<br>
+	Para explicarlo mejor tomemos el ejemplo de las matrioskas. Una matrioska es un juguete artesanal de origen ruso, lo genial de estas muñecas es que están huecas por dentro, y dentro de cada matrioska hay una aún más pequeña, y dentro de ésta, otra, y así sucesivamente, hasta llegar a la matrioska más pequeña que ya no tiene otra dentro de ella. Seguro has visto una alguna vez.
+</p>
+<div class="Subtitulo" id="2">
+	Matrioskas
+</div>
+<p>
+	Imagina que tienes la muy importante tarea de sacar todas las matrioskas que viven dentro de la más grande de ellas.
+	<br>
+	Para abrir todas las matrioskas, primero debemos de abrir, (<s><int>lógicamente</int></s>) la primera, y seguir con las demás. Es decir, del primer gran problema de abrirlas todas, empezamos por un problema más sencillo, abrir la primera. Después, podemos ver como otro problema también pequeño, abrir la segunda. Así no lo vemos todo junto como tener que abrirlas todas. <int>Eso puede sonar, además como algo muy tardado</int>.
+	<br>
+	Para ello, y como buen programador, imaginas la tarea a realizar como si fuera un programa:
+</p>
+<div class="EjemploPc">
+	1&nbsp;definir-nuevo-procedimiento "matrioskas" como
+	<br>2&nbsp;inicio
+	<br>3&nbsp;&nbsp;&nbsp;abrir-matrioska;
+	<br>4&nbsp;&nbsp;&nbsp;sacar-nueva-matrioska;
+	<br>5&nbsp;&nbsp;&nbsp;matrioskas;
+	<br>6&nbsp;fin;
+</div>
+<p>
+	Siguiendo el funcionamiento del anterior procedimiento, primero tienes una matrioska, la abres, sacas la matrioska en su interior, y a continuación ejecutas el procedimiento "matrioskas". (<int><a href="{{ site.url}}/Karel/Funciones/index.html" class="Ref" target="_blank">¿Esto no tiene sentido para ti?</a></int>). 
+	<br>
+	<int>¿Qué pasa cuando ejecutamos de nuevo el procedimiento "matrioskas"?</int> Tomaríamos la matrioska, la abriríamos, sacaríamos la muñeca en su interior y volveríamos a aplicar el procedimiento anterior. Esto se vería más o menos así:
+</p>
+<div class="GloboL">
+	<picture>
+		<source media="(min-width: 700px)" srcset="{{ site.url}}/Recursos/Multimedia/Recursividad/02.gif">
+		<img class="Imagen" src="{{ site.url}}/Recursos/Multimedia/Recursividad/02.gif" alt="Recursividad">
+	</picture>
+	<span class="GloboLT">Matrioskas infinitas</span>
+</div>
+<p>
+	<int>Genial ¿no?</int> Sólo que hay un problema, (<s><int>no sólo que muy seguramente no tenemos esa barba</int></s>), las matrioskas en el mundo real <int>no son infinitas</int>. Así que en algún momento no podremos seguir sacando matrioskas, es decir <b>no podremos seguir realizando el procedimiento "matrioskas"</b>.
+</p>
+<div class="Subtitulo" id="3">
+	Fin de la recursión
+</div>
+<p>
+	En nuestra misión de abrir todas las matrioskas y aplicada en el mundo real (donde las matrioskas no son infinitas) nos detuvimos al llegar a la muñeca más pequeña pues dentro de ella ya no hay más muñecas. Sin embargo, un robot, o una computadora, (<int>como Karel</int>) no sabe por sí solo cuando detenerse. Recuerda que (<s><int>hasta ahora</int></s>) una máquina no sabe nada si tú no se lo programas.
+</p>
+<div class="EjemploN">
+	En la recursión una de las cosas más importantes (<s><int>por no decir que la más importante</int></s>) es su final.
+</div>
+<p>
+	<int>¿Por qué es tan importante saber detenerse?</int> Como en todo, el exceso no es bueno. En el caso de Karel ¿recuerdas lo que pasaba cuando le decíamos que avanzara sin importar nada? en el momento en que llegaba a una pared y trataba de atravesarla, fallaba, o como cuando tomaba o dejaba zumbadores <b>sin consideración</b>.
+</p>
+<p>
+	¿Notaste dónde empieza la recursión en el procedimiento anterior? La recursión empieza por una cosa que llamaremos <b>llamada recursiva</b> que es el momento en el que se vuelve a llamar una función dentro de sí misma. En el procedimiento que declaramos la llamada recursiva está en la línea 5.
+</p>
+<p>
+	Sin embargo una función nunca, <b>nunca</b> debe declararse si no es controlada por una condición. Es decir, toda llamada recursiva debe ser realizada dentro de una condición. En el proceso anterior, ¿dónde debemos poner la condición y qué condición debe ser evaluada?.
+</p>
+<div class="Subtitulo" id="4">
+	Condición de la recursión
+</div>
+<p>
+	La condición en toda recursión debe tener siempre en cuenta <b>qué es lo que está buscando</b>. Es decir, el porqué se realiza la recursión. Volviendo a nuestro ejemplo de las muñecas rusas, queríamos llegar a la más pequeña, ¿y cómo íbamos a saber que era la más pequeña? pues porque dentro de ella <b>ya no iba a haber otra matrioska</b>.
+</p>
+<p>
+	Por lo tanto, ejecutamos el procedimiento "matrioska" siempre y cuando se pueda o sea necesario seguir ejecutándolo, una vez que hayamos cumplido nuestro cometido podemos dejar de hacer eso. Viéndolo así, seguro ya te imaginas dónde y qué condición hay que ubicar. 
+</p>
+<div class="EjemploPc">
+	1&nbsp;definir-nuevo-procedimiento "matrioskas" como
+	<br>2&nbsp;inicio
+	<br>3&nbsp;&nbsp;&nbsp;abrir-matrioska
+	<br>4&nbsp;&nbsp;&nbsp;sacar-nueva-matrioska
+	<br>5&nbsp;&nbsp;&nbsp;si tiene-otra-muñeca-dentro entonces matrioskas
+	<br>6&nbsp;fin
+</div>
+<p>
+	Toma en cuenta que lo anterior <b>no es un código real</b>, sólo es una manera general e informal de expresar un procedimiento y que puede ser fácilmente traducido a un lenguaje de programación real. Es decir, es un pseudocódigo. Es por ello que puede que hayas tenido otra manera de expresar la condición de la recursión pero la idea debe ser la misma.
+</p>
+<div class="Subtitulo" id="5">
+	Más recursión
+</div>
+<div class="EjemploN">
+	Cuando buscas "recursión" en google ¿cuál es el sentido de que te diga "<i>Quizás quisiste decir: <b>recursión</b></i>"?
+</div>
+<div class="EjemploN">
+	¿Te gustó el gif de las matrioskas interminables? Las <a href="http://giphy.com/search/recursive" class="Ref" target="_blank">animaciones recursivas</a> siempre son geniales.
+</div>
+<div class="EjemploN">
+	No lo olvides, la idea básica de la recursión es <b>aplicar un proceso a una cosa, y después, al resultado de eso volver a aplicar ese proceso otra vez</b> y seguir haciéndolo hasta lograr lo que buscamos.
+</div>
+<div class="Nav">
+	<a href="{{ site.url }}/Karel/Problemas/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/Karel/Recursion/Simple/" id="NDer">Tema siguiente</a>
+</div>

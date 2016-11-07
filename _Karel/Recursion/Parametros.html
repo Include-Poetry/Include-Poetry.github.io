@@ -1,0 +1,314 @@
+---
+layout: General
+title: Recursión con parámetros en Karel
+---
+<p>
+	¿Has notado que con Karel no usamos números? Es decir, sí, los usamos pero sólo para la estructura "<i>repetir</i>", con otra cosa no. Pero siendo más claros, no podemos contar contar alguna cosa y tener presente ese número (de lo que ya contamos) para usarlo de diversas formas ¿no?
+	<br>
+	Ya aprendimos que con recursión podemos contar, más bien dicho podemos repetir un conjunto de acciones la misma cantidad de veces que hicimos la recursión, pero nunca vemos de manera más práctica y concisa las repeticiones de la recursión. Para poder lograr esto la recursión simple ya no nos alcanza. Sin embargo, Karel tiene otra habilidad que nos salva en estos casos: la recursión con parámetros.
+</p>
+<ul class="ListaContenido">
+	<li id="1L"><span>Parámetros; idea de variable</span></li>
+	<li id="2L"><span>Parámetros en Karel</span></li>
+	<li id="3L"><span>Expresión sucede</span></li>
+	<li id="4L"><span>Expresión precede</span></li>
+	<li id="5L"><span>Aumentar o disminuir más de 1</span></li>
+	<li id="6L"><span>Expresión si-es-cero</span></li>
+	<li id="7L"><span>Expresión no si-es-cero</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Parámetros; la idea de variable
+</div>
+<p>
+	Cuando en la escuela, te pones a resolver un problema de matemáticas, como por ejemplo, <i>Zita ayer tenía 5 libros, pero esta mañana ha comprado 3 más, ¿cuántos libros tiene ahora en total?</i>, (<s><int>vaya problema difícil</int></s>) encontramos y manejamos los números que nos dan en el problema con toda naturalidad, esos <b>datos</b> que nos da el problema son los que nos hacen mucho más sencillo resolverlo, a esos datos les llamaremos <b>parámetros</b>. Lo que el DRAE tiene para decirnos sobre los parámetros es:
+</p>
+<div class="EjemploN">
+	<a href="http://dle.rae.es/?id=Rrl8oAZ" class="Ref" target="_blank"><b>parámetro</b></a>:
+	<br>
+	1. m. Dato o factor que se toma como necesario para analizar o valorar una situación.
+	<br>
+	2. m. Mat. Variable que, en una familia de elementos, sirve para identificar cada uno de ellos mediante su valor numérico.
+</div>
+<p>
+	Como puedes ver, en nuestro ejemplo de los libros de Zita, se nos dan los datos necesarios para poder analizar su situación, esos datos podemos verlos como <i>variables</i> de nuestro problema, que al final mediremos con un valor numérico, es decir, diremos cuántos libros tiene ella en total.
+</p>
+<p>
+	<int>Pero, un momento, ¿qué es una variable?</int>. Como su nombre lo indica, es algo que varía, en este caso (<s><int>así como en las matemáticas</int></s>) nos referimos a que es su valor el que varía, es decir, el que puede cambiar, ser diferente, ser <a href="http://dle.rae.es/?id=bNTTsak" class="Ref" target="_blank">variable</a>.
+</p>
+<p>
+	Recuerda que en la programación no diseñamos soluciones para un caso específico de un problema, sino que debemos diseñar soluciones para <b>todos</b> los casos de un problema. Por ellos es poco común que manejemos los datos de un problema como algo <a href="http://dle.rae.es/?id=AQymQN7" class="Ref" target="_blank">constante</a>, que nunca cambia y siempre es igual, no. Hay que ver los datos del problema como algo que es variable y nuestra solución debe adaptarse a eso. De esta forma, si Zita nos preguntara cuántos libros tiene ella en total, nosotros consideraríamos lo siguiente:
+</p>
+<div class="EjemploN">
+	libros-de-ayer + libros-de-hoy = libros-en-total
+</div>
+<p>
+	Para el caso mencionado nuestras variables tendrían valores como sigue: <i>libros-de-ayer=5</i>; <i>libros-de-hoy=3</i>; dando un total de <b>8 libros en total</b>. Dicho de otro modo <i>libros-en-total= 5+3 = 8</i>.
+</p>
+<div class="Subtitulo" id="2">
+	Parámetros en Karel
+</div>
+<p>
+	¿Notaste que en la pila de llamadas cada que se llamaba una función, al registrarse su nombre se ponía justo delante unos paréntesis vacíos? Seguro te preguntaste el porqué de esos paréntesis. En realidad, esos paréntesis están ahí para mostrar <b>el valor de un parámetro</b>. <int>¿Pero qué parámetro?</int> Hasta ahora no hemos declarado ningún parámetro en realidad, no le hemos dicho a el compilador que vamos a usar alguno, pero él ya está listo para el caso en el que lo necesitemos. Para declarar un parámetro tenemos que hacerlo de la siguiente manera:
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>UnaNueva(x)</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avanza;
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gira-izquierda;
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(0)</span>;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>11&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Si ejecutas esta función, verás como en la <i>pila de llamadas</i> junto a el nombre de la función ya aparece el valor de su parámetro entre paréntesis, que en este caso es 0. Hay algunas cosas <b>muy muy importantes</b> que debes recordar sobre los parámetros en Karel.
+</p>
+<div class="EjemploN">
+	En la función principal siempre debes llamar a la función dándole un valor numérico <b>entero y mayor o igual a 0</b>.
+</div>
+<div class="EjemploN">
+	Al declarar la función y poner algo entre los paréntesis, lo que ponemos ahí es el <b>nombre del parámetro</b>.
+</div>
+<div class="EjemploN">
+	Las mismas reglas para los nombres de funciones aplican para el nombre de los parámetros.
+</div>
+<p>
+	Es aconsejable que uses un nombre corto como nombre de las variables, (<int>muy corto, como sólo una letra</int>), de esta manera te es más sencillo escribirla y recordarla.
+	<br>
+	Ahora, ya hemos declarado, un parámetro, (<int>genial</int>) pero <int>¿Para qué dijimos que nos servía?</int>. El parámetro por sí solo no nos sirve de mucho en realidad, su poder está en <b>la manera en la que lo manipulamos</b>.
+</p>
+<div class="Subtitulo" id="3">
+	Expresión sucede
+</div>
+<p>
+	En las matemáticas el poder de las variables está en que podemos modificar su valor, por ejemplo sumándole alguna determinada cantidad (u otra variable incluso). En el lenguaje de Karel, también podemos modificar el valor de sus parámetros, la manera de hacer esto es en realidad sencilla (<s><int>y poderosa</int></s>).
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>UnaNueva(x)</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deja-zumbador;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(</span>sucede<span>(x))</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(0)</span>;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>14&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Como puedes notar, en este código hemos agregado algo distinto al parámetro de la función <i>UnaNueva</i> que está en la línea 7. Hemos agregado la expresión <b>sucede</b>.
+	<br>
+	El uso de esta expresión es en realidad muy sencillo, <b>aumenta en uno el valor de la variable o número que tiene dentro de su paréntesis</b>. Por ejemplo:
+</p>
+<div class="EjemploN">
+	sucede(variable) = variable+1
+	<br>
+	sucede(5) = 5+1 = 6
+</div>
+<p>
+	Nota que está el nombre de la función, luego unos paréntesis, ahí dentro va la expresión (si aplica) y ya que ponemos la expresión va otra vez unos paréntesis y entre ellos la variable o valor al que queremos agregar uno más.
+	<br>
+	Ahora sí, analicemos lo que sucede en la pila de llamadas cuando ejecutamos el código anterior en un mundo como este.
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E5/E5.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E5/E5.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">Sucede</span>
+</div>
+<p>
+	Como puedes ver, el valor de su parámetro comenzó siendo 0, porque así lo definimos cuando lo llamamos por primera vez desde la función principal, y fue incrementando cada vez que hacía la llamada recursiva desde la línea 7. Cuando ya no pudo seguir realizándose la recursión, debido a que el frente se había bloqueado, el parámetro tenía valor de 5. Prueba a dar distintos <i>valores iniciales al parámetro</i>.
+</p>
+<div class="EjemploN">
+	Es muy importante saber, que si tenemos dos funciones con parámetros en nuestro programa, por ejemplo <i>FuncionUno</i> y <i>FuncionDos</i> podemos llamar desde <i>FuncionUno</i> a la otra función dándole como valor inicial a su parámetro (al de <i>FuncionDos</i>) el valor del parámetro de <i>FuncionUno</i> . Prueba a intentarlo en tu simulador.
+</div>
+<div class="Subtitulo" id="4">
+	Expresión precede
+</div>
+<p>
+	Así como en la vida conocemos la suma y la resta, también Karel conoce el principio de añadir y de quitar. Como ya vimos, añade con <i>sucede</i>.
+	<br>
+	Para que Karel quite o disminuya un valor, utilizamos la expresión <b>precede</b>. Su funcionamiento es más o menos igual al de <i>sucede</i>, sólo que el funcionamiento es <a href="http://dle.rae.es/?id=M3NVLLY" class="Ref" target="_blank">inverso</a>.
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>UnaNueva(x)</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deja-zumbador;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(</span>precede<span>(x))</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(8)</span>;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>14&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	La ejecución de este código se ve así:
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E6/E6.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E6/E6.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">Precede</span>
+</div>
+<p>
+	Nota que esta vez iniciamos con 8, y terminamos con tres, pues por cada llamada recursiva se le restaba uno a la variable.
+	<br>
+	¿Qué habría pasado si empezamos con el cero? De haber empezado por el 0, al quitarle 1 por cada llamada habríamos llevado un <a href="http://dle.rae.es/?id=QM8mhzM#NryQS8z" class="Ref" target="_blank">valor negativo</a>. Es decir, su valor sería incluso menor a 0. Karel <b>no sabe manejar números negativos</b>. Así que procura nunca llegar a una situación en la que tenga que usarlos.
+</p>
+<div class="Subtitulo" id="5">
+	Aumentar o disminuir más de 1
+</div>
+<p>
+	Seguramente ya te has preguntado o incluso tratado de hacer que Karel aumente o disminuya más de uno a una variable. Esto es posible y en realidad es muy sencillo. 
+	<br>
+	Primero tienes que verlo de la siguiente manera.
+</p>
+<div class="EjemploPc">
+	NombreDeFuncion( valor )
+</div>
+<p>
+	Ahí tenemos una fuznción con un parámetro, ese parámetro se llama (<int>para fines <a href="http://dle.rae.es/?id=TtEMsxJ#NIXOKao" class="Ref" target="_blank">prácticos</a></int>) <i>valor</i>. Todo bien hasta ahí, ahora vamos a incrementar ese valor en uno. La cosa se vería más o menos así.
+</p>
+<div class="EjemploK">
+	<span>NombreDeFuncion(</span> sucede<span>(valor) )</span>
+</div>
+<p>
+	Esto a su vez, sería más o menos lo mismo que decir:
+</p>
+<div class="EjemploPc">
+	NombreDeFuncion( 1+(valor) )
+</div>
+<p>
+	Entonces, si queremos sumar más de uno, por ejemplo 2, es como querer que esto se viera así
+</p>
+<div class="EjemploPc">
+	NombreDeFuncion( 1+( 1+(valor) ) )
+</div>
+<p>
+	<int>Seguramente ya lo tienes</int>. Para hacer, entonces que Karel incremente 2 a su parámetro por cada llamada recursiva, un código completo se vería así. 
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>UnaNueva(x)</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si frente-libre entonces
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deja-zumbador;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(</span>sucede<span>(</span>sucede<span>(x)))</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(0)</span>;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>14&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Lo mismo sería para restar 2, aunque claro, en lugar de <i>sucede</i> usaríamos <i>precede</i>. <int>¿Y si queremos sumarle 3? Seguro que ya lo tienes</int>.
+</p>
+<div class="Subtitulo" id="6">
+	Expresión si-es-cero
+</div>
+<p>
+	¿Recuerdas cuando aprendimos lo que era una condición y vimos las condiciones que Karel puede evaluar? Pues ahora que ya estás aprendiendo sobre los parámetros estás listo para aprender la última condición que Karel conoce.
+	<br>
+	A diferencia de nosotros, Karel no puede comparar dos números, decir si es más grande o más chico. Lo que sí puede hacer es decirnos si un valor es igual a 0. ¿Por qué 0? No estamos seguros en realidad, pero lo más probable es que es porque el cero es un número muy práctico. (<s><int>o tal vez a Karel le gusta mucho</int></s>). El valor que Karel puede evaluar es el de <b>una variable</b>. 
+</p>
+<p>
+	En realidad Karel también puede evaluar un número ya definido, pero el que nosotros le preguntemos, por ejemplo si 5 es igual a 0, es en realidad algo nada útil de nuestra parte, pues sabemos que el 5 nunca va a ser igual a 0 porque siempre va a ser igual a 5. De lo que no podemos estar seguros es de que una variable sea siempre igual o diferente a 0, es por eso que está de más decir que sólo evaluaremos variables.
+</p>
+<p>
+	Recuerda que estamos hablando de <b>una condición</b> aunque a diferencia de las demás parezca más bien una comparación en sí por como se lee. Pero no te confundas, un ejemplo te será más útil.
+</p>
+<div class="EjemploK">
+	si si-es-cero<span>(x)</span> entonces avanza;
+</div>
+<p>
+	De esta forma, si el valor de el parámetro <i>x</i> es igual a 0, Karel avanzará. En un programa completo podemos verlo así.
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>UnaNueva(x)</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si si-es-cero<span>(x)</span> entonces
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deja-zumbador;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(</span>precede<span>(x))</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin sino gira-izquierda;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(3)</span>;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>14&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Seguramente ya notaste que en este caso Karel nunca dejará un zumbador ni hará una llamada recursiva, pues la condición en la línea 4 no es verdadera, y esto se debe a que la función es llamada dando un valor de 3 al parámetro <i>x</i>. Y como 3 y 0 no son iguales, no se realizan las acciones de esa comparación, lo que pasará es que Karel girará a la izquierda, pues la condición no se cumplió.
+</p>
+<div class="EjemploN">
+	Nota que siendo <b><i>si-es-cero(x)</i></b> una condición puedes combinarla con cualquier otra condición como aprendiste en la sección de <a href="{{ site.url}}/Karel/Instrucciones/Condicionales/index.html" class="Ref" target="_blank">instrucciones condicionales</a>.
+</div>
+<div class="Subtitulo" id="7">
+	Expresión no si-es-cero
+</div>
+<p>
+	Cuando vimos por primera vez la cláusula <i>no</i>, parecía que usarla no tenía mucho sentido, sin embargo, ahora y dado a que no existe la condición <i>no-es-cero(x)</i> tenemos que usar la cláusula <i>no</i> forzosamente para evaluar cuando una variable <b>no</b> es igual a cero.
+</p>
+<div class="EjemploK">
+	01&nbsp;&nbsp;iniciar-programa
+	<br>02&nbsp;&nbsp;&nbsp;&nbsp;define-nueva-instruccion <span>UnaNueva(x)</span> como
+	<br>03&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;si no si-es-cero<span>(x)</span> entonces
+	<br>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inicio
+	<br>06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deja-zumbador;
+	<br>07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(</span>precede<span>(x))</span>;
+	<br>08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>09&nbsp;&nbsp;&nbsp;&nbsp;fin;
+	<br>10&nbsp;&nbsp;&nbsp;&nbsp;inicia-ejecucion
+	<br>11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>UnaNueva(3)</span>;
+	<br>12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apagate;
+	<br>13&nbsp;&nbsp;&nbsp;&nbsp;termina-ejecucion
+	<br>14&nbsp;&nbsp;finalizar-programa
+</div>
+<p>
+	Usando el código anterior, y poniendo zumbadores en la mochila de Karel, el código de arriba nos dará la siguiente ejecución.
+</p>
+<div class="GloboL">
+	<video class="VideoG" controls>
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E7/E7.mp4" type="video/mp4">
+		<source src="{{ site.url}}/Recursos/Multimedia/Videos/E7/E7.webm" type="video/webm">
+		Tu navegador no soporta este video :c
+	</video>
+	<span class="GloboLT">no si-es-cero</span>
+</div>
+<p>
+	Como puedes ver, Karel deja 3 zumbadores mientras realiza llamadas recursivas, en las que cada vez le va restando uno al valor de su variable. Esa variable empezó siendo 3, pero al irle quitando, en un momento se hizo 0, cuando eso pasó la condición en la línea 4 dejó de cumplirse, y por lo tanto la recursión terminó.
+</p>
+<div class="EjemploN">
+	El uso de <i>si-es-cero</i> y  <i>si no si-es-cero</i> puede resultar confuso, pero con un poco de práctica te acostumbrarás.
+</div>
+<div class="EjemploN">
+	También puedes hacer comparaciones como <i>si-es-cero( sucede(x) )</i>
+</div>
+<div class="EjemploN">
+	Ya estas listo para comenzar con la sección de <i>Recursión con parámetros</i> de Karelotitlán.
+</div>
+<div class="Nav">
+	<a href="{{ site.url }}/Karel/Recursion/Simple/" id="NIzq">Tema anterior</a>
+</div>

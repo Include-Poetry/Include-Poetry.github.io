@@ -1,0 +1,153 @@
+---
+layout: General
+title: Compilador de C++
+---
+
+<p>
+	Cuando queremos escribir un programa, lo hacemos en un determinado <i>lenguaje de programación</i>. A este escrito que hay que hacer le llamamos <i>código fuente</i> o simplemente <i>código</i>. Éste no es ejecutado por la computadora tal cual ha sido escrito, sino que debe de ser <i>traducido</i> a su lenguaje, <i>el lenguaje máquina</i>. Una de las maneras de hacer esta traducción es <b>compilando</b> el código, y esto, lo hace un <b>compilador</b>. Cada lenguaje de programación necesita un compilador particular.
+</p>
+<ul class="ListaContenido">
+	<li id="1L"><span>Compilación de un programa</span></li>
+	<li id="2L"><span>Compiladores e IDE</span></li>
+	<li id="3L"><span>Dev-C++</span></li>
+	<li id="4L"><span>Code::Blocks</span></li>
+	<li id="5L"><span>Uso de ambos IDE</span></li>
+	<li id="6L"><span>Recomendaciones</span></li>
+</ul>
+<div class="Subtitulo" id="1">
+	Compilación de un programa
+</div>
+<p>
+	Cuando escribimos un programa en C/C++, lo que hacemos es crear un archivo con extensión <code class="cd">.c</code> para C y <code class="cd">.cpp</code> para C++. Dentro de ese archivo va escrito nuestro código. Una vez que ya lo tenemos hay que compilarlo para poder ver su ejecución, <int>es como traerlo a la vida</int>.
+</p>
+<p>
+	Cuando compilamos un código fuente, el compilador crea un archivo que podemos ejecutar, este archivo tiene la extensión <code class="cd">.exe</code> como la mayoría de los programas de Windows. Si quieres volver a ver la ejecución de tu programa sólo tienes que volver a abrir el archivo <code class="cd">.exe</code>. Sin embargo, tienes que volver a compilar cada que hagas cambios en tu código, para que esos nuevos cambios vuelvan a ser <i>traducidos</i> y puedan ser ejecutados.
+</p>
+<div class="EjemploN">
+	Una vez creado el ejecutable, éste se hace independiente del código fuente que lo generó
+</div>
+
+<div class="Subtitulo" id="2">
+	Compiladores e IDE
+</div>
+<p>
+	Lo primero que necesitamos para empezar a programar en C/C++ es un compilador que soporte estos lenguajes. Existen muchos y hay de muchos tipos. Como queremos empezar en el mundo de la programación necesitaremos además de un compilador, <i>un Entorno de Desarrollo Integrado</i> (<b>IDE por sus siglas en inglés</b>) que nos haga más sencillo escribir, ejecutar y depurar nuestros programas.
+</p>
+<p>
+	Estos entornos vienen por lo general integrados con un compilador dentro de la misma aplicación. De esta manera con instalar un sólo programa tendremos ambos. Un <i>IDE</i> incluye típicamente un <i>editor de código fuente</i>, <i>herramientas de construcción automáticas</i> y un <i>depurador</i>. De esta manera podemos escribir, probar y corregir nuestro código fácilmente.
+</p>
+
+<div class="Subtitulo" id="3">
+	Dev-C++
+</div>
+<p>
+	Dev-C++ es un <i>IDE</i> para desarrollar programas escritos en C/C++, su compilador es el <i>MinGW</i> y es solamente compatible con <i>Windows</i>. Puedes conseguirlo directamente en nuestra sección de <a href="{{ site.url }}/Recursos/Descargables" class="Ref" target="_blank">recursos</a>.
+</p>
+<p>
+	(<int>El proceso de instalación que se describirá está especialmente enfocado en la versión 5.10 pero es muy similar a versiones anteriores</int>).
+	<br>
+	Una vez descargado el instalador lo ejecutamos (puede ser necesario dar permisos de administrador), se comenzarán a cargar los archivos necesarios para la instalación, a continuación podrás seleccionar uno de los lenguajes disponibles, para después pasar al acuerdo de licencia. Una vez que lo aceptes te preguntará qué tipo de instalación deseas hacer, es recomendable la instalación completa (full). Después seleccionarás el sitio donde se instalará (preferentemente deja la ubicación predeterminada), y listo, haces click en <b>instalar</b>. Al finalizar se te ofrecerá la opción de ejecutar el programa. No hay problema si así lo escoges.
+</p>
+<p>
+	Ya dentro aparecerá una gran pantalla gris. Para empezar a escribir un programa hay que ir a la pestaña <i>Archivo</i> y de ahí a <i>Nuevo</i> y a continuación <i>Archivo fuente</i>. También puedes crear un nuevo <i>proyecto</i> pero para los programas que estaremos haciendo es más sencillo, práctico y por lo tanto más recomendable escoger <i>Archivo fuente</i>. También puedes utilizar el <i>shortcut</i> <code class="cd">ctrl + n</code> o el ícono de la barra.
+</p>
+<p>
+	<int>De esta manera ya estamos listos para empezar a <b>escribir</b> nuestros programas</int>.
+</p>
+
+<div class="Subtitulo" id="4">
+	Code::Blocks
+</div>
+<p>
+	Code::Blocks es un <i>IDE</i> para el desarrollo de programas escritos en C/C++. Cabe señalar que es <i>multiplataforma</i>, por lo que si lo necesitas, puedes instalarlo también en un equipo con <i>sistema operativo</i> distinto de Windows. También puedes encontrarlo en nuestra sección de <a href="{{ site.url }}/Recursos/Descargables" class="Ref" target="_blank">recursos</a>.
+</p>
+<p>
+	(<int>El procedimiento aquí señalado se centrará en la verisión <i>16.01 MinGW</i> aunque para versiones anteriores es muy similar</int>).
+	<br>
+	Una vez descargado el instalador, podemos ejecutarlo (puede ser necesario dar permisos de administrador). Se dará la bienvenida a la instalación y después el acuerdo de licencia, a continuación el tipo de instalación (también es recomendada la instalación <i>full</i>), y el lugar donde se instalará. Está bien si todo lo dejamos así y procedemos con la instalación. Al finalizar nos preguntará si queremos iniciar con el programa. El programa se ejecutará pero la ventana de instalación permanecerá ahí, sólo hay que dar un <i>next</i>, luego un <i>finish</i> y listo.
+</p>
+<p>
+	Una vez que el programa se ha abierto, se mostrará el panel de bienvenida del entorno. Para empezar a escribir un código fuente podemos ir a la pestaña <i>File</i>, luego en <i>New</i> y a continuación (<int>y más recomendable</int>) <i>Empty file</i> (shortcut <code class="cd">ctrl + shift + n</code>). Se abrirá una página limpia, lista para escribir. Es muy recomendable que antes de empezar a escribir <b>guardes</b> el archivo nuevo. Dirigiéndonos a la pestaña <i>File</i> y a continuación <i>Save file</i>. Ahí busca un lugar donde guardar el archivo y asegurate de escribir al final del nombre que le des, la extensión <code class="cd">.cpp</code>.
+</p>
+<p>
+	<int>Estamos listos para empezar a <b>escribir</b> nuestros programas</int>.
+</p>
+<div class="Subtitulo" id="5">
+	Uso de ambos IDE
+</div>
+<p>
+	Principalmente estaremos utilizando las mismas funciones cada que desarrollemos nuestros programas. Estas funciones son:
+</p>
+<p>
+	<b>Compilar</b>: Con esta opción compilamos nuestro programa, de haber errores se mostrarán en la parte inferior de la pantalla. Al compilar el archivo fuente se guardará automáticamente.
+	<br>
+	<b>Ejecutar</b>: Aquí ejecutamos el programa previamente compilado.
+	<br>
+	<b>Compilar y ejecutar</b>: Hacemos las dos funciones anteriores con un sólo click.
+	<br>
+	<b>Guardar</b>: Con esta opción escogemos un nombre y una ubicación con el que guardaremos nuestro código fuente. Recuerda que cada que compilamos el código se guarda automáticamente.
+	<br>
+	<b>Abrir</b>: Aquí podremos abrir un archivo con formato <code class="cd">.c</code> o <code class="cd">.cpp</code>. No un archivo ejecutable.
+	<br>
+	<b>Reconstruir</b>: En ocasiones el compilador tiene problemas para procesar nuestro código. Cuando estos problemas son ajenos a nuestro código (por lo general se marca el error <code>Id returned 1 exit status</code> o similar), podemos usar esta opción para volver a intentarlo tras reconstruir el proceso.
+</p>
+<p>
+	Como no hay como estar bien familiarizado con nuestro entorno de trabajo, es muy útil aprenderse los atajos del teclado o <i>shortcuts</i>.
+</p>
+<p>
+	En <b>Dev-C++</b>:
+	<br>
+	<i>Compilar</i>: <code class="cd">F9</code>
+	<br>
+	<i>Ejecutar</i>: <code class="cd">F10</code>
+	<br>
+	<i>Compilar y ejecutar</i>: <code class="cd">F11</code>
+	<br>
+	<i>Reconstruir</i>: <code>F12</code>
+</p>
+<p>
+	En <b>Code::Blocks</b>:
+	<br>
+	<i>Compilar</i> (build): <code class="cd">ctrl + F9</code>
+	<br>
+	<i>Ejecutar</i> (run): <code class="cd">ctrl + F10</code>
+	<br>
+	<i>Compilar y ejecutar</i> (Build and run): <code class="cd">F9</code>
+	<br>
+	<i>Reconstruir</i> (rebuild): <code>ctrl + F11</code>
+</p>
+<p>
+	<b>En ambos</b>:
+	<br>
+	<i>Guardar</i>: <code class="cd">ctrl + s</code>
+	<br>
+	<i>Abrir</i>: <code class="cd">ctrl + o</code>
+</p>
+
+<div class="Subtitulo" id="6">
+	Recomendaciones
+</div>
+<p>
+	Como todos sabemos <i>la práctica y la organización hacen al maestro</i>, por lo que es sumamente recomendable que mantengas tus códigos <b>bien organizados</b>, por categorías en carpetas o algún otro método que te ayude a encontrarlos fácilmente.
+</p>
+<p>
+	Tras estar trabajando un buen rato en el IDE puede que tu vista se canse, por lo que es recomendable utilizar un <i>tema</i> del entorno más amigable. Por lo general los temas con fondos oscuros y texto en alto contraste son más llevaderos (<s><int>y más <i>cool</i></int></s>). Para cambiar el tema en Dev-C++ ve a <i>Herramientas > Opciones del editor > Sintaxis</i>, en la parte inferior de la ventana hay una lista de temas predefinidos, también puedes crearlos tú. 
+</p>
+<p>
+	Hacer esto en Code::Blocks nos tomará un poco más de tiempo. Lo primero es asegurarte de que <i>Code::Blocks</i> esté cerrado. Ahora, descarga el archivo <code class="cd">colour_themes.conf</code>, puedes hacerlo justo de <a href="{{ site.url }}/Recursos/Descargables/colour_themes.conf" class="Ref">aquí</a> o copialo de la página de sus creadores <a href="http://wiki.codeblocks.org/index.php?title=Syntax_highlighting_custom_colour_themes" class="Ref" target="_blank">acá</a>. El archivo contiene ajustes de colores para los códigos de C/C++.
+</p>
+<p>
+	Ahora abre la carpeta donde se instaló Code::Clocks, típicamente para usuarios de Windows está en <i>C > Program Files > CodeBlocks</i> o una ruta muy similar según la versión de Windows que tengas. Ahí ejecuta el archivo <code class="cd">cb_share_config.exe</code>. Abrirá una pequeña ventana, dividida en dos partes, haz click en el cuadrado con tres puntos que está en la mitad derecha (<i>Destination configuration file</i>), abrirá una ventana típicamente con la dirección <i>C > Users > TuUsuario > AppData > Roaming > CodeBlocks</i> en donde inmediatamente encontrarás un archivo llamado <code class="cd">default.conf</code>, selecciona ese archivo. Ahora, haz click en el cuadro con puntos de la parte izquierda (<i>Source configuration file</i>), ahí navega hasta encontrar el archivo que descargaste. Abajo se cargará una lista de archivos, son los temas, te sugiero seleccionarlos todos, luego haz click en el botón <i>Transfer >></i>, confirma la acción y luego haz click en <i>save</i> y confirma también. Ya puedes cerrar esa ventana y abrir <i>Code::Blocks</i>.
+</p>
+<p>
+	Dentro de Code::Blokcs dirígete a <i>Settings > Editor > Syntax highlighting</i>, en la parte de arriba en la sección <i>Colour theme</i> encontrarás los temas que instalaste. Escoge el que más te agrade y guarda los cambios.
+</p>
+<div class="EjemploN">
+	No es necesario que instales los dos IDE aunque tampoco hay problema si instalas ambos
+</div>
+<div class="EjemploN">
+	Nota que en ningún momento se ha hablado de lo que se escribirá como código fuente, solamente el cómo instalar, configurar y personalizar los IDE, así como algunas de sus funciones más básicas
+</div>
+<div class="Nav">
+	<a href="{{ site.url }}/C++/Introduccion/" id="NIzq">Tema anterior</a> | <a href="{{ site.url }}/C++/Introduccion/Variables/" id="NDer">Tema siguiente</a>
+</div>
