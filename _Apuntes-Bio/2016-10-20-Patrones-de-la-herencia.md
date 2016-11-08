@@ -31,9 +31,9 @@ En términos genéticos podemos verlo como:
 
 1. Los ***genes*** son unidades hereditarias de información acerca de los caracteres. Los progenitores, transmiten genes a sus descendientes. Cada gen se encuentra en una ubicación específica (***locus***) sobre un cromosoma específico.
 2. Las células con un número diploide de cromosomas (*2n*) tienen pares de genes sobre pares de cromosomas homólogos.
-3. Una mutación es un cambio permanente en un gen. Puede ocasionar que algún rasgo cambie. Estas formas alternativas de un mismo gen son ***alelos***.
+3. Una ***mutación*** es un cambio permanente en un gen. Puede ocasionar que algún rasgo cambie. Estas formas alternativas de un mismo gen son ***alelos***.
 4. Todos los miembros de un linaje de crianza verdadera para un rasgo específico, tienen alelos idénticos para dicho rasgo. Los descendientes de un cruce o apareamiento entre dos individuos en sus líneas puras para diferentes formas de un rasgo, son ***híbridos***. El híbrido no tiene alelos idénticos para ese rasgo.
-5. Un individuo con alelos no idénticos de un gen es ***heterocigoto*** para el mismo. Un individuo con alelos idénticos para el mismo gen es ***homocigoto*** para el mismo.
+5. Un individuo con alelos no idénticos de un gen, es ***heterocigoto*** para el mismo. Un individuo con alelos idénticos para un gen, es ***homocigoto*** para el mismo.
 6. Un alelo es ***dominante*** cuando su efecto enmascara el efecto de un alelo ***recesivo*** homólogo.
 7. Un individuo ***homocigoto dominante*** tiene un par de alelos dominantes. Un individuo ***homocigoto recesivo*** tiene un par de alelos recesivos. Un individuo heterocigoto tiene un par de alelos no idénticos. Los heterocigotos son híbridos.
 8. La ***expresión genética*** es el proceso por el cual la información de un gen se transforma en una parte estructural o funcional de una célula u organismo. Los genes que se expresan determinan los caracteres.

@@ -33,7 +33,7 @@ El cromosoma `X` humano lleva 1336 genes. Algunos de ellos están asociados con 
 
 El cariotipo es una herramienta diagnóstica, que ayuda a determinar el complemento diploide de cromosomas del individuo. Para poder desarrollarlo, se toman células, se estimula a que realicen la mitosis, pero utilizando una toxina llamada *colchicina*, el proceso se detiene en la metafase. De ahí la muestra se traslada a un medio con una solución hipotónica, para que la célula se hinche con agua y los cromosomas se separen. Luego se tiñen para que sean visibles al microscopio.
 
-Con la imagen del microscopio, se reordena digitalmente una microfotografía de una sola célula, para que las imágenes de los cromosomas queden lineadas por ubicación de centrómeros y ordenadas según su tamaño, forma y longitud. El arreglo terminado, constituye el ***cariotipo*** del individuo. El cariotipo muestra si hay cromosomas adicionales o faltantes, y también permite observar otras anomalías estructurales.
+Con la imagen del microscopio, se reordena digitalmente una microfotografía de una sola célula, para que las imágenes de los cromosomas queden alineadas por ubicación de centrómeros y ordenadas según su tamaño, forma y longitud. El arreglo terminado, constituye el ***cariotipo*** del individuo. El cariotipo muestra si hay cromosomas adicionales o faltantes, y también permite observar otras anomalías estructurales.
 
 ## Resumen
 

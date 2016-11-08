@@ -11,7 +11,7 @@ Las variaciones de rasgos no siempre son resultado de diferencias en los alelos.
 
 ### Conejo Himalaya
 
-El conejo Himalaya es homocigoto para un alelo que codifica una forma sensible al calor de la enzima necesaria para síntesis de melanina. Las partes más frescas de su cuerpo, como las orejas, son oscuras. La masa corporal principal es más cálida, por lo que es de color claro. Si se rasura una zona de la piel blanca del conejo, y se le coloca una compresa helada sobre el sitio, al crecer, la piel será se color oscuro. La compresa enfría la zona lo suficiente, para que la enzima pudiera trabajar, por lo cual se produce melanina.
+El conejo Himalaya es homocigoto para un alelo que codifica una forma sensible al calor de la enzima necesaria para síntesis de melanina. Las partes más frescas de su cuerpo, como las orejas, son oscuras. La masa corporal principal es más cálida, por lo que es de color claro. Si se rasura una zona de la piel blanca del conejo, y se le coloca una compresa helada sobre el sitio, al crecer, la piel será de color oscuro. La compresa enfría la zona lo suficiente, para que la enzima pueda trabajar, por lo cual se produce melanina.
 
 ### Plantas de yarrow
 

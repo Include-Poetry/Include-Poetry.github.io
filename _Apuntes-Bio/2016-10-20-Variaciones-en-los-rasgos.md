@@ -33,7 +33,7 @@ Después, durante la anafase *I*, cada cromosoma duplicado se separa de su homó
 
 En la telofase *II*, cada uno de los núcleos haploides se divide. Si las cromátidas hermanas fueran idénticas, se producirían núcleos idénticos, pero, como en la realidad ocurre el entrecruzamiento, y las cromátidas hermanas dejan de ser idénticas, no se producen núcleos idénticos al final. 
 
-Las células que dan lugar a los gametos humanos tienen 23 pares de cromosomas homólogos, por lo que cada vez que una célula germinal humana experimenta meiosis, los cuatro gametos que se forman terminan con una de $$ 2^23 = 8388608 $$ combinaciones posibles de cromosomas homólogos.
+Las células que dan lugar a los gametos humanos tienen 23 pares de cromosomas homólogos, por lo que cada vez que una célula germinal humana experimenta meiosis, los cuatro gametos que se forman terminan con una de $$ 2^{23} = 8388608 $$ combinaciones posibles de cromosomas homólogos.
 
 ## Resumen
 

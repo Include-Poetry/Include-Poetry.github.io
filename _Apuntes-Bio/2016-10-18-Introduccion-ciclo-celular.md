@@ -19,7 +19,7 @@ Mediante el proceso llamado ***replicación del ADN***, la célula copia todo su
 
 De manera cíclica también podemos verla como:
 
-- ***G1***: Fase de crecimiento de la célula antes de replicación del ADN (cromosomas no duplicados).
+- ***G1***: Fase de crecimiento de la célula antes de la replicación del ADN (cromosomas no duplicados).
 - ***S***: Fase de crecimiento de la célula durante el cual el ADN se replica (todos los cromosomas se duplican).
 - ***G2***: Fase tras la replicación del ADN, la célula se prepara para dividirse. La interfase termina para la célula madre.
 - Profase
@@ -44,7 +44,7 @@ Después de la mitosis sigue la división del citoplasma, y la célula madre dip
 
 ## Huso mitótico
 
-Durante la división nuclear, se forma una red dinámica de microtúbulos llamado ***huso mitótico***. El uso crece hacia el citoplasma desde extremos opuestos o *polos* de la célula. Durante la mitosis algunos microtúbulos del huso se unen con los cromosomas duplicados. Los microtúbulos  de un polo se conectan con una cromátida de cada cromosoma, los microtúbulos del otro polo se conectan con su hermana.
+Durante la división nuclear, se forma una red dinámica de microtúbulos llamado ***huso mitótico***. El huso crece hacia el citoplasma desde extremos opuestos o *polos* de la célula. Durante la mitosis algunos microtúbulos del huso se unen con los cromosomas duplicados. Los microtúbulos  de un polo se conectan con una cromátida de cada cromosoma, los microtúbulos del otro polo se conectan con su hermana.
 
 Los microtúbulos separan a las cromátidas hermanas y las desplazan a extremos opuestos de la célula. Así se forman dos paquetes de cromosomas y una membrana nuclear en torno a cada uno de ellos. El citoplasma se divide y como resultado se forman dos nuevas células.
 

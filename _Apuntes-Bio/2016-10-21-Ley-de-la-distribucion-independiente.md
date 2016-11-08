@@ -9,11 +9,11 @@ category: [Semestre-1, Parcial-4]
 
 Muchos genes se clasifican en gametos independientes.
 
-Los ***experimentos dihíbridos*** prueban, las relaciones de dominancia entre los alelos en dos locus distintos. Los individuos con alelos diferentes de dos genes se cruzan; la proporción de rasgos en los descendientes, ofrece ***indicios*** acerca de los alelos.
+Los ***experimentos dihíbridos*** prueban las relaciones de dominancia entre los alelos en dos locus distintos. Los individuos con alelos diferentes de dos genes se cruzan; la proporción de rasgos en los descendientes, ofrece ***indicios*** acerca de los alelos.
 
 ## Experimento de Mendel
 
-Si recreamos uno de los experimentos dihíbridos de Mendel, cruzando dos plantas de crianza verdadera para dos rasgos. Aquí tomaremos el color de la flor siendo `A` el color púrpura y `a` el color blanco. Y las alturas serían `B` para alta, y `b` para baja. Tendríamos entonces:
+Podemos recrear uno de los experimentos dihíbridos de Mendel, cruzando dos plantas de crianza verdadera para dos rasgos. Aquí tomaremos el color de la flor siendo `A` el color púrpura y `a` el color blanco. Y las alturas serían `B` para alta, y `b` para baja. Tendríamos entonces:
 
 ### Progenitores P
 

@@ -12,7 +12,7 @@ Mendel se concentró en los caracteres basados en alelos claramente dominantes o
 ## Codominancia
 
 Codominancia
- : los dos alelos homólogos no idénticos de un gen, se expresan de manera completa en heterocigotos, de modo que ninguno es dominante o recesivo.
+ : Los dos alelos homólogos no idénticos de un gen, se expresan de manera completa en heterocigotos, de modo que ninguno es dominante o recesivo.
 
 La codominancia puede ocurrir en sistemas de alelos múltiples, en los cuales tres o más alelos de un gen, persisten entre individuos de una población.
 
@@ -58,4 +58,4 @@ Es provocado por mutaciones en el gen de fibrilina, que imparte elasticidad a lo
 ## Resumen
 
 - Un alelo puede ser totalmente dominante, tener dominancia incompleta, o ser codominante con su compañero en un cromosoma homólogo.
-- En la epistasis, dos o más productos genéticos influyen en un rasgo. El la pleiotropía, un producto genético influye en dos o más rasgos.
+- En la epistasis, dos o más productos genéticos influyen en un rasgo. En la pleiotropía, un producto genético influye en dos o más rasgos.
