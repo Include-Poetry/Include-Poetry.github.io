@@ -10,7 +10,7 @@
 
 	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/General.css">
 	  	<link rel="stylesheet" type="text/css" href="{{ site.url}}/Recursos/CSS/Motivacion.css">
-	  	<script src="https://use.fontawesome.com/c334c419c0.js"></script>
+	  	{% include Fontawesome.html %}
 	  	{% if jekyll.environment == 'production' %}
 		{% include analytics.html %}
 		{% endif %}

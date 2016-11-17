@@ -62,6 +62,9 @@ collections:
   Resueltos-C:
     output: true
     permalink: /Problemas-resueltos/C++/:year/:month/:day/:title/
+  Equipo:
+    output: true
+    permalink: /Equipo/:categories/:title/
   posts:
     output: true
     permalink: /Poetry/:categories/:year/:month/:day/:title/
