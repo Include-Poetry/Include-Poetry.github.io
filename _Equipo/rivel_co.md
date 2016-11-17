@@ -24,5 +24,7 @@ Siempre he creído que si te crees demasiado bueno en algo es porque no te has m
 ### Datos de contacto
 
 - <i class="fa fa-user-o" aria-hidden="true"></i> : Ricardo Velázquez Contreras
-- <i class="fa fa-github" aria-hidden="true"></i> : <https://github.com/Include-Poetry>
+- <i class="fa fa-github" aria-hidden="true"></i> : [Include-Poetry](https://github.com/Include-Poetry)
 - <i class="fa fa-slack" aria-hidden="true"></i> : @rivelco
+- OmegaUp: [rivel_co](https://omegaup.com/profile/RiVel_Co/)
+- A2OJ: [rivel_co](https://a2oj.com/profile?Username=rivel_co)
