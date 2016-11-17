@@ -1,7 +1,41 @@
+{% assign TagName = "" %}
+{% if page.url contains "Poetry/" %}
+	{% assign TagName = "poetry" %}
+{% endif %}
+{% if page.url contains "Biology/" %}
+	{% assign TagName = "biology" %}
+{% endif %}
+{% if page.url contains "Chemistry/" %}
+	{% assign TagName = "chemistry" %}
+{% endif %}
+{% if page.url contains "Physics/" %}
+	{% assign TagName = "physics" %}
+{% endif %}
+{% if page.url contains "Math/" %}
+	{% assign TagName = "math" %}
+{% endif %}
+
+{% assign Note = "" %}
+{% if page.url contains "Poetry/" %}
+	{% assign Note = "Fuera del código" %}
+{% endif %}
+{% if page.url contains "Biology/" %}
+	{% assign Note = "Apuntes de biología" %}
+{% endif %}
+{% if page.url contains "Chemistry/" %}
+	{% assign Note = "Apuntes de química" %}
+{% endif %}
+{% if page.url contains "Physics/" %}
+	{% assign Note = "Apuntes de física" %}
+{% endif %}
+{% if page.url contains "Math/" %}
+	{% assign Note = "Apuntes de matemáticas" %}
+{% endif %}
+
 		<header>
 			<section class="Titulo">
-				<a href="{{ site.url }}/Poetry/"><span class="Inco">#include</span><span class="Fre"><nope><</nope>poetry></span></a>
+				<a href="{{ site.url }}/{{ TagName || capitalize }}/"><span class="Inco">#include</span><span class="Fre"><nope><</nope>{{ TagName }}></span></a>
 			</section>
-			<h4>/* Fuera del código */</h4>
+			<h4>/* {{ Note }} */</h4>
 			{% include Multibtn.html %}
 		</header>
