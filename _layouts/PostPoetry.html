@@ -34,6 +34,16 @@
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/Multibtn.css">
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/CodeP.css">
 
+		<script src="{{ site.url }}/Recursos/JS/jquery-1.8.2.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/JS/lightbox/css/lightbox.min.css">
+		<script type="text/javascript" src="{{ site.url }}/Recursos/JS/lightbox/js/lightbox.min.js"></script>
+		<script>
+		    lightbox.option({
+		      'disableScrolling': true
+		    })
+		</script>
+
 		<link rel="stylesheet" type="text/css" href="{{ site.url }}/Recursos/CSS/JSXGraph.css">
 		<script type="text/javascript" src="{{ site.url }}/Recursos/JS/JSXGraph.js"></script>
 
@@ -47,6 +57,9 @@
 		<script type="text/javascript" async
 		  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 		</script>
+
+		<script src="{{ site.url }}/Recursos/JS/jpreloader.min_.js"></script>
+		<script src="{{ site.url }}/Recursos/JS/LoaderP.js"></script>
 	  	
 	  	{% include Fontawesome.html %}
 	  	{% if jekyll.environment == 'production' %}
@@ -54,6 +67,8 @@
 		{% endif %}
 	</head>
 	<body>
+		<div class="Pre-fondo"></div>
+		<div class="Pre-img"></div>
 		{% include CabeceraPp.html %}
 		<div id="Cuerpo">
 			{% include CabPostFalso.html %}

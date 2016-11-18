@@ -64,8 +64,20 @@ ul li, ol li{
 	line-height: 1.5em;
 }
 a{
+	font-family: 'Kalam', cursive;
 	text-decoration: none;
 	color: #000;
+}
+p a:after{
+	font-family: "FontAwesome";
+	font-size: .7em;
+	content: ' \f08e';
+}
+p a:hover{
+	text-decoration: underline;
+}
+a[data-lightbox]:after{
+	content: none;
 }
 code{
 	background-color: #f8f8f8;
@@ -107,7 +119,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote:before {
+/*blockquote:before {
   color: #ccc;
   content: open-quote;
   font-size: 4em;
@@ -122,7 +134,7 @@ blockquote:after {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
-}
+}*/
 blockquote p {
   display: inline;
 }
@@ -295,6 +307,7 @@ header h4{
 	font-size: 2em;
 }
 .iTitulo a{
+	font-family: 'Kaushan Script', cursive;
 	text-decoration: none;
 	color: #000;
 }
@@ -330,9 +343,16 @@ header h4{
 	color: #f8f8f8;
 	border: 1px solid #96989A;
 	background-color: #96989A;
+	text-decoration: none;
+}
+.TagPost:after{
+	content: none;
 }
 .ListaTags h3{
 	margin-bottom: 0;
+}
+.ListaTags a{
+	font-family: 'Roboto Condensed', sans-serif;
 }
 .ListaTags .TagPost{
 	font-size: .7em;
@@ -441,6 +461,28 @@ footer span{
 	height: 144px;
 	visibility: hidden;
 }
+.Pre-fondo{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(250,250,250);
+	z-index: 99999999999;
+}
+.Pre-img{
+	background: url('../Multimedia/Loading-p.gif') no-repeat center;
+	background-size: cover;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: fixed;
+	left:50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+	z-index: 9999999999999;
+}
 @media only screen and (max-width: 768px){
 	#Contenido{
 		padding-top: 20px;
@@ -506,5 +548,8 @@ footer span{
 	}
 	.iTitulo{
 		font-size: 1.5em;
+	}
+	p a:after{
+		font-size: .7em;
 	}
 }
