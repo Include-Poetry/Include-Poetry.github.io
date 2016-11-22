@@ -3,7 +3,7 @@ layout: PostPoetry
 title: Convocatoria 9° OPI
 date: 2016-11-15 11:20:00
 author: rivel_co
-tags: [Convocatoria, OPI]
+permalink: /Inscripcion-OPI/
 ---
 
 ¡Ya puedes inscribirte para participar en la novena OPI! ¡Vamos rumbo a OMI 2017!
@@ -59,4 +59,4 @@ No olvides dar <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> a la página
 
 <i class="fa fa-facebook-square" aria-hidden="true"></i> [Olimpiada Potosina de Informática](https://www.facebook.com/olimpiada.potosina.de.informatica){:target="_blank"}
 
-Y por supuesto, no te despegues de \#include&lt;<int>poetry</int>&gt;, pues seguiremos informándote y generando más material de estudio para ti.
+Y por supuesto, no te despegues de \#include&lt;<int>poetry</int>&gt;, pues seguiremos informándote y generando más material de estudio para ti. Puedes ver esta publicación en nuestro blog también [justo acá]({{ site.url }}/Poetry/2016/11/15/Convocatoria-9na-OPI/){:target="_blank"}
