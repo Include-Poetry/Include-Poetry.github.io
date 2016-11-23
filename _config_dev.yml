@@ -5,7 +5,14 @@ name: Include Poetry
 title: Include Poetry
 
 # Descripcón del sitio
-description: Aprende a programar C/C++ y Karel de la manera más fácil y con enfoque en la OMI.
+description: Iniciativa dedicada al entrenamiento de competidores de olimpiadas de ciencias en México, como la OMI, ONB, OMF y OMM.
+
+# Email
+email: includepoetry@gmail.com
+
+# Facebook
+facebook:
+  app_id: 201218926955149
 
 # Autor
 author: rivel_co
@@ -13,14 +20,12 @@ author: rivel_co
 # Versión de Markdown
 markdown: kramdown
 
-# Email
-email: includepoetry@gmail.com
-
 # Google services
 google_analytics: UA-74086952-1
 
 # Base del sitio url: "http://localhost:4000" "http://192.168.1.65:4000" url: "http://169.254.223.56:4000"
-
+url: "http://192.168.1.74:4000"
+host: 0.0.0.0
 
 # Excuidos de la conversión
 exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace]
@@ -30,9 +35,11 @@ exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublim
 paginate: 8
 paginate_path: "/Poetry/Pagina-:num/"
 
+# Gemas
 #gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 gems: [jekyll-paginate]
 
+# Colecciones
 collections:
   C: 
     output: true
