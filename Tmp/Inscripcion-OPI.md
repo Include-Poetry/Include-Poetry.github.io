@@ -29,6 +29,14 @@ Y como siempre, también tras un lugar rumbo a la ***OMI 2017***:
 
 > Examen de preparatoria: 4 de febrero 2017
 
+### Lugar
+
+Te esperamos en las instalaciones del ***Tec Superior de San Luis Potosí***
+
+> Carr Mex-piedras Negras Km 189+100 No. 6501, Villa de Pozos, 78421 San Luis, SLP
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14790.32314873999!2d-100.87177632701416!3d22.06562608766251!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x716b9ca157887020!2sInstituto+Tecnol%C3%B3gico+Superior+De+San+Luis+Potos%C3%AD!5e0!3m2!1ses!2smx!4v1479936925950" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 ## Inscripciones
 
 Y por si fuera poco, ¡ya puedes inscribirte desde aquí también! Así que ***¡no lo pienses más! Inscripciones abiertas***:
