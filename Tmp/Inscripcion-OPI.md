@@ -49,6 +49,8 @@ Y por si fuera poco, ¡ya puedes inscribirte desde aquí también! Así que ***�
 
 Comienza a prepararte para la competencia, ya sea para la OMIPS o la OMI, ***hay material para todos***.
 
+Para los participantes interesados en la división de secundaria rumbo a la ***OMIPS 2017***:
+
 ### Karel
 
 - [Conoce a Karel]({{ site.url }}/Karel/Principio/Karel/){:target="_blank"}
@@ -57,10 +59,21 @@ Comienza a prepararte para la competencia, ya sea para la OMIPS o la OMI, ***hay
 - [Conoce sus problemas]({{ site.url }}/Karel/Problemas/){:target="_blank"}
 - [Aprende a ser recursivo]({{ site.url }}/Karel/Recursion/){:target="_blank"}
 
-### C++
+Para los participantes de interesados en la división de preparatoria rumbo a la ***OMI 2017***:
 
 - [Te presentamos el lenguaje C++]({{ site.url }}/C++/Lenguaje/){:target="_blank"}
-- [Compilador, variables, funciones... todo lo que necesitas para empezar]({{ site.url }}/C++/Introduccion/){:target="_blank"}
+- [¿Qué es un compilador?]({{ site.url }}/C++/Introduccion/Compilador/){:target="_blank"}
+- [Manejando variables]({{ site.url }}/C++/Introduccion/Variables/){:target="_blank"}
+- [Librerías en la programación]({{ site.url }}/C++/Introduccion/Librerias/){:target="_blank"}
+- [Uso de operadores]({{ site.url }}/C++/Introduccion/Operadores/){:target="_blank"}
+- [Aprendiendo a usar funciones]({{ site.url }}/C++/Introduccion/Funciones/){:target="_blank"}
+- [¿Ciclos? ¿Condicionales?]({{ site.url }}/C++/Introduccion/Sentencias/){:target="_blank"}
+- [Arreglos]({{ site.url }}/C++/Introduccion/Arreglos/){:target="_blank"}
+
+## ¿Tienes dudas?
+
+No dudes más y manda un mensaje, puedes preguntar [aquí en #iP]({{ site.url }}/Contacto/){:target="_blank"} 
+o en la página oficial de facebook de la [OPI](https://www.facebook.com/olimpiada.potosina.de.informatica){:target="_blank"}
 
 ## Mantente en contacto
 
