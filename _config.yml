@@ -25,7 +25,7 @@ google_analytics: UA-74086952-1
 
 # Base del sitio
 # url: "https://include-poetry.github.io"
-# host: 0.0.0.0
+host: 0.0.0.0
 
 # Excuidos de la conversión
 exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace]
