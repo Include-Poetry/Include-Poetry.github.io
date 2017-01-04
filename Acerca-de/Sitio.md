@@ -1,6 +1,7 @@
 ---
 layout: G-Article
 title: Sobre el sitio
+permalink: /Acerca-de/Sitio/
 ---
 
 La firma de **#include&lt;<span>poetry</span>&gt;** busca promover conocimientos de diversas disciplinas, principalmente aquellas que se utilizan en olimpiadas nacionales, como lo es *matemáticas*, *física*, *química*, *biología*, *geografía* e *informática*. Se busca ofrecer conocimientos especialmente orientados a este tipo de competencias, y no sólo el conocimiento técnico o profesional de cada materia, para de esta manera contribuir a la mejora del desempeño estatal y nacional de los participantes de estas competencias.

@@ -1,6 +1,7 @@
 ---
 layout: P-Main
 title: Contacto
+permalink: /Blog/Contacto/
 ---
 
 # Escribe a #iP 		{#CFDefT}
