@@ -13,7 +13,7 @@ Este blog pertenece al sitio de ***#include &lt;poetry&gt;***, por lo que conten
 * [Acerca de](# "Esta página")
 * [Contacto]({{ site.url }}/Blog/Contacto/ "Manda un mensaje")
 
-![Nuestro logo]({{ site.iP-Sources }}/Multimedia/Include.png "#iP")
+![Nuestro logo]({{ site.iP-Sources }}/Multimedia/Logo/IPoetryN.png "#iP")
 
 ## Sobre la libreta de apuntes
 
