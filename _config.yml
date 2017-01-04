@@ -36,8 +36,8 @@ paginate: 8
 paginate_path: "/Blog/Pagina-:num/"
 
 # Gemas
-#gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+#gems: [jekyll-paginate]
 
 # Variables del sitio
 logo-grande-n: "/Multimedia/Logo/IPoetryN.png"
