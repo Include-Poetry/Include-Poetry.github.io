@@ -1,0 +1,6 @@
+<i class="fa fa-clock-o" aria-hidden="true"></i> 
+{% if include.palabras < 360 %}
+1 min
+{% else %}
+{{ include.palabras | divided_by:180 }} mins
+{% endif %}

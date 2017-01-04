@@ -1,0 +1,50 @@
+{% comment %}
+Este include necesita recibir el parámetro 'coleccion'
+que deberá ser la colección de la que se extraen los tags
+{% endcomment %}
+
+{% assign rawtags = "" %}
+{% for post in include.coleccion %}
+{% assign ttags = post.tags | join:'|' | append:'|' %}
+{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+
+{% for tag in rawtags %}
+{% if tag != "" %}
+
+{% if tags == "" %}
+{% assign tags = tag | split:'|' %}
+{% endif %}
+
+{% unless tags contains tag %}
+{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+{% for tag in tags %}
+	<a href="#{{ tag | slugify }}" class="TagPost"> <i class="fa fa-tag"></i> {{ tag }}</a>
+{% endfor %}
+
+{% for tag in tags %}
+<h2 class="ancla" id="{{ tag | slugify }}">{{ tag }}</h2>
+<ul class="ListaTags">
+  	{% for post in include.coleccion %}
+	  	{% if post.tags contains tag %}
+		<li>
+			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			<small>
+				{% assign words = post.content | number_of_words %}
+				{% include U-FechaEsp.html fecha=post.date %}    
+				{% include U-TiLec.html palabras=words%} | 
+				<i class="fa fa-user-o" aria-hidden="true"></i> {{ post.author }}
+			</small>
+		</li>
+	  	{% endif %}
+  	{% endfor %}
+</ul>
+{% endfor %}

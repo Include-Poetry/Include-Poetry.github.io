@@ -1,5 +1,5 @@
 ---
-layout: PostPoetry
+layout: P-Post
 title: Próximamente en &#35;iP
 author: rivel_co
 tags: IncludePoetry

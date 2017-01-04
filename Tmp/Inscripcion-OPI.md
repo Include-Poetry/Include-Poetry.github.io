@@ -1,5 +1,5 @@
 ---
-layout: PostPoetry
+layout: P-Post
 title: Convocatoria 9° OPI
 date: 2016-11-15 11:20:00
 author: rivel_co
@@ -15,7 +15,7 @@ Y esta vez ¡ya hay dos categorías en las que puedes participar! Dale un vistaz
 
 &nbsp;
 
-<a href="{{ site.url }}/Recursos/Multimedia/Blog/Convocatorias/OPI-9.jpg" data-lightbox="image-1">![Convocatoria OPI]({{ site.url }}/Recursos/Multimedia/Blog/Convocatorias/OPI-9.jpg "9na OPI")</a>
+[![Convocatoria OPI]({{ site.iP-Sources }}/Multimedia/Blog/Convocatorias/OPI-9.jpg "9na OPI")]({{ site.iP-Sources }}/Multimedia/Blog/Convocatorias/OPI-9.jpg){: data-lightbox="image-1"}
 
 &nbsp;
 
@@ -53,22 +53,22 @@ Para los participantes interesados en la división de secundaria rumbo a la ***O
 
 ### Karel
 
-- [Conoce a Karel]({{ site.url }}/Karel/Principio/Karel/){:target="_blank"}
-- [Aprende a usar sus instrucciones]({{ site.url }}/Karel/Instrucciones/Lineales/){:target="_blank"}
-- [Crea funciones]({{ site.url }}/Karel/Funciones/){:target="_blank"}
-- [Conoce sus problemas]({{ site.url }}/Karel/Problemas/){:target="_blank"}
-- [Aprende a ser recursivo]({{ site.url }}/Karel/Recursion/){:target="_blank"}
+- [Conoce a Karel]({{ site.url }}/Code/Karel/Principio/Karel/){:target="_blank"}
+- [Aprende a usar sus instrucciones]({{ site.url }}/Code/Karel/Instrucciones/Lineales/){:target="_blank"}
+- [Crea funciones]({{ site.url }}/Code/Karel/Funciones/){:target="_blank"}
+- [Conoce sus problemas]({{ site.url }}/Code/Karel/Problemas/){:target="_blank"}
+- [Aprende a ser recursivo]({{ site.url }}/Code/Karel/Recursion/){:target="_blank"}
 
 Para los participantes de interesados en la división de preparatoria rumbo a la ***OMI 2017***:
 
-- [Te presentamos el lenguaje C++]({{ site.url }}/C++/Lenguaje/){:target="_blank"}
-- [¿Qué es un compilador?]({{ site.url }}/C++/Introduccion/Compilador/){:target="_blank"}
-- [Manejando variables]({{ site.url }}/C++/Introduccion/Variables/){:target="_blank"}
-- [Librerías en la programación]({{ site.url }}/C++/Introduccion/Librerias/){:target="_blank"}
-- [Uso de operadores]({{ site.url }}/C++/Introduccion/Operadores/){:target="_blank"}
-- [Aprendiendo a usar funciones]({{ site.url }}/C++/Introduccion/Funciones/){:target="_blank"}
-- [¿Ciclos? ¿Condicionales?]({{ site.url }}/C++/Introduccion/Sentencias/){:target="_blank"}
-- [Arreglos]({{ site.url }}/C++/Introduccion/Arreglos/){:target="_blank"}
+- [Te presentamos el lenguaje C++]({{ site.url }}/Code/C++/Lenguaje/){:target="_blank"}
+- [¿Qué es un compilador?]({{ site.url }}/Code/C++/Introduccion/Compilador/){:target="_blank"}
+- [Manejando variables]({{ site.url }}/Code/C++/Introduccion/Variables/){:target="_blank"}
+- [Librerías en la programación]({{ site.url }}/Code/C++/Introduccion/Librerias/){:target="_blank"}
+- [Uso de operadores]({{ site.url }}/Code/C++/Introduccion/Operadores/){:target="_blank"}
+- [Aprendiendo a usar funciones]({{ site.url }}/Code/C++/Introduccion/Funciones/){:target="_blank"}
+- [¿Ciclos? ¿Condicionales?]({{ site.url }}/Code/C++/Introduccion/Sentencias/){:target="_blank"}
+- [Arreglos]({{ site.url }}/Code/C++/Introduccion/Arreglos/){:target="_blank"}
 
 ## ¿Tienes dudas?
 
@@ -81,4 +81,6 @@ No olvides dar <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> a la página
 
 <i class="fa fa-facebook-square" aria-hidden="true"></i> [Olimpiada Potosina de Informática](https://www.facebook.com/olimpiada.potosina.de.informatica){:target="_blank"}
 
-Y por supuesto, no te despegues de \#include&lt;<int>poetry</int>&gt;, pues seguiremos informándote y generando más material de estudio para ti. Puedes ver esta publicación en nuestro blog también [justo acá]({{ site.url }}/Poetry/2016/11/15/Convocatoria-9na-OPI/){:target="_blank"}
+Y por supuesto, no te despegues de \#include&lt;<span>poetry</span>&gt;, pues seguiremos informándote y generando más material de estudio para ti.
+
+> Puedes ver esta publicación en nuestro blog también [justo acá]({{ site.url }}/Blog/2016/11/15/Convocatoria-9na-OPI/){:target="_blank"}

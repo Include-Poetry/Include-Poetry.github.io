@@ -1,0 +1,24 @@
+{% if jekyll.environment == 'production' %}
+{% include U-Comentario.html %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		{% include G-Head.html %}
+	</head>
+
+	<body>
+		{% include G-BTTL.html %}
+		{% include G-LoaderG.html %}
+		{% include G-HBarMain.html %}
+		
+		<div class="Cuerpo">
+			<div class="Contenido">
+				{{ content }}
+			</div>
+		</div>
+
+		{% include G-FGlobal.html %}
+		{% include G-ScriptU.html %}
+	</body>
+</html>

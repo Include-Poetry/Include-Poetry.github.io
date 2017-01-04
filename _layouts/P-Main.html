@@ -1,0 +1,26 @@
+{% if jekyll.environment == 'production' %}
+{% include U-Comentario.html %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		{% include U-Head.html tdef="#iP - Blog"%}
+
+		{% include P-Head.html %}
+		<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Poetry/Contact.css">
+	</head>
+	<body>
+		<div class="Pre-fondo"></div>
+		<div class="Pre-img"></div>
+
+		{% include P-HMain.html nivel="HOficial" %}
+		<section>
+			{% include P-HMain.html nivel="HFalso" %}
+			<article>
+				{{ content }}
+			</article>
+		</section>
+		{% include P-FGlobal.html %}
+		
+	</body>
+</html>

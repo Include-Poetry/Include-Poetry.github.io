@@ -1,5 +1,5 @@
 ---
-layout: PostPoetry
+layout: P-Post
 title: rivel_co
 date: 2016-08-13 23:59:59
 author: rivel_co
@@ -7,7 +7,7 @@ tags: []
 category: []
 ---
 
-Fundador de \#include&lt;<int>poetry</int>> y creador original del sitio. Estudiante de la UASLP, Facultad de Ciencias, carrera de licenciado en Biología. Exolímpico y participante de diversos concursos. Entusiasta de la ciencia y tecnología, la literatura, música y cine.
+Fundador de \#include&lt;<span>poetry</span>> y creador original del sitio. Estudiante de la UASLP, Facultad de Ciencias. Exolímpico y participante de diversos concursos. Entusiasta de la ciencia y tecnología, la literatura, música y cine.
 
 Busco lo simple y prefiero la utilidad a la belleza, el trabajo al talento y los resultados sobre la intención.
 Siempre he creído que si te crees demasiado bueno en algo es porque no te has medido frente a los retos correctos.
@@ -28,3 +28,5 @@ Siempre he creído que si te crees demasiado bueno en algo es porque no te has m
 - <i class="fa fa-slack" aria-hidden="true"></i> : @rivelco
 - OmegaUp: [rivel_co](https://omegaup.com/profile/RiVel_Co/)
 - A2OJ: [rivel_co](https://a2oj.com/profile?Username=rivel_co)
+
+![Firma]({{ site.iP-Sources }}{{ site.logo-pluma}} "Logo de rivel_co"){: style="width:19%;"}

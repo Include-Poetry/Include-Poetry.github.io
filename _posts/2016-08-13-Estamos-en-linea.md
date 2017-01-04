@@ -1,5 +1,5 @@
 ---
-layout: PostPoetry
+layout: P-Post
 title: Estamos en línea
 author: rivel_co
 tags: IncludePoetry
@@ -22,8 +22,8 @@ Por lo que esto es a penas el comienzo de lo que esperamos, sea una gran herrami
 
 ## De este blog
 
-- [Inicio]({{ site.url }}/Poetry/ "Blog de #iP")
-- [Acerca de]({{ site.url }}/Poetry/Acerca-de/ "Sobre el blog")
-- [Contacto]({{ site.url }}/Poetry/Contacto/ "Manda un mensaje al blog")
+- [Inicio]({{ site.url }}/Blog/ "Blog de #iP")
+- [Acerca de]({{ site.url }}/Blog/Acerca-de/ "Sobre el blog")
+- [Contacto]({{ site.url }}/Blog/Contacto/ "Manda un mensaje al blog")
 
 No olvides que estamos en constante crecimiento, y que para ello esperamos contar con tu ayuda, para mejorar, crecer y ayudarte a aprender lo que más te gusta. Así que no dudes mandar un mensaje al blog o a la página, estaremos felices de leerte y aprovechar tus aportaciones.

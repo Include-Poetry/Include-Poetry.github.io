@@ -1,0 +1,20 @@
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+		{% include U-FavIcons.html %}
+		<title>
+			{% if page.title %}
+				{{ page.title }} | {{ include.tdef }}
+			{% else %}
+				{{ include.tdef }}
+			{% endif %}
+		</title>
+
+		<script src="{{ site.iP-Sources }}/JS/Universal/jquery-1.8.2.min.js"></script>
+		<script src="{{ site.iP-Sources }}/JS/Universal/jpreloader.min_.js"></script>
+		{% include U-Fontawesome.html %}
+
+	  	{% if jekyll.environment == 'production' %}
+			{% include U-GAnalytics.html %}
+			<meta property="fb:app_id" content="201218926955149" />
+		{% endif %}

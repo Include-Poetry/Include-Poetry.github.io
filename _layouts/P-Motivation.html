@@ -1,0 +1,23 @@
+{% if jekyll.environment == 'production' %}
+{% include U-Comentario.html %}
+{% endif %}
+<html lang="es">
+	<head>
+		{% include G-Head.html %}
+
+	  	<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Universal/Motivation.css">
+	</head>
+
+	<body>
+		{% include G-BTTL.html %}
+		<div class="LoaderGif" id="LGPoli"></div>
+		{% include G-HBarMain.html %}
+		
+		<div class="Cuerpo">
+			{{ content }}
+		</div>
+
+		{% include G-FGlobal.html %}
+		{% include G-ScriptU.html %}
+	</body>
+</html>
