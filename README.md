@@ -1,8 +1,8 @@
-![Logo](Recursos/Multimedia/Include.png)
+![Logo](https://www.include-poetry.com/IP-Sources/Multimedia/Logo/IPoetryN.png)
 
-[Ir al sitio](https://include-poetry.github.io "El sitio real") |
-[Únete al equipo](https://include-poetry.github.io/Reclutamiento/ "Reclutamiento") |
-[El blog](https://include-poetry.github.io/Poetry/ "Blog oficial")
+[Ir al sitio](https://www.include-poetry.com "El sitio real") |
+[Únete al equipo](https://www.include-poetry.com/Reclutamiento/ "Reclutamiento") |
+[El blog](https://www.include-poetry.com/Poetry/ "Blog oficial")
 
 ***&#35;include&lt;poetry&gt;*** nace como una iniciativa que pretende servir de apoyo en el estudio de las diversas disciplinas que conforman las **Olimpiadas Nacionales de Ciencias en México**, como lo es, la **OMI** (*Olimpiada Mexicana de Informática*), **OMM** (*Olimpiada Mexicana de Matemáticas*), **OMF** (*Olimpiada Mexicana de Física*), **OMB** (*Olimpiada Mexicana de Biología*) y **ONQ** (*Olimpiada Nacional de Química*) utilizando un sitio web como herramienta principal. El proyecto comienza enfocado en la *OMI*, y desarrollado por Ricardo Velázquez Contreras.
 
@@ -12,7 +12,7 @@ Se busca que la información encontrada en el sitio sea de utilidad específica 
 
 Para lograr lo anterior, la información en el sitio es redactada por *ex-olímpicos* y *entrenadores* de estas olimpiadas, de esa manera tratamos de brindar la experiencia particular y personal de cada tema, visto siempre, con el enfoque de la competencia más que con un enfoque técnico. 
 
-El otro principio del proyecto es la *simplicidad* y *estética* de uso, de tal manera que sea sencillo encontrar lo que se busca, y evitando lo más que se pueda las posibles distracciones y saturaciones de material. ([Acerca del sitio, en el sitio](https://include-poetry.github.io/Acerca-de/ "Acerca del sitio"))
+El otro principio del proyecto es la *simplicidad* y *estética* de uso, de tal manera que sea sencillo encontrar lo que se busca, y evitando lo más que se pueda las posibles distracciones y saturaciones de material. ([Acerca del sitio, en el sitio](https://www.include-poetry.com/Acerca-de/ "Acerca del sitio"))
 
 ## Justificación
 
@@ -24,7 +24,7 @@ Todos estos factores, reducen y complican el tiempo de estudio efectivo que se d
 
 Debido a que este proyecto trata de abarcar una cantidad enorme de material, el esfuerzo, tiempo y dedicación necesarios no pueden ser logrados sino por un equipo decidido a hacerlo crecer. Por esto, estamos sumamente interesados en encontrar colaboradores que tengan conocimientos de los temas que son necesarios para las diversas olimpiadas. Así que si tú estás interesado, tienes el tiempo, las ganas, y la experiencia, no dudes en contactarnos, nos encantaría poder trabajar juntos.
 
-Considera también que no sólo funcionamos con contenidos escritos, hay muchas más cosas que hacer y en qué colaborar de las que te puedes imaginar. Si te interesa colaborar dirígete a nuestro [formato de reclutamiento](https://include-poetry.github.io/Reclutamiento/ "Reclutamiento").
+Considera también que no sólo funcionamos con contenidos escritos, hay muchas más cosas que hacer y en qué colaborar de las que te puedes imaginar. Si te interesa colaborar dirígete a nuestro [formato de reclutamiento](https://www.include-poetry.com/Reclutamiento/ "Reclutamiento").
 
 ## Metas próximas
 
@@ -35,7 +35,7 @@ El sitio continúa en crecimiento y por lo tanto, hemos fijado distintos objetiv
 - [x] Obtener un dominio propio
 - [ ] Desarrollar los temas básicos de estudio para una segunda olimpiada
 
-Como objetivos más específicos, y sin  tener un orden particular de realización:
+Como objetivos más específicos, y sin tener un orden particular de realización:
 
 - [ ] Registro de usuarios
 - [ ] Conversión de contenidos a medios portables
@@ -49,7 +49,6 @@ Como objetivos más específicos, y sin  tener un orden particular de realizaci�
 - Con librerías
 	- jQuery 1.8.2
 	- Lunr 0.7.1
-	- Fresco 2.2.1
 	- Ace
 	- MathJax
 	- FontAwesome
