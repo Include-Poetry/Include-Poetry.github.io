@@ -1,10 +1,9 @@
 ---
-layout: Manual
+layout: G-Search
 title: Resultados de la búsqueda
 ---
-<div class="Titulo">
-  Resultados de la búsqueda
-</div>
+
+<h1> Resultados de la búsqueda </h1>
 
 <form action="{{ site.url }}/Buscador/" method="get">
   <input type="text" id="search-box" name="query">
@@ -13,7 +12,7 @@ title: Resultados de la búsqueda
 
 <ul id="search-results">
   <li>
-    <div class="Subtitulo">Inicia una busqueda</div>
+    <h2>Inicia una busqueda</h2>
     <p>Ingresa el texto en el cuadro superior</p>
   </li>
 </ul>
@@ -86,5 +85,5 @@ title: Resultados de la búsqueda
     {% endfor %}
   };
 </script>
-<script src="/Recursos/JS/lunr.min.js"></script>
-<script src="/Recursos/JS/search.js"></script>
+<script src="{{ site.iP-Sources }}/JS/lunr.min.js"></script>
+<script src="{{ site.iP-Sources }}/JS/search.js"></script>

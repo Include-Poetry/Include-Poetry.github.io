@@ -1,0 +1,60 @@
+{% if jekyll.environment == 'production' %}
+{% include U-Comentario.html %}
+{% endif %}
+
+{% if page.url contains "Topicos-adicionales/" %}
+	{% if page.url contains "Karel/" %}
+		{% assign pagina = "Code/Topicos-adicionales/Karel" %}
+	{% endif %}
+	{% if page.url contains "C++/" %}
+		{% assign pagina = "Code/Topicos-adicionales/C++" %}
+	{% endif %}
+{% endif %}
+{% if page.url contains "Problemas-resueltos/" %}
+	{% if page.url contains "Karel/" %}
+		{% assign pagina = "Code/Problemas-resueltos/Karel" %}
+	{% endif %}
+	{% if page.url contains "C++/" %}
+		{% assign pagina = "Code/Problemas-resueltos/C++" %}
+	{% endif %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		{% include G-Head.html %}
+
+	  	{% include U-Lightbox.html %}
+
+	  	{% include U-Mathjax.html %}
+	</head>
+
+	<body>
+		{% include G-BTTL.html %}
+		{% include G-LoaderG.html %}
+		
+		{% if page.Only-Lyt %}
+			{% include G-HBarMain.html %}
+		{% else %}
+			{% include G-HBarCode.html %}
+		{% endif %}
+		<section id="main">
+			<h1>{{ page.title }}</h1>
+
+			{{ content }}
+
+			<p>
+				{% for tag in page.tags %}
+		            <a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+		        {% endfor %}
+	        </p>
+	        {% unless page.Hide_FBC %}
+	        	{% include U-FBComments.html %}
+	        {% endunless %}
+		</section>
+		{% include G-FGlobal.html %}
+
+		{% include G-ScriptU.html %}
+		{% include U-AceEditor.html %}
+	</body>
+</html>

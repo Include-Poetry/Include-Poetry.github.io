@@ -1,0 +1,38 @@
+{% if jekyll.environment == 'production' %}
+{% include U-Comentario.html %}
+{% endif %}
+<!-- Fecha de inicio formal: 20 febrero 2016-->
+<!DOCTYPE html>
+<html lang="es">
+  	<head>
+	  	{% include G-Head.html %}
+
+	  	<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Course/Main.css">
+	  	{% if page.url contains "Acerca-de/" %}
+	  		<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Universal/About.css">
+	  	{% endif %}
+	</head>
+  	<body>
+  		{% include G-BTTL.html %}
+  		{% include G-LoaderP.html %}
+  		{% if page.url contains "Code/" %}
+			{% include G-HBarCode.html %}
+		{% else %}
+			{% include G-HBarMain.html %}
+		{% endif %}
+		
+		<section id="main">
+			{{ content }}
+		</section>
+
+		{% include G-FGlobal.html %}
+
+		{% include G-ScriptU.html %}
+
+		{% if page.url contains "Acerca-de/" %}
+	  		<!--<script type="text/javascript" src="{{ site.iP-Sources }}/JS/Universal/Parallax.js"></script>-->
+	  	{% else %}
+			<script type="text/javascript" src="{{ site.iP-Sources }}/JS/Universal/BackgroundShift.js"></script>
+		{% endif %}
+  	</body>
+</html>

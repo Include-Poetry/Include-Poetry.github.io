@@ -1,0 +1,22 @@
+---
+layout: P-Main
+title: Posts
+---
+
+{% include P-PostList.html pagina = "Blog" coleccion = paginator.posts %}
+
+{% if paginator.total_pages > 1 %}
+<div class="Paginacion">
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path }}">Más recientes</a>
+	{% else %}
+		<span class="pNone">Más recientes</span>
+	{% endif %}
+	<span>{{ paginator.page }} of {{ paginator.total_pages }}</span>
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path }}">Más antiguas</a>
+	{% else %}
+		<span class="pNone">Más antiguas</span>
+	{% endif %}
+</div>
+{% endif %}

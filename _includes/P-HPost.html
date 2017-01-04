@@ -1,0 +1,9 @@
+		<header class="{{ include.nivel }}" id="HPost">
+			<span>#include &lt;poetry&gt;</span>
+			<section class="Kau">
+				{{ page.title }}
+			</section>
+			{% if include.nivel contains "HOficial"%}
+				{% include P-HMultibtn.html %}
+			{% endif %}
+		</header>

@@ -1,0 +1,25 @@
+{% comment %}
+Este include necesita dos parámetros:
+'coleccion' -> El sitio de donde se extraen los posts
+'pagina' 	-> El vinculo para los tags
+{% endcomment %}
+
+<ul id="PostsList">
+	{% for post in include.coleccion %}
+		<li>
+			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			<small>
+				{% assign words = post.content | number_of_words %}
+				{% include U-FechaEsp.html fecha=post.date %}    
+				{% include U-TiLec.html palabras=words%} | 
+				<i class="fa fa-user-o" aria-hidden="true"></i> {{ post.author }}
+			</small>
+
+			{{ post.excerpt }}
+
+			{% for tag in post.tags %}
+				<a class="TagPost" href="{{ site.url }}/{{ include.pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+			{% endfor %}
+		</li>
+	{% endfor %}
+</ul>

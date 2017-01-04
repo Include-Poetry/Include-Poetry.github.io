@@ -24,7 +24,7 @@ markdown: kramdown
 google_analytics: UA-74086952-1
 
 # Base del sitio url: "http://localhost:4000" "http://192.168.1.65:4000" url: "http://169.254.223.56:4000"
-url: "http://192.168.1.74:4000"
+url: "http://192.168.1.67:4000"
 host: 0.0.0.0
 
 # Excuidos de la conversión
@@ -33,44 +33,25 @@ exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublim
 #incremental: true;
 
 paginate: 8
-paginate_path: "/Poetry/Pagina-:num/"
+paginate_path: "/Blog/Pagina-:num/"
 
 # Gemas
 #gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 gems: [jekyll-paginate]
 
+# Variables del sitio
+logo-grande-n: "/Multimedia/Logo/IPoetryN.png"
+logo-chico-n: "/Multimedia/Logo/IPN.png"
+logo-grande-b: "/Multimedia/Logo/IPoetryB.png"
+logo-chico-b: "/Multimedia/Logo/IPB.png"
+logo-pluma: "/Multimedia/Logo/RPlumaN.png"
+iP-Sources: "/RecursosDev"
+
 # Colecciones
 collections:
-  C: 
-    output: true
-    permalink: /C++/:path/
-  Karel:
-    output: true
-    permalink: /Karel/:path/
-  Topicos-C:
-    output: true
-    permalink: /Topicos-adicionales/C++/:categories/:title/
-  Topicos-Karel:
-    output: true
-    permalink: /Topicos-adicionales/Karel/:categories/:title/
-  Apuntes-Bio:
-    output: true
-    permalink: /Biology/:categories/:year/:month/:day/:title/
-  Apuntes-Qui:
-    output: true
-    permalink: /Chemistry/:categories/:year/:month/:day/:title/
-  Apuntes-Fis:
-    output: true
-    permalink: /Physics/:categories/:year/:month/:day/:title/
-  Apuntes-Mat:
-    output: true
-    permalink: /Math/:categories/:year/:month/:day/:title/
-  Resueltos-C:
-    output: true
-    permalink: /Problemas-resueltos/C++/:year/:month/:day/:title/
   Equipo:
     output: true
     permalink: /Equipo/:categories/:title/
   posts:
     output: true
-    permalink: /Poetry/:categories/:year/:month/:day/:title/
+    permalink: /Blog/:categories/:year/:month/:day/:title/
