@@ -1,3 +1,5 @@
+{% assign link = "blog" %}
+
 {% assign subject = "" %}
 {% if page.url contains "Poetry/" %}
 	{% assign subject = "poetry" %}
@@ -37,7 +39,7 @@
 
 		<header class="{{ include.nivel }}" id="HMain">
 			<section>
-				<a href="{{ site.url }}/{{ subject || capitalize }}/">
+				<a href="{{ site.url }}/{{ link || capitalize }}/">
 					<span class="Inco">#include</span>
 					<span class="Fre">&lt;{{ subject }}&gt;</span>
 				</a>
