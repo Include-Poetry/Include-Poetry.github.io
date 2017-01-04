@@ -25,6 +25,7 @@ google_analytics: UA-74086952-1
 
 # Base del sitio
 # url: "https://include-poetry.github.io"
+url: "https://www.include-poetry.com"
 host: 0.0.0.0
 
 # Excuidos de la conversión
