@@ -4,6 +4,6 @@ branches:
   only:
     - master
 script: 
-  - bundle exec jekyll algolia push
+  - jekyll algolia push
 rvm:
  - 2.2
