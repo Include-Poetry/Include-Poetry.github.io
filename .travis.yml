@@ -4,6 +4,6 @@ branches:
   only:
     - master
 script: 
-  - bundle exec jekyll --help
+  - bundle exec jekyll build
 rvm:
  - 2.2
