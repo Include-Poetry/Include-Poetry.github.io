@@ -5,7 +5,7 @@ GEM
     algoliasearch (1.12.4)
       httpclient (~> 2.8.2.4)
       json (>= 1.5.1)
-    algoliasearch-jekyll (0.7.0)
+    algoliasearch-jekyll (0.8.0)
       algoliasearch (~> 1.4)
       appraisal (~> 2.1.0)
       awesome_print (~> 1.6)
@@ -99,7 +99,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  algoliasearch-jekyll (~> 0.7.0)
+  algoliasearch-jekyll (~> 0.8)
   jekyll (~> 2.5)
   jekyll-paginate
   jekyll-seo-tag
