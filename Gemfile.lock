@@ -20,7 +20,7 @@ GEM
     colorator (0.1)
     ffi (1.9.14-x86-mingw32)
     httpclient (2.8.2.4)
-    jekyll (3.1.6)
+    jekyll (2.5)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 1.1)
@@ -63,7 +63,7 @@ PLATFORMS
 
 DEPENDENCIES
   algoliasearch-jekyll (~> 0.8.0)
-  jekyll (~> 3.1.6)
+  jekyll (~> 2.5)
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
