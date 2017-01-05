@@ -37,11 +37,11 @@ paginate: 8
 paginate_path: "/Blog/Pagina-:num/"
 
 # Gemas
-gems: 
+gems:
+  - algoliasearch-jekyll
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
-  - algoliasearch-jekyll
 
 #gems: [jekyll-paginate]
 
