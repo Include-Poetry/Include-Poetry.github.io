@@ -29,7 +29,7 @@ url: "https://www.include-poetry.com"
 host: 0.0.0.0
 
 # Excuidos de la conversión
-exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace]
+exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace, vendor]
 
 # incremental: true;
 
@@ -37,8 +37,14 @@ paginate: 8
 paginate_path: "/Blog/Pagina-:num/"
 
 # Gemas
-gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, algoliasearch-jekyll]
 #gems: [jekyll-paginate]
+
+# Algolia
+algolia:
+  application_id: 'QO0HGR5828'
+  index_name:     'IPSearch'
+  read_only_api_key: 'eb04fe369bec3b6b078e4eb51ea48ae6'
 
 # Variables del sitio
 logo-grande-n: "/Multimedia/Logo/IPoetryN.png"

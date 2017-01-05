@@ -32,12 +32,12 @@ exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublim
 
 #incremental: true;
 
-paginate: 8
-paginate_path: "/Blog/Pagina-:num/"
+#paginate: 8
+#paginate_path: "/Blog/Pagina-:num/"
 
 # Gemas
 #gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
-gems: [jekyll-paginate]
+gems: [jekyll-seo-tag]
 
 # Variables del sitio
 logo-grande-n: "/Multimedia/Logo/IPoetryN.png"
