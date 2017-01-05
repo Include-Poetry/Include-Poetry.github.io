@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '~> 3.1.6'
 gem 'jekyll-seo-tag'
 gem 'jekyll-paginate'
 gem 'jekyll-sitemap'
