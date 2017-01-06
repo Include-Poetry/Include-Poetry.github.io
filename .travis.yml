@@ -4,6 +4,7 @@ branches:
   only:
     - master
 script: 
+  - gem install algoliasearch-jekyll
   - bundle exec jekyll --help
 rvm:
  - 2.2
