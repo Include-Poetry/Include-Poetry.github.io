@@ -36,8 +36,8 @@ exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublim
 #paginate_path: "/Blog/Pagina-:num/"
 
 # Gemas
-#gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
-gems: [jekyll-seo-tag]
+# gems: 
+#  - jekyll-seo-tag
 
 # Variables del sitio
 logo-grande-n: "/Multimedia/Logo/IPoetryN.png"

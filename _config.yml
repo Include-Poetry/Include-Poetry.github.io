@@ -24,14 +24,10 @@ markdown: kramdown
 google_analytics: UA-74086952-1
 
 # Base del sitio
-# url: "https://include-poetry.github.io"
 url: "https://www.include-poetry.com"
-host: 0.0.0.0
 
 # Excuidos de la conversión
-exclude: [No en git, Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace, vendor]
-
-# incremental: true;
+exclude: [vendor]
 
 paginate: 8
 paginate_path: "/Blog/Pagina-:num/"
@@ -42,8 +38,6 @@ gems:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
-
-#gems: [jekyll-paginate]
 
 # Algolia
 algolia:
