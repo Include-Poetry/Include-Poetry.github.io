@@ -2,6 +2,7 @@
 layout: G-Article
 title: Contactanos
 permalink: /Contacto/
+description: Manda un mensaje a #iP, estamos interesados en escucharte.
 Only-Lyt: true
 Hide_FBC: true
 ---
