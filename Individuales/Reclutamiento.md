@@ -2,6 +2,7 @@
 layout: G-Article
 title: Únete al equipo
 permalink: /Reclutamiento/
+published: false
 ---
 
 Si te interesa contribuir a la mejora del aprendizaje y por ende, al desempeño de los participantes mexicanos en las diversas olimpiadas del conocimiento, puedes colaborar a hacer crecer este proyecto, en más de una forma. Es mucho más sencillo de lo que parece y tiene un impacto más grande de lo que imaginas. Sin importar tu edad, sexo o estado de residencia, en #iP estamos interesados por tu ayuda.

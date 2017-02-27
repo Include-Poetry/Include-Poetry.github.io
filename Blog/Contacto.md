@@ -1,6 +1,7 @@
 ---
 layout: P-Main
 title: Contacto
+description: Deja tu mensaje, fuera las formalidades
 permalink: /Blog/Contacto/
 ---
 
