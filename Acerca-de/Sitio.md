@@ -2,12 +2,11 @@
 layout: G-Article
 title: Sobre el sitio
 permalink: /Acerca-de/Sitio/
+description: Todos los datos técnicos del sitio, un motor de la maquinaria
 Only-Lyt: true
 ---
 
-La firma de **#include&lt;<span>poetry</span>&gt;** busca promover conocimientos de diversas disciplinas, principalmente aquellas que se utilizan en olimpiadas nacionales, como lo es *matemáticas*, *física*, *química*, *biología*, *geografía* e *informática*. Se busca ofrecer conocimientos especialmente orientados a este tipo de competencias, y no sólo el conocimiento técnico o profesional de cada materia, para de esta manera contribuir a la mejora del desempeño estatal y nacional de los participantes de estas competencias.
-
-Debido a esto, estamos muy, **muy** interesados en continuar creciendo y mejorando los contenidos de cada una de las anteriores áreas. Si te interesa colaborar por favor entra [acá]({{ site.url }}/Reclutamiento/){: target="_blank"} y contribuye a mejorar el desempeño de nuestro país en las olimpiadas.
+La firma de **#include&lt;<span>poetry</span>&gt;** busca promover la ciencia, principalmente a través de la difusión de cocimientos de diversas disciplinas, principalmente aquellas que se utilizan en olimpiadas nacionales, como lo es *matemáticas*, *física*, *química*, *biología*, *geografía* e *informática*. Se busca ofrecer conocimientos especialmente orientados a este tipo de competencias, y no sólo el conocimiento técnico o profesional de cada materia, para de esta manera contribuir a la mejora del desempeño estatal y nacional de los participantes de estas competencias. Además de ofrecer artículos y temas de interés como invitación a la ciencia en general.
 
 ## Derechos de autoría
 
