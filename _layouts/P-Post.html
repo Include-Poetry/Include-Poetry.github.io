@@ -2,23 +2,12 @@
 {% include U-Comentario.html %}
 {% endif %}
 
-{% if page.url contains "Biology/" %}
-{% assign pagina = "Biology" %}
-{% endif %}
-{% if page.url contains "Chemistry/" %}
-{% assign pagina = "Chemistry" %}
-{% endif %}
-{% if page.url contains "Math/" %}
-{% assign pagina = "Math" %}
-{% endif %}
-{% if page.url contains "Physics/" %}
-{% assign pagina = "Physics" %}
-{% endif %}
+{% assign pagina = "" %}
 {% if page.url contains "Blog/" %}
-{% assign pagina = "Blog" %}
+	{% assign pagina = "Blog" %}
 {% endif %}
 {% if page.url contains "Equipo/" %}
-{% assign pagina = "Blog" %}
+	{% assign pagina = "Blog" %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -40,10 +29,12 @@
 			{% include P-HPost.html nivel="HFalso" %}
 			<article>
 				<small>
+				{% unless page.Hide_data %}
 					{% assign words = content | number_of_words %}
 					{% include U-FechaEsp.html fecha=page.date %}    
 					{% include U-TiLec.html palabras=words%} | 
-					<i class="fa fa-user-o" aria-hidden="true"></i><a href="{{ site.url }}/Equipo/{{ page.author }}/"> {{ page.author }}</a> 
+					<i class="fa fa-user-o" aria-hidden="true"></i><a href="{{ site.url }}/Equipo/{{ page.author }}/"> {{ page.author }}</a>
+				{% endunless %} 
 			    </small>
 		    	{% for tag in page.tags %}
 					<a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>

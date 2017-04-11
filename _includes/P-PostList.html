@@ -4,8 +4,13 @@ Este include necesita dos parámetros:
 'pagina' 	-> El vinculo para los tags
 {% endcomment %}
 
+{% assign orden = "true" %}
+{% if orden == "true" %}
+	{% assign items = include.coleccion | sort: 'date' %}
+{% endif %}
+
 <ul id="PostsList">
-	{% for post in include.coleccion %}
+	{% for post in items reversed %}
 		<li>
 			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 			<small>
