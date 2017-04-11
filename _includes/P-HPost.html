@@ -1,9 +1,25 @@
+{% assign link = "" %}
+{% assign subject = "" %}
+
+{% if page.url contains "Poetry/" %}
+	{% assign subject = "poetry" %}
+	{% assign link = "Poetry" %}
+{% endif %}
+{% if page.url contains "Blog/" %}
+	{% assign subject = "blog" %}
+	{% assign link = "Blog" %}
+{% endif %}
+{% if page.url contains "Equipo/" %}
+	{% assign subject = "blog" %}
+	{% assign link = "Blog" %}
+{% endif %}
+
 		<header class="{{ include.nivel }}" id="HPost">
-			<span>#include &lt;poetry&gt;</span>
+			<span>#include &lt;{{ subject }}&gt;</span>
 			<section class="Kau">
 				{{ page.title }}
 			</section>
 			{% if include.nivel contains "HOficial"%}
-				{% include P-HMultibtn.html %}
+				{% include P-HMultibtn.html destino = link %}
 			{% endif %}
 		</header>

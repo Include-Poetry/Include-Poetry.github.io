@@ -1,51 +1,27 @@
-{% assign link = "blog" %}
-
+{% assign link = "" %}
 {% assign subject = "" %}
+{% assign Note = "" %}
+
 {% if page.url contains "Poetry/" %}
 	{% assign subject = "poetry" %}
+	{% assign Note = "La ciencia de la poesía, la poesía de la ciencia" %}
+	{% assign link = "Poetry" %}
 {% endif %}
 {% if page.url contains "Blog/" %}
-	{% assign subject = "poetry" %}
-{% endif %}
-{% if page.url contains "Biology/" %}
-	{% assign subject = "biology" %}
-{% endif %}
-{% if page.url contains "Chemistry/" %}
-	{% assign subject = "chemistry" %}
-{% endif %}
-{% if page.url contains "Physics/" %}
-	{% assign subject = "physics" %}
-{% endif %}
-{% if page.url contains "Math/" %}
-	{% assign subject = "math" %}
-{% endif %}
-
-{% assign Note = "" %}
-{% if page.url contains "Blog/" %}
+	{% assign subject = "blog" %}
 	{% assign Note = "Fuera del código" %}
-{% endif %}
-{% if page.url contains "Biology/" %}
-	{% assign Note = "Apuntes de biología" %}
-{% endif %}
-{% if page.url contains "Chemistry/" %}
-	{% assign Note = "Apuntes de química" %}
-{% endif %}
-{% if page.url contains "Physics/" %}
-	{% assign Note = "Apuntes de física" %}
-{% endif %}
-{% if page.url contains "Math/" %}
-	{% assign Note = "Apuntes de matemáticas" %}
+	{% assign link = "Blog" %}
 {% endif %}
 
 		<header class="{{ include.nivel }}" id="HMain">
 			<section>
-				<a href="{{ site.url }}/{{ link || capitalize }}/">
+				<a href="{{ site.url }}/{{ link }}/">
 					<span class="Inco">#include</span>
 					<span class="Fre">&lt;{{ subject }}&gt;</span>
 				</a>
 			</section>
 			<h4>/* {{ Note }} */</h4>
 			{% if include.nivel contains "HOficial" %}
-				{% include P-HMultibtn.html %}
+				{% include P-HMultibtn.html destino = link %}
 			{% endif %}
 		</header>
