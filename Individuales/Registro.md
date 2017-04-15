@@ -37,7 +37,7 @@ Al parecer algo ha salido mal:
     <input type="email" placeholder="Tu correo" name="REmail" id="REmail" required="">
     
     <label for="RTipo">Tipo de usuario</label>
-    <select name="RTipo" required="">
+    <select id="RTipo" name="RTipo" required="">
         <option selected="">Competidor</option>
         <option>Estudiante</option>
         <option>Profesor</option>
