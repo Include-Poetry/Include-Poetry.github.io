@@ -5,6 +5,7 @@ date: 2016-11-15 11:20:00
 author: rivel_co
 tags: [Convocatoria, OPI]
 description: Inscríbete en la siguiente OPI y participa para representar a San Luis Potosí en la OMI 2017
+published: false
 ---
 
 ¡Ya puedes inscribirte para participar en la novena OPI! ¡Vamos rumbo a OMI 2017!
