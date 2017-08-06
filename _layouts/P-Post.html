@@ -9,6 +9,9 @@
 {% if page.url contains "Equipo/" %}
 	{% assign pagina = "Blog" %}
 {% endif %}
+{% if page.url contains "Poetry/" %}
+	{% assign pagina = "Poetry" %}
+{% endif %}
 
 <!DOCTYPE html>
 <html lang="es">
@@ -54,6 +57,6 @@
 		</section>
 		{% include P-FGlobal.html %}
 		<script src="{{ site.iP-Sources }}/JS/Universal/BTTyL.js"></script>
-		<script src="{{ site.iP-Sources }}/JS/Universal/DarkMode.js"></script>
+		<script src="{{ site.iP-Sources }}/JS/Universal/DarkModePoetry.js"></script>
 	</body>
 </html>

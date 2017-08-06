@@ -82,5 +82,3 @@ No olvides dar <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> a la página
 <i class="fa fa-facebook-square" aria-hidden="true"></i> [Olimpiada Potosina de Informática](https://www.facebook.com/olimpiada.potosina.de.informatica){:target="_blank"}
 
 Y por supuesto, no te despegues de \#include&lt;<span>poetry</span>&gt;, pues seguiremos informándote y generando más material de estudio para ti.
-
-> Puedes ver esta publicación en nuestro blog también [justo acá]({{ site.url }}/Blog/2016/11/15/Convocatoria-9na-OPI/){:target="_blank"}
