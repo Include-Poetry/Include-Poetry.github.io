@@ -4,7 +4,7 @@
 [Únete al equipo](https://www.include-poetry.com/Reclutamiento/ "Reclutamiento") |
 [El blog](https://www.include-poetry.com/Poetry/ "Blog oficial")
 
-***&#35;include&lt;poetry&gt;*** nace como una iniciativa que pretende servir de apoyo en el estudio de las diversas disciplinas que conforman las **Olimpiadas Nacionales de Ciencias en México**, como lo es, la **OMI** (*Olimpiada Mexicana de Informática*), **OMM** (*Olimpiada Mexicana de Matemáticas*), **OMF** (*Olimpiada Mexicana de Física*), **OMB** (*Olimpiada Mexicana de Biología*) y **ONQ** (*Olimpiada Nacional de Química*) utilizando un sitio web como herramienta principal. El proyecto comienza enfocado en la *OMI*, y desarrollado por Ricardo Velázquez Contreras.
+***&#35;include&lt;poetry&gt;*** nace como una iniciativa que pretende servir de apoyo en el estudio de las diversas disciplinas que conforman las **Olimpiadas Nacionales de Ciencias en México**, como lo es, la **OMI** (*Olimpiada Mexicana de Informática*), **OMM** (*Olimpiada Mexicana de Matemáticas*), **OMF** (*Olimpiada Mexicana de Física*), **OMB** (*Olimpiada Mexicana de Biología*) y **ONQ** (*Olimpiada Nacional de Química*), además de la divulgación e invitación a la ciencia en general, utilizando un sitio web como herramienta principal. El proyecto comienza desarrollado por Ricardo Velázquez Contreras.
 
 ## Principios del proyecto
 

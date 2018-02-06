@@ -27,7 +27,7 @@ que deberá ser la colección de la que se extraen los tags
 {% endfor %}
 
 {% for tag in tags %}
-	<a href="#{{ tag | slugify }}" class="TagPost"> <i class="fa fa-tag"></i> {{ tag }}</a>
+	<a href="#{{ tag | slugify }}" class="TagPost"> <i class="fas fa-tag"></i> {{ tag }}</a>
 {% endfor %}
 
 {% for tag in tags %}
@@ -41,7 +41,7 @@ que deberá ser la colección de la que se extraen los tags
 				{% assign words = post.content | number_of_words %}
 				{% include U-FechaEsp.html fecha=post.date %}    
 				{% include U-TiLec.html palabras=words%} | 
-				<i class="fa fa-user-o" aria-hidden="true"></i> {{ post.author }}
+				<i class="fas fa-user"></i> {{ post.author }}
 			</small>
 		</li>
 	  	{% endif %}

@@ -32,6 +32,6 @@ Las fuerzas del mal han conspirado y tu mensaje no podido ser enviado. Comprueba
 	
 	<textarea placeholder="Tu mensaje" name="Mensaje" id="Mensaje" required="" ></textarea>
 	<input type="text" name="_gotcha" style="display:none" />
-	<input type="submit" value="Listo" id="Enviar">
+	<input type="submit" value="Listo" class="Enviar">
 </form>
 <script src="{{ site.iP-Sources }}/JS/Universal/ContactForm.js"></script>

@@ -1,57 +1,49 @@
 ---
 layout: G-Article
-title: Registro
+title: Regístrate en &#35iP
 permalink: /Registro/
 description: Registrate en Include Poetry y forma parte de esta gran comunidad
 Only-Lyt: true
-Hide_FBC: true
-published: false
+no_comments: true
+Hide_Title: true
 ---
 
-## ¡Gracias por registrarte! {#RFGraT}
+<h1 id="SUTitulo">Regístrate en #iP</h1>
 
-## Algo salió mal {#RFErrT}
+<p id="SUPre">
+    Puedes usar tu cuenta de:
+</p>
 
-{: #RFDefP}
-Regístrate en #iP para que puedas tener acceso al nuevo material, más funcionalidades, registro de progreso y mucho más.
+<p id="SUAlters">
+    <span class="SUOpt" id="SUGoogle"><i class="fab fa-google"></i> <span class="SUOptTex">Google</span></span> <span class="SUOpt" id="SUFacebook"><i class="fab fa-facebook-f"></i> <span class="SUOptTex">Facebook</span></span> <span class="SUOpt" id="SUGithub"><i class="fab fa-github"></i> <span class="SUOptTex">Github</span></span>
+</p>
 
-{: #RFGraP}
-Revisa tu correo electrónico, pues hemos enviado un correo de confirmación, en unos momentos te redireccionaremos a la página de inicio. Te vemos adentro.
-
-{: #RFErrP}
-Al parecer algo ha salido mal: 
-
-{: #RFErrD}
-> 
+<p id="SUPost">
+    O utilizar tu correo y una contraseña
+</p>
 
 <form id="RegisterForm">
-    <label for="RNombre">Nombre</label> 
-    <input type="text" placeholder="Tu nombre" name="RNombre" id="RNombre">
-
-    <label for="RApellidos">Apellidos</label> 
-    <input type="text" placeholder="Tus apellidos" name="RApellidos" id="RApellidos" required="">
-
-    <label for="RUsuario">Usuario</label>
-    <input type="text" placeholder="Tu nombre de usuario" name="RUsuario" id="RUsuario" autofocus>
-    <input type="hidden" id="foouser" value="false" name="foouser">
+    <span class="UPCampo UPUno">
+        <label class="UPUIco" for="SUCorreo"><i class="far fa-envelope"></i></label>
+        <input class="UPUTex" id="SUCorreo" name="SUMail" placeholder="Correo">
+    </span>
+    <span class="UPCampo UPUno">
+        <label class="UPUIco" for="SUPass"><i class="fas fa-key"></i></label>
+        <input type="password" class="UPUTex" id="SUPass" name="SUPassword" placeholder="Contraseña">
+    </span>
+    <span class="UPCampo UPUno">
+        <label class="UPUIco" for="SUPassConf"><i class="fas fa-key"></i></label>
+        <input type="password" class="UPUTex" id="SUPassConf" name="SUPasswordConf" placeholder="Confirmar contraseña">
+    </span>
     
-    <label for="REmail">Correo</label>
-    <input type="email" placeholder="Tu correo" name="REmail" id="REmail" required="">
-    
-    <label for="RTipo">Tipo de usuario</label>
-    <select id="RTipo" name="RTipo" required="">
-        <option selected="">Competidor</option>
-        <option>Estudiante</option>
-        <option>Profesor</option>
-        <option>Investigador</option>
-    </select>
-
-    <label for="RPass">Contraseña</label>
-    <input type="password" placeholder="Contraseña" name="RPass" id="RPass" required="">
-
-    <label for="RPassc">Repite tu contraseña</label>
-    <input type="password" placeholder="Contraseña" name="RPassc" id="RPass" required="">
-
-    <input type="submit" value="Listo" id="REnviar">
+    <p id="SUOffer">
+        ¿Ya tienes una cuenta? <a href="{{ site.url }}/Iniciar-sesion/">Inicia sesión</a>
+    </p>
+    <p id="SUTerms">
+        Al registrarte aceptas los <a href="{{ site.url }}/Perfil/Terminos-y-condiciones/" target="_blank">términos y condiciones así como políticas de privacidad</a>
+    </p>
+    <p id="SUSendB">
+        <input type="submit" value="Registrarme" id="LEnviar" name="LEnviar">
+    </p>
 </form>
 <script src="{{ site.iP-Sources }}/JS/Universal/Registro.js"></script>
