@@ -4,7 +4,7 @@ title: Contactanos
 permalink: /Contacto/
 description: Manda un mensaje a Include Poetry, estamos interesados en escucharte
 Only-Lyt: true
-Hide_FBC: true
+no_comments: true
 ---
 
 ## Deja tu mensaje 	{#CFDefT}

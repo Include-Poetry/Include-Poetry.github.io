@@ -8,7 +8,7 @@ title: Include Poetry
 description: Iniciativa dedicada a la divulgación de la ciencia y al entrenamiento de competidores de olimpiadas de ciencias en México, como la OMI, ONB, OMF y OMM.
 
 # Email
-email: includepoetry@gmail.com
+email: contacto@include-poetry.com
 
 # Facebook
 facebook:
@@ -23,19 +23,18 @@ markdown: kramdown
 # Google services
 google_analytics: UA-74086952-1
 
-# Base del sitio url: "http://localhost:4000" "http://192.168.1.65:4000" url: "http://169.254.223.56:4000"
-url: "http://192.168.1.75:4000"
-host: 0.0.0.0
+# Base del sitio
+url: "http://localhost:4000"
+#host: 0.0.0.0
 
 # Excuidos de la conversión
 exclude: [Montar.bat, Sublime  iP.sublime-project, Sublime  iP.sublime-workspace]
 
-#incremental: true;
-
 # Gemas
-gems: 
+plugins: 
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-sitemap
 
 paginate: 8
 paginate_path: "/Blog/Pagina-:num/"
@@ -54,7 +53,7 @@ collections:
     output: true
     permalink: /Equipo/:categories/:title/
   Poetry:
-    output: true
+    output: false
     permalink: /Poetry/:year/:month/:day/:title/
   posts:
     output: true

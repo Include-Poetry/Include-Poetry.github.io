@@ -36,21 +36,21 @@
 					{% assign words = content | number_of_words %}
 					{% include U-FechaEsp.html fecha=page.date %}    
 					{% include U-TiLec.html palabras=words%} | 
-					<i class="fa fa-user-o" aria-hidden="true"></i><a href="{{ site.url }}/Equipo/{{ page.author }}/"> {{ page.author }}</a>
+					<i class="fas fa-user"></i><a href="{{ site.url }}/Equipo/{{ page.author }}/"> {{ page.author }}</a>
 				{% endunless %} 
 			    </small>
 		    	{% for tag in page.tags %}
-					<a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
+					<a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fas fa-tag"></i> {{ tag }}</a>
 				{% endfor %}
 			    
 				{{ content }}
 
 				<nav>
 					{% if page.previous.url %}
-						<a href="{{ page.previous.url }}"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{page.previous.title}}</a>
+						<a href="{{ page.previous.url }}"><i class="fas fa-chevron-left"></i> {{page.previous.title}}</a>
 					{% endif %}
 					{% if page.next.url %}
-						<a href="{{ page.next.url }}">{{page.next.title}} <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+						<a href="{{ page.next.url }}">{{page.next.title}} <i class="fas fa-chevron-right"></i></a>
 					{% endif %}
 				</nav>
 			</article>
