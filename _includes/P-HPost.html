@@ -17,7 +17,11 @@
 		<header class="{{ include.nivel }}" id="HPost">
 			<span>#include &lt;{{ subject }}&gt;</span>
 			<section class="Kau">
-				{{ page.title }}
+				{% if page.title contains "|" %}
+					{{page.headTitle}}
+				{% else %}
+					{{ page.title }}
+				{% endif %}
 			</section>
 			{% if include.nivel contains "HOficial"%}
 				{% include P-HMultibtn.html destino = link %}
