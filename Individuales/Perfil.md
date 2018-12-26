@@ -20,24 +20,24 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
         <i id="AccStatIcon" class="far fa-fw fa-clock" title="Tu perfil está completo"></i>
     </div>
     <div id="DatosPre">
-        <span class="UPCampo UPUno">
+        <span class="UPCampo UPUno"> <!-- Username -->
             <span class="UPUIco"><i class="fas fa-user-circle"></i></span>
             <span class="UPDVal UPDOut" id="BIFUsername">Nombre de usuario</span>
             <input class="UPDVal UPDIn" id="BIFUsernameIn">
         </span>
-        <span class="UPCampo UPUno">
+        <span class="UPCampo UPUno"> <!-- Nombre completo -->
             <span class="UPUIco"><i class="far fa-address-book"></i></span>
             <span class="UPUTex" id="DPName">Nombre completo</span>
         </span>
-        <span class="UPCampo UPUno">
+        <span class="UPCampo UPUno"> <!-- Nacionalidad y estado -->
             <span class="UPUIco"><i class="fas fa-map-marker-alt"></i></span>
             <span class="UPUTex" id="DPNacio">Nacionalidad y estado</span>
         </span>
-        <span class="UPCampo UPUno">
+        <span class="UPCampo UPUno"> <!-- Tipo de usuario -->
             <span class="UPUIco"><i class="far fa-handshake"></i></span>
             <span class="UPUTex" id="DPType">Tipo de usuario</span>
         </span>
-        <span class="UPCampo UPUno" id="UPDesc">
+        <span class="UPCampo UPUno" id="UPDesc"> <!-- Descripción -->
             <span class="UPUTex" id="DPMore">Descripción</span>
             <textarea class="UPUTex UPUIn" id="DPMoreIn"></textarea>
             <span class="UPUIco UPUIcoDesc"><i class="fas fa-info-circle"></i></span>
@@ -56,19 +56,19 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
 ## Información básica
 
 <article id="BasicInfo">
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Nombre -->
         <span class="UPDIco"><i class="far fa-address-book"></i></span>
         <span class="UPDNom">Nombre</span>
         <span class="UPDVal UPDOut" id="BIFName"></span>
         <input class="UPDVal UPDIn" id="BIFNameIn">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Apellidos -->
         <span class="UPDIco"><i class="far fa-id-card"></i></span>
         <span class="UPDNom">Apellidos</span>
         <span class="UPDVal UPDOut" id="BILName"></span>
         <input class="UPDVal UPDIn" id="BILNameIn">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- País -->
         <span class="UPDIco"><i class="fas fa-globe"></i></span>
         <span class="UPDNom">País</span>
         <span class="UPDVal UPDOut" id="BINaci"></span>
@@ -269,7 +269,7 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
             <option>Zimbabue</option>
         </select>
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Estado -->
         <span class="UPDIco"><i class="fas fa-map-marker-alt"></i></span>
         <span class="UPDNom">Estado de residencia</span>
         <span class="UPDVal UPDOut" id="BIState"></span>
@@ -310,13 +310,13 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
             <option>Zacatecas</option>
         </select>
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Fecha de nacimiento -->
         <span class="UPDIco"><i class="far fa-calendar-alt"></i></span>
         <span class="UPDNom">Fecha de nacimiento</span>
         <span class="UPDVal UPDOut" id="BIBirth"></span>
         <input class="UPDVal UPDIn" id="BIBirthIn" type="date">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Estudios -->
         <span class="UPDIco"><i class="fas fa-university"></i></span>
         <span class="UPDNom">Estudiando actualmente</span>
         <span class="UPDVal UPDOut" id="BISchool"></span>
@@ -330,7 +330,7 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
             <option>Postdoctorado</option>
         </select>
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Semestre -->
         <span class="UPDIco"><i class="fas fa-bookmark"></i></span>
         <span class="UPDNom">Semestre o año</span>
         <span class="UPDVal UPDOut" id="BIGrade"></span>
@@ -343,7 +343,7 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
             <option>Semestre 11 a 12 | Año 6</option>
         </select>
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Sexo -->
         <span class="UPDIco"><i class="fas fa-venus-mars"></i></span>
         <span class="UPDNom">Sexo</span>
         <span class="UPDVal UPDOut" id="BISex"></span>
@@ -365,31 +365,31 @@ Aquí puedes personalizar la forma en que otros usuarios te conocerán y la form
 ## Datos de contacto
 
 <article id="ContactMethods">
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Correo -->
         <span class="UPDIco"><i class="far fa-envelope"></i></span>
         <span class="UPDNom">Correo</span>
         <span class="UPDVal UPDOut" id="CMCorreo"></span>
         <input type="email" class="UPDVal UPDIn" id="CMCorreoIn">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Facebook -->
         <span class="UPDIco"><i class="fab fa-facebook-square"></i></span>
         <span class="UPDNom">Facebook (usuario)</span>
         <span class="UPDVal UPDOut" id="CMFacebook"></span>
         <input type="text" class="UPDVal UPDIn" id="CMFacebookIn">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Github -->
         <span class="UPDIco"><i class="fab fa-github"></i></span>
         <span class="UPDNom">Github (usuario)</span>
         <span class="UPDVal UPDOut" id="CMGithub"></span>
         <input type="text" class="UPDVal UPDIn" id="CMGithubIn">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Página web -->
         <span class="UPDIco"><i class="fas fa-link"></i></span>
         <span class="UPDNom">Página web (link)</span>
         <span class="UPDVal UPDOut" id="CMWebsite"></span>
         <input type="url" class="UPDVal UPDIn" id="CMWebsiteIn">
     </span>
-    <span class="UPCampo UPDos">
+    <span class="UPCampo UPDos"> <!-- Celular -->
         <span class="UPDIco"><i class="fas fa-mobile"></i></span>
         <span class="UPDNom">Celular con lada</span>
         <span class="UPDVal UPDOut" id="CMCelular"></span>
