@@ -1,0 +1,139 @@
+		{% include G-HBar.html %}
+		<nav id="NavUl">
+			<span id="MenuBackArr"><i class="fas fa-arrow-left"></i></span>
+			<ul id="MainUl"> <!-- Principal -->
+				<li><a href="{{ site.baseurl }}/Buscador/">Buscador</a></li>
+				<li data-son="MKarel"><span>Karel</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MC"><span>C++</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MProb"><span>Problemas</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MAcc" id="MUSCtrl"><span id="MUNDysp">Mi cuenta</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MMIP"><span>Más de #iP</span><i class="fas fa-caret-down"></i></li>
+			</ul>
+
+			<ul id="MKarel"> <!-- Karel -->
+				<li data-son="MKStart"><span>Para empezar</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MKIns"><span>Instrucciones</span><i class="fas fa-caret-down"></i></li>
+				<li><a href="{{ site.baseurl }}/Karel/Funciones/">Funciones</a></li>
+				<li data-son="MKRec"><span>Recursión</span><i class="fas fa-caret-down"></i></li>
+				<li><a href="{{ site.baseurl }}/Otros-temas/Karel/">Otros temas</a></li>
+			</ul>
+			<ul id="MKStart"> <!-- Principio -->
+				<li><a href="{{ site.baseurl }}/Karel/Principio/Karel/">Karel el robot</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Principio/Mundo/">Mundo de Karel</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Principio/Zumbadores/">Zumbadores</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Principio/Simulador/">El simulador</a></li>
+			</ul>
+			<ul id="MKIns"> <!-- Instrucciones -->
+				<li><a href="{{ site.baseurl }}/Karel/Instrucciones/Lineales/">Lineales</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Instrucciones/Condicionales/">Condicionales</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Instrucciones/Ciclicas/">Cíclicas</a></li>
+			</ul>
+			<ul id="MKRec"> <!-- Recursión -->
+				<li><a href="{{ site.baseurl }}/Karel/Recursion/">Idea de recursión</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Recursion/Simple/">Recursión simple</a></li>
+				<li><a href="{{ site.baseurl }}/Karel/Recursion/Parametros/">Recursión con parámetros</a></li>
+			</ul>
+
+			<ul id="MC"> <!-- C++ -->
+				<li data-son="MCInt"><span>Introducción</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MCEst"><span>Estructuras</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MCM"><span>Métodos</span><i class="fas fa-caret-down"></i></li>
+				<li><a href="{{ site.baseurl }}/Otros-temas/C++/">Otros temas</a></li>
+			</ul>
+			<ul id="MCInt"> <!-- Introducción -->
+				<li data-son="MCIAnt"><span>Antes de empezar</span><i class="fas fa-caret-down"></i></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Librerias/">Librerías</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Variables/">Variables</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Funciones/">Funciones</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Operadores/">Operadores</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Punteros/">Punteros</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Sentencias/">Sentencias</a></li>
+			</ul>
+			<ul id="MCIAnt"> <!-- Antes de empezar -->
+				<li><a href="{{ site.baseurl }}/C++/Lenguaje/">Lenguaje C++</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/">La programación</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Introduccion/Compilador/">Compilador</a></li>
+			</ul>
+			<ul id="MCEst"> <!-- Estructuras -->
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/Arreglos/">Arreglos</a></li>
+				<li data-son="MCET"><span>Creación de tipos</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MCEC"><span>Contenedores</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MCESTL"><span>STL</span><i class="fas fa-caret-down"></i></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/Grafos/">Grafos</a></li>
+			</ul>
+			<ul id="MCET"> <!-- Creación de tipos -->
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/Creacion-de-tipos/Struct/">Struct</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/Creacion-de-tipos/Class/">Class</a></li>
+			</ul>
+			<ul id="MCEC"> <!-- Contenedores -->
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/Contenedores/Pila/">Pila</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/Contenedores/Cola/">Cola</a></li>
+			</ul>
+			<ul id="MCESTL"> <!-- STL -->
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/">STL</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/Vector/">Vector</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/String/">String</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/Queue/">Queue</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/Stack/">Stack</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/List/">List</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Estructuras/STL/Pair/">Pair</a></li>
+			</ul>
+			<ul id="MCM"> <!-- Métodos -->
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Recursion/">Recursión</a></li>
+				<!--<li><a href="{{ site.baseurl }}/C++/Metodos/DP/">DP</a></li>-->
+				<li data-son="MCMO"><span>Ordenamientos</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MCMB"><span>Búsquedas</span><i class="fas fa-caret-down"></i></li>
+			</ul>
+			<ul id="MCMO">	<!-- Ordenamientos -->
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Ordenamientos/">Introducción</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Ordenamientos/Bubble-sort/">Bubble sort</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Ordenamientos/Merge-sort/">Merge sort</a></li>
+			</ul>
+			<ul id="MCMB">	<!-- Búsquedas -->
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Busquedas/">Introducción</a></li>
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Busquedas/Lineales/">Lineales</a></li>
+				<li data-son="MCMBA"><span>En amplitud</span><i class="fas fa-caret-down"></i></li>
+				<li data-son="MCMBP"><span>A profundidad</span><i class="fas fa-caret-down"></i></li>
+				<!--<li><a href="{{ site.baseurl }}/C++/Busquedas/Backtrack/">Backtrack</a></li>-->
+			</ul>
+			<ul id="MCMBA"> <!-- Búsquedas en amplitud -->
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Busquedas/Amplitud/Matrices/">En matrices</a></li>
+				<!--<li><a href="{{ site.baseurl }}/C++/Metodos/Busquedas/Amplitud/Grafos/">En grafos</a></li>-->
+			</ul>
+			<ul id="MCMBP"> <!-- Búsquedas a profundidad -->
+				<li><a href="{{ site.baseurl }}/C++/Metodos/Busquedas/Profundidad/Matrices/">En Matrices</a></li>
+				<!--<li><a href="{{ site.baseurl }}/C++/Metodos/Busquedas/Profundidad/Grafos/">En grafos</a></li>-->
+			</ul>
+
+			<ul id="MProb"> <!-- Problemas -->
+				<li><a href="{{ site.baseurl }}/Problemas/omegaUp/">omegaUp</a></li>
+				<li><a href="{{ site.baseurl }}/Problemas/Karelotitlan/">Karelotitlán</a></li>
+				<li data-son="MPRes"><span>Resueltos</span><i class="fas fa-caret-down"></i></li>
+			</ul>
+			<ul id="MPRes"> <!-- Problemas resueltos -->
+				<li><a href="{{ site.baseurl }}/Problemas/Resueltos/C++/">C++</a></li>
+				<!--<li><a href="{{ site.baseurl }}/Problemas/Resueltos/Karel/">Karel</a></li>-->
+			</ul>
+			
+			<ul id="MMIP"> <!-- Más de #iP -->
+				<li><a href="{{ site.url }}/Acerca-de/">Acerca de</a></li>
+				<li data-son="MCur"><span>Cursos</span><i class="fas fa-caret-down"></i></li>
+				<li><a href="{{ site.url }}/Contacto/">Contacto</a></li>
+				<li><a href="{{ site.baseurl }}/Motivacion/">¡Motivate!</a></li>
+				<li><a href="{{ site.baseurl }}/Recursos/Descargables/">Recursos</a></li>
+				<li><a href="{{ site.url }}/Blog/">Blog</a></li>
+			</ul>
+			<ul id="MCur"> <!-- Cursos -->
+				<li><a href="{{ site.baseurl }}/">Olimpiada de Informática</a></li>
+				<li><a href="{{ site.url }}/Notes/">Apuntes de biología</a></li>
+			</ul>
+			<ul id="MAcc0">
+				<li><a href="{{ site.url }}/Iniciar-sesion/">Iniciar sesión</a></li>
+				<li><a href="{{ site.url }}/Registro/">Registro</a></li>
+			</ul>
+			<ul id="MAcc1">
+				<li><a href="{{ site.url }}/Perfil/">Perfil</a></li>
+				<li><a href="{{ site.url }}/Perfil/Configuracion/">Configuración</a></li>
+				<li><span id="MLogOut">Cerrar sesión</span></li>
+			</ul>
+		</nav>
