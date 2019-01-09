@@ -6,7 +6,7 @@ description: Todos los datos técnicos del sitio, un motor de la maquinaria
 Only-Lyt: true
 ---
 
-La firma de **#include&lt;<span>poetry</span>&gt;** busca promover la ciencia, principalmente a través de la difusión de cocimientos de diversas disciplinas, principalmente aquellas que se utilizan en olimpiadas nacionales, como lo es *matemáticas*, *física*, *química*, *biología*, *geografía* e *informática*. Se busca ofrecer conocimientos especialmente orientados a este tipo de competencias y no sólo el conocimiento técnico o profesional de cada materia, para de esta manera contribuir a la mejora del desempeño estatal y nacional de los participantes de estas competencias. Además de ofrecer artículos y temas de interés como invitación a la ciencia en general.
+La firma de **#include&lt;<span>poetry</span>&gt;** busca promover la ciencia, principalmente a través de la difusión de cocimientos de diversas disciplinas, principalmente aquellas que se utilizan en olimpiadas nacionales, como lo es *matemáticas*, *física*, *química*, *biología*, *geografía* e *informática*. Se busca ofrecer conocimientos especialmente orientados a este tipo de competencias y no sólo el conocimiento técnico o profesional de cada materia, para de esta manera contribuir a la mejora del desempeño estatal y nacional de los participantes de estas competencias. Además de ofrecer artículos y temas de interés como invitación a la ciencia en general. No olvides revisar nuestros [términos, condiciones y políticas de privacidad]({{ site.url }}/Terminos-condiciones-y-privacidad/ "Términos, condiciones y políticas de privacidad &vert; #iP")
 
 ## Derechos de autoría
 
@@ -16,6 +16,7 @@ El sitio se ha desarrollado utilizando software de código abierto. Las imágene
 
 \> Hospedado en [Github Pages](https://pages.github.com/ "Github Pages")<br>
 \> Motorizado por [Jekyll](https://jekyllrb.com/ "Jekyll")<br>
+\> Protegido por [Cloudflare](https://www.cloudflare.com/ "Cloudflare")<br>
 \> Con librerías<br>
 &nbsp;&nbsp; > [jQuery](https://jquery.com/ "jQuery")<br>
 &nbsp;&nbsp; > [Ace](https://ace.c9.io/ "Ace")<br>
@@ -25,7 +26,6 @@ El sitio se ha desarrollado utilizando software de código abierto. Las imágene
 &nbsp;&nbsp; > [Lightbox](http://lokeshdhakar.com/projects/lightbox2/ "Lightbox")<br>
 \> Utilizando servicios de<br>
 &nbsp;&nbsp; > [Google Analytics](https://www.google.com/analytics/ "Google Analytics")<br>
-&nbsp;&nbsp; > [Firebase](https://firebase.google.com/ "Firebase")<br>
 &nbsp;&nbsp; > [Algolia](https://www.algolia.com/ "algolia")<br>
 &nbsp;&nbsp; > [Disqus](https://disqus.com/ "Disqus")<br>
 \> Desarrollado desde el 20 de febrero del 2016<br>
