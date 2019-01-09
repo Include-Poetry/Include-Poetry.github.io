@@ -34,6 +34,7 @@ Las fuerzas del mal han conspirado y tu mensaje no podido ser enviado. Comprueba
 	</div>
 	<textarea placeholder="Mensaje" name="Mensaje" id="Mensaje" required=""></textarea>
 	<input type="text" name="_gotcha" style="display:none" />
+	<input type="hidden" name="Codigo" id="CFCodeRec">
 	<span id="CFTerms"><input type="checkbox" id="CFAC" name="CFAC"> <label for="CFAC">He leído y acepto los <a href="{{site.url}}/Terminos-y-condiciones/">terminos y condiciones</a>.</label></span>
 	<div id="CFDelSend"><input type="submit" value="Listo" id="Enviar"></div>
 </form>
