@@ -17,7 +17,7 @@ no_comments: true
 En Include Poetry estamos en constante desarrollo y crecimiento, es por ello que tu opinión nos interesa mucho. Así que no lo pienses dos veces y di lo que tienes en mente, tanto si quieres felicitar o sugerir correcciones, colaborar o hacer una petición, decir hola o solicitar información.
 
 {: #CFGraP}
-Gracias por tu mensaje, recibirás una respuesta muy pronto.
+Gracias por tu mensaje, recibirás una respuesta muy pronto. Código de tu mensaje:
 
 {: #CFErrP}
 Las fuerzas del mal han conspirado y tu mensaje no podido ser enviado. Comprueba tu conexión a internet o espera unos minutos.
@@ -29,26 +29,12 @@ Las fuerzas del mal han conspirado y tu mensaje no podido ser enviado. Comprueba
 <form id="ContactForm" method="POST">
 	<div class="FIzq">
 		<input type="hidden" name="_subject" value="Mensaje desde #IP" />
-		<input  class="FElem" type="text" placeholder="Tu nombre" name="Nombre" id="Nombre" required="">
-
-		<input  class="FElem" type="email" placeholder="Tu correo" name="_replyto" id="Correo" required="">
-
-		<select class="FElem" name="Motivo" >
-			<option selected="" value="Nada">Motivo de tu mensaje</option>
-			<option>Aportación</option>
-			<option>Petición de tema</option>
-			<option>Petición de material</option>
-			<option>Sugerencia</option>
-			<option>Corrección</option>
-			<option>Información sobre el sitio</option>
-			<option>Información de olimpiada</option>
-			<option>Saludo :D</option>
-			<option>Otro</option>
-		</select>
+		<input  class="FElem" type="text" placeholder="Nombre o identificador" name="Nombre" id="Nombre" required="">
+		<input  class="FElem" type="email" placeholder="Correo" name="_replyto" id="Correo" required="">
 	</div>
-	
-	<textarea placeholder="Tu mensaje" name="Mensaje" id="Mensaje" required="" ></textarea>
+	<textarea placeholder="Mensaje" name="Mensaje" id="Mensaje" required=""></textarea>
 	<input type="text" name="_gotcha" style="display:none" />
-	<input type="submit" value="Listo" id="Enviar">
+	<span id="CFTerms"><input type="checkbox" id="CFAC" name="CFAC"> <label for="CFAC">He leído y acepto los <a href="{{site.url}}/Terminos-y-condiciones/">terminos y condiciones</a>.</label></span>
+	<div id="CFDelSend"><input type="submit" value="Listo" id="Enviar"></div>
 </form>
 <script src="{{ site.iP-Sources }}/JS/Universal/ContactForm.js"></script>
