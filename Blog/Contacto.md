@@ -25,13 +25,15 @@ Las fuerzas del mal han conspirado y tu mensaje no podido ser enviado. Comprueba
 [Volvamos a intentarlo]({{ site.url }}/Blog/Contacto/){: #CFOtroSad}
 
 <form id="ContactForm" method="POST">
-	<input type="hidden" name="_subject" value="Mensaje desde el blog de #IP" />
-
-	<input  class="FElem" type="text" placeholder="Tu nombre" name="Nombre" id="Nombre" required="">
-	<input  class="FElem" type="email" placeholder="Tu correo" name="_replyto" id="Correo" required="">
-	
-	<textarea placeholder="Tu mensaje" name="Mensaje" id="Mensaje" required="" ></textarea>
-	<input type="text" name="_gotcha" style="display:none" />
-	<input type="submit" value="Listo" class="Enviar">
+    <div class="FIzq">
+        <input type="hidden" name="_subject" value="Mensaje desde #IP" />
+        <input  class="FElem" type="text" placeholder="Nombre o identificador" name="Nombre" id="Nombre" required="">
+        <input  class="FElem" type="email" placeholder="Correo" name="_replyto" id="Correo" required="">
+    </div>
+    <textarea placeholder="Mensaje" name="Mensaje" id="Mensaje" required=""></textarea>
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="hidden" name="Codigo" id="CFCodeRec">
+    <span id="CFTerms"><input type="checkbox" id="CFAC" name="CFAC"> <label for="CFAC">He leído y acepto los <a id="CFBlogL" href="{{site.url}}/Terminos-condiciones-y-privacidad/">terminos y condiciones</a>.</label></span>
+    <input type="submit" value="Listo" id="Enviar" class="Enviar">
 </form>
 <script src="{{ site.iP-Sources }}/JS/Universal/ContactForm.js"></script>
