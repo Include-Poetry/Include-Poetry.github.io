@@ -20,6 +20,8 @@ Adicionalmente, he realizado colaboraciones en proyectos de investigación en el
 
 Actualmente continúo involucrándome en el desarrollo de herramientas de código libre, sobre todo con fines educativos y para investigación así como participando en eventos de desarrollo de software como [Hacktoberfest](https://hacktoberfest.digitalocean.com/ "Hacktoberfest") en 2016, 2017 y 2018 a través de mi cuenta de [Github](https://github.com/Include-Poetry), también continúo participando en competencias de programación como el [ICPC Región México](https://blogs.iteso.mx/acm/ "ACM ITESO") donde mi equipo resultó finalista en 2018.
 
+En mi universidad he recibido el reconocimiento de **Alumno de Excelencia**, he impartido talleres a estudiantes y profesores en la **Facultad de Ingeniería**, cursos a estudiantes en la **Facultad de Ciencias** además de cursos de actualización para profesores de **Colegio de Bachilleres de San Luis Potosí**. También participio en la coordinación, como asesor y profesor en el **Concurso Potosino de Ciencias**. 
+
 Además continúo colaborando con trabajos de investigación ahora en el **Laboratorio de Neurobiología de la Conducta y Cognición** de la **Facultad de Medicina, UASLP** y coordinando en conjunto con el apoyo de la **Facultad de Ingeniería UASLP**, subsistema **COBACH** y otros exolímpicos potosinos la [Olimpiada Potosina de Informática](https://olimpiada-potosina-de-informatica.github.io/ "Sitio web oficial de la OPI").
 
 ### Relevancia de mis actividades en el desarrollo del sitio
