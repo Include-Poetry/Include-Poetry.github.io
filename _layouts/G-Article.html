@@ -2,20 +2,20 @@
 {% include U-Comentario.html %}
 {% endif %}
 
-{% if page.url contains "Topicos-adicionales/" %}
+{% if page.url contains "Otros-temas/" %}
 	{% if page.url contains "Karel/" %}
-		{% assign pagina = "Code/Topicos-adicionales/Karel" %}
+		{% assign pagina = "Code/Otros-temas/Karel" %}
 	{% endif %}
 	{% if page.url contains "C++/" %}
-		{% assign pagina = "Code/Topicos-adicionales/C++" %}
+		{% assign pagina = "Code/Otros-temas/C++" %}
 	{% endif %}
 {% endif %}
-{% if page.url contains "Problemas-resueltos/" %}
+{% if page.url contains "Problemas/Resueltos/" %}
 	{% if page.url contains "Karel/" %}
-		{% assign pagina = "Code/Problemas-resueltos/Karel" %}
+		{% assign pagina = "Code/Problemas/Resueltos/Karel" %}
 	{% endif %}
 	{% if page.url contains "C++/" %}
-		{% assign pagina = "Code/Problemas-resueltos/C++" %}
+		{% assign pagina = "Code/Problemas/Resueltos/C++" %}
 	{% endif %}
 {% endif %}
 
@@ -27,20 +27,6 @@
 	  	{% include U-Lightbox.html %}
 
 	  	{% include U-Mathjax.html %}
-
-	  	{% if page.url contains "Perfil/"%}
-	  	<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Universal/Userprofile.css">
-	  	{% endif %}
-	  	{% if page.url contains "Iniciar-sesion/"%}
-	  	<script src="{{ site.iP-Sources }}/JS/Universal/jquery.validate.min.js"></script>
-		<script src="{{ site.iP-Sources }}/JS/Universal/additional-methods.min.js"></script>
-	  	<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Universal/Login.css">
-	  	{% endif %}
-	  	{% if page.url contains "Registro/"%}
-	  	<script src="{{ site.iP-Sources }}/JS/Universal/jquery.validate.min.js"></script>
-		<script src="{{ site.iP-Sources }}/JS/Universal/additional-methods.min.js"></script>
-	  	<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Universal/Signup.css">
-	  	{% endif %}
 	  	{% if page.url contains "Contacto/"%}
 	  	<link rel="stylesheet" type="text/css" href="{{ site.iP-Sources }}/CSS/Course/Contact.css">
 	  	{% endif %}
@@ -63,11 +49,12 @@
 
 			{{ content }}
 
-			<p>
+			{% unless page.Hide_Tags %}
 				{% for tag in page.tags %}
 		            <a class="TagPost" href="{{ site.url }}/{{ pagina }}/Tags/#{{ tag | slugify }}"><i class="fas fa-tag"></i> {{ tag }}</a>
 		        {% endfor %}
-	        </p>
+	        {% endunless %}
+	        
 	        {% unless page.no_comments %}
 	        	{% include U-Disqus.html %}
 	        {% endunless %}

@@ -52,6 +52,9 @@ collections:
   Equipo:
     output: true
     permalink: /Equipo/:categories/:title/
+  Cursos:
+    output: true
+    permalink: /Cursos/:title/
   Poetry:
     output: false
     permalink: /Poetry/:year/:month/:day/:title/

@@ -24,7 +24,8 @@ markdown: kramdown
 google_analytics: UA-74086952-1
 
 # Base del sitio
-url: "http://localhost:4000"
+#url: "http://localhost:4000"
+url: "192.168.1.110:4000"
 host: 0.0.0.0
 
 # Excuidos de la conversión
@@ -52,6 +53,9 @@ collections:
   Equipo:
     output: true
     permalink: /Equipo/:categories/:title/
+  Cursos:
+    output: true
+    permalink: /Cursos/:title/
   Poetry:
     output: false
     permalink: /Poetry/:year/:month/:day/:title/
