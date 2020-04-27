@@ -1,8 +1,8 @@
+> This file is also under development.
+
 ![Logo](https://www.include-poetry.com/IP-Sources/Multimedia/Logo/IPoetryN.png)
 
-[Ir al sitio](https://www.include-poetry.com "El sitio real") |
-[Únete al equipo](https://www.include-poetry.com/Reclutamiento/ "Reclutamiento") |
-[El blog](https://www.include-poetry.com/Poetry/ "Blog oficial")
+[Ir al sitio](https://www.include-poetry.com "El sitio real")
 
 ***&#35;include&lt;poetry&gt;*** nace como una iniciativa que pretende servir de apoyo en el estudio de las diversas disciplinas que conforman las **Olimpiadas Nacionales de Ciencias en México**, como lo es, la **OMI** (*Olimpiada Mexicana de Informática*), **OMM** (*Olimpiada Mexicana de Matemáticas*), **OMF** (*Olimpiada Mexicana de Física*), **OMB** (*Olimpiada Mexicana de Biología*) y **ONQ** (*Olimpiada Nacional de Química*), además de la divulgación e invitación a la ciencia en general, utilizando un sitio web como herramienta principal. El proyecto comienza desarrollado por Ricardo Velázquez Contreras.
 
@@ -20,39 +20,21 @@ Como ex-olímpico, muchas veces tuve la mala experiencia de no encontrar materia
 
 Todos estos factores, reducen y complican el tiempo de estudio efectivo que se dedica a la preparación para las competencias, por lo que, de poder redactar, seleccionar, y recopilar la información específica para las olimpiadas en un mismo sitio web, puede resultar mucho más óptimo que una búsqueda tradicional en internet.
 
-## Colaboraciones
-
-Debido a que este proyecto trata de abarcar una cantidad enorme de material, el esfuerzo, tiempo y dedicación necesarios no pueden ser logrados sino por un equipo decidido a hacerlo crecer. Por esto, estamos sumamente interesados en encontrar colaboradores que tengan conocimientos de los temas que son necesarios para las diversas olimpiadas. Así que si tú estás interesado, tienes el tiempo, las ganas, y la experiencia, no dudes en contactarnos, nos encantaría poder trabajar juntos.
-
-Considera también que no sólo funcionamos con contenidos escritos, hay muchas más cosas que hacer y en qué colaborar de las que te puedes imaginar. Si te interesa colaborar dirígete a nuestro [formato de reclutamiento](https://www.include-poetry.com/Reclutamiento/ "Reclutamiento").
-
-## Metas próximas
-
-El sitio continúa en crecimiento y por lo tanto, hemos fijado distintos objetivos qué ir cumpliendo, los objetivos más generales (y en orden cronológico esperado).
-
-- [x] Desarrollar los temas básicos de estudio para una olimpiada
-- [x] Poner el sitio en línea
-- [x] Obtener un dominio propio
-- [ ] Desarrollar los temas básicos de estudio para una segunda olimpiada
-
-Como objetivos más específicos, y sin tener un orden particular de realización:
-
-- [ ] Registro de usuarios
-- [ ] Conversión de contenidos a medios portables
-- [ ] Desarrollo de medios de divulgación social para el sitio
-- [ ] Lograr un equipo de trabajo de 5 personas
-
 ## Datos técnicos del sitio
 
-- Hospedado en Github Pages
-- Motorizado por Jekyll 3
+- Hospedado en [Github Pages](https://pages.github.com/ "Github Pages")
+- Motorizado por [Jekyll](https://jekyllrb.com/ "Jekyll")
+- Protegido por [Cloudflare](https://www.cloudflare.com/ "Cloudflare")
 - Con librerías
-	- jQuery 1.8.2
-	- Lunr 0.7.1
-	- Ace
-	- MathJax
-	- FontAwesome
-    - JSXGraph
-    - Lightbox2
+    + [jQuery](https://jquery.com/ "jQuery")
+    + [Ace](https://ace.c9.io/ "Ace")
+    + [MathJax](https://www.mathjax.org/ "MathJax")
+    + [FontAwesome](https://fontawesome.com/ "Font Awesome")
+    + [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/index.html "JSXGraph")
+    + [Lightbox](http://lokeshdhakar.com/projects/lightbox2/ "Lightbox")
+- Utilizando servicios de
+    + [Google Analytics](https://www.google.com/analytics/ "Google Analytics")
+    + [Algolia](https://www.algolia.com/ "algolia")
+    + [Disqus](https://disqus.com/ "Disqus")
 - Desarrollado desde el 20 de febrero del 2016
-- En línea oficialmente desde el 13 de Agosto del 2016
+- En línea oficialmente desde el 13 de Agosto del 2016 
