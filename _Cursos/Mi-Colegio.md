@@ -7,6 +7,7 @@ Hide_Tags: true
 Only-Lyt: true
 olimpiada: [OMI, OMIPS]
 subject: [Karel]
+published: false
 ---
 
 Taller de Programación Competitiva impartido en los Centros Educativos Mi Colegio Secundaria. El curso comprende el uso de el simulador [Karel el Robot]({{ site.url }}/Code/Karel/Principio/Karel/ "Karel el robot") utilizando la versión oficial [Karel.js](https://omegaup.com/karel.js/ "Karel.js en omegaUp").
@@ -69,4 +70,3 @@ Resolverás problemas similares a los aplicados en competencias locales, estatal
 Como responsables y profesores del curso:
 
 ### Edith Janeth Gaspar Martínez y Ricardo Velázquez Contreras
-
