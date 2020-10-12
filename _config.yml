@@ -8,11 +8,7 @@ title: Include Poetry
 description: Iniciativa dedicada a la divulgación de la ciencia y al entrenamiento de competidores de olimpiadas de ciencias en México, como la OMI, ONB, OMF y OMM.
 
 # Email
-email: contacto@include-poetry.com
-
-# Facebook
-facebook:
-  app_id: 201218926955149
+email: includepoetry@protonmail.com
 
 # Autor
 author: rivel_co
@@ -31,7 +27,7 @@ exclude:
   - vendor
 
 # Gemas
-plugins: 
+plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
@@ -47,7 +43,7 @@ logo-chico-b: "/Multimedia/Logo/IPB.png"
 logo-pluma: "/Multimedia/Logo/RPlumaN.png"
 iP-Sources: "https://www.include-poetry.com/IP-Sources"
 
-# Colecciones 
+# Colecciones
 collections:
   Equipo:
     output: true
