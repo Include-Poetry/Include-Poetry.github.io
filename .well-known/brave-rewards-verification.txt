@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: include-poetry.com
+Token: ee5f875ef37b17db6d8f198996f50dfd436ab9cc399693f064bb30fafcfe7f91

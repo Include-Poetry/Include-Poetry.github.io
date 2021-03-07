@@ -26,6 +26,8 @@ url: "https://www.include-poetry.com"
 exclude:
   - vendor
 
+include: [".well-known"]
+
 # Gemas
 plugins:
   - jekyll-seo-tag
